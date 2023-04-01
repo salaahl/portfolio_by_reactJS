@@ -10,7 +10,6 @@ function Home(props: HomeProps) {
                 <i className="arrow up"></i>
             </a>
             <div className="bg-doodle">
-                <css-doodle use="var(--rule)"></css-doodle>
             </div>
             <svg viewBox="0 0 600 200">
                 <symbol id="s-text">
