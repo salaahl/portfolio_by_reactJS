@@ -9,8 +9,7 @@ function Home(props: HomeProps) {
             <a href="#">
                 <i className="arrow up"></i>
             </a>
-            <div className="bg-doodle">
-            </div>
+            <div className="bg-doodle"></div>
             <svg viewBox="0 0 600 200">
                 <symbol id="s-text">
                     <text textAnchor="middle" x="50%" y="50%" dy=".35em">{props.title}</text>
