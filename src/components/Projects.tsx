@@ -38,7 +38,7 @@ interface ProjectProps {
 function Project(props: ProjectProps) {
     return (
         <div className="project">
-            <img src="src/assets/images/placeholder.png" />
+            <img src="\images\placeholder.png" />
             <h4>{props.title}</h4>
             <p>{props.description}</p>
         </div>
