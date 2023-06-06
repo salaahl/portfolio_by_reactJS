@@ -587,14 +587,6 @@ video {
     padding: 2%;
     margin: 0 5% 0 5%;
   }
-
-  .project:nth-child(2) {
-    transform: translateX(-100%);
-  }
-
-  .project:last-child {
-    transform: translateX(-200%);
-  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -631,14 +623,6 @@ video {
   .project {
     padding: 1%;
     margin: 0 2% 0 2%;
-  }
-
-  .project:first-child {
-    transform: translateX(100%);
-  }
-
-  .project:last-child {
-    transform: translateX(-100%);
   }
 }
 
@@ -808,10 +792,17 @@ a p {
 
 .project:nth-child(2) {
   z-index: 2;
+  transform: translate(-100%);
+}
+
+.project:nth-child(2) {
+  z-index: 3;
+  transform: translate(-200%);
 }
 
 .project:last-child {
-  z-index: 3;
+  z-index: 4;
+  transform: translate(-300%);
 }
 
 .project h4 {
