@@ -15,6 +15,7 @@ function Projects(props: ProjectsProps) {
                 <Project title="Interface d'administration" />
                 <Project title="Restaurant Le Vingtième" />
                 <Project title="Jeu de dé" />
+                <Project title="Site de e-commerce" />
             </div>
             <a href="#contact">
                 <p>{props.arrowDownText}</p>
