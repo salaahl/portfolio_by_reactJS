@@ -1,7 +1,7 @@
 const target = ['#about-me h2 span', '.project', '#contact h2 span'];
 
 const options = {
-  threshold: 0,
+  threshold: 1,
 };
 
 const observer = new IntersectionObserver(handleIntersection, options);
