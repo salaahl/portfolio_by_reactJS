@@ -1,6 +1,7 @@
 const target = ['#about-me h2 span', '.project', '#contact h2 span'];
 
 const options = {
+  root: document.body,
   threshold: 0.25,
 };
 
