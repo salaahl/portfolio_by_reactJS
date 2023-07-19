@@ -746,7 +746,7 @@ a p {
   background-color: gray;
 }
 
-#projects .content {
+#projects > .content {
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
@@ -789,7 +789,7 @@ a p {
   transform: translate(-200%);
 }
 
-.project:nth-child(3) {
+.project:nth-child(4) {
   z-index: 4;
   transform: translate(-300%);
 }
