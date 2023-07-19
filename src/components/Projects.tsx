@@ -40,6 +40,12 @@ function Projects(props: ProjectsProps) {
                     github="https://github.com/salaahl/e-commerce-by-laravel"
                     website="https://salaha-sokhona-ecommerce.herokuapp.com/"
                 />
+                <Project 
+                    title="Bibliothèque locale"
+                    description="En cours. Projet sous python/Django"
+                    github="https://github.com/salaahl/library"
+                    website="https://salaha-sokhona-library-6e6b0019ca6e.herokuapp.com/catalog/"
+                />
             </div>
             <a href="#contact">
                 <p>{props.arrowDownText}</p>
