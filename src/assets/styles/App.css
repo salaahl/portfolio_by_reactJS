@@ -789,9 +789,14 @@ a p {
   transform: translate(-200%);
 }
 
-.project:last-child {
+.project:nth-child(3) {
   z-index: 4;
   transform: translate(-300%);
+}
+
+.project:last-child {
+  z-index: 5;
+  transform: translate(-400%);
 }
 
 .project h4 {
