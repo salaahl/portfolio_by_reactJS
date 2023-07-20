@@ -43,7 +43,7 @@ function Projects(props: ProjectsProps) {
                 <Project 
                     title="Bibliothèque locale"
                     image="\images\books.jpg"
-                    description="En cours. Projet sous python/Django"
+                    description="Bibliothèque numérique de prêt sous python/Django. Compte utilisateur disponible : Ousmane, mdp : Ous75019"
                     github="https://github.com/salaahl/library"
                     website="https://salaha-sokhona-library-6e6b0019ca6e.herokuapp.com/catalog/"
                 />
