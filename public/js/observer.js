@@ -5,7 +5,7 @@ const options = {
 };
 
 const observer = new IntersectionObserver(handleIntersection, options);
-console.log(document.documentElement.clientWidth)
+
 function handleIntersection(entries) {
   entries.map((entry) => {
     function animate() {
@@ -16,14 +16,15 @@ function handleIntersection(entries) {
     }
   });
 }
-
-window.addEventListener("load", () => {
-  target.forEach((index) => {
-    let container = document.querySelectorAll(index);
-    if (container) {
-      for (let i = 0; i < container.length; i++) {
-        observer.observe(container[i]);
+if(document.documentElement.clientWidth >= 1024) {
+  window.addEventListener("load", () => {
+    target.forEach((index) => {
+      let container = document.querySelectorAll(index);
+      if (container) {
+        for (let i = 0; i < container.length; i++) {
+          observer.observe(container[i]);
+        }
       }
-    }
+    });
   });
-});
+}
