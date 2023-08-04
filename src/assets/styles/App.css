@@ -758,6 +758,10 @@ a p {
   transform: rotate(45deg);
 }
 
+#home {
+  background-color: rgb(51, 29, 44);
+}
+
 #home svg {
   margin: auto;
   background-color: black;
@@ -775,7 +779,7 @@ a p {
 
 #about-me {
   flex-wrap: wrap;
-  background-color: lightsalmon;
+  background-color: rgb(63, 46, 62);
 }
 
 #about-me h2 {
@@ -788,7 +792,7 @@ a p {
 }
 
 #projects {
-  background-color: gray;
+  background-color: rgb(167, 130, 149);
 }
 
 #projects > .content {
@@ -849,7 +853,7 @@ a p {
 
 #contact {
   flex-wrap: wrap;
-  background-color: lightseagreen;
+  background-color: rgb(239, 225, 209);
 }
 
 #contact h2 {
