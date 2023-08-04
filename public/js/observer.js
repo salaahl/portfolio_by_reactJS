@@ -5,7 +5,7 @@ const options = {
 };
 
 const observer = new IntersectionObserver(handleIntersection, options);
-
+console.log(document.documentElement.clientWidth)
 function handleIntersection(entries) {
   entries.map((entry) => {
     function animate() {
@@ -18,7 +18,6 @@ function handleIntersection(entries) {
 }
 
 window.addEventListener("load", () => {
-  alert('load ok');
   target.forEach((index) => {
     let container = document.querySelectorAll(index);
     if (container) {
