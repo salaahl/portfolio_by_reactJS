@@ -779,6 +779,7 @@ a p {
 
 #about-me {
   flex-wrap: wrap;
+  color: white;
   background-color: rgb(63, 46, 62);
 }
 
