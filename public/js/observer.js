@@ -1,5 +1,5 @@
 const target = ['#about-me h2 span', '.project', '#contact h2 span'];
-alert('javascript ok');
+
 const options = {
   threshold: 1,
 };
