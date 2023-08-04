@@ -574,6 +574,18 @@ video {
   #home svg {
     width: 90%;
   }
+
+  #about-me h2 span {
+    text-decoration-color: #343a40;
+  }
+
+  .project {
+    transform: translate(-0%);
+  }
+
+  #contact h2 span {
+    margin: 0%;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
