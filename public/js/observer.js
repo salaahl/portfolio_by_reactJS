@@ -18,17 +18,7 @@ function handleIntersection(entries) {
 }
 
 window.addEventListener("load", () => {
-  target.forEach((index) => {
-    let container = document.querySelectorAll(index);
-    if (container) {
-      for (let i = 0; i < container.length; i++) {
-        observer.observe(container[i]);
-      }
-    }
-  });
-});
-
-screen.addEventListener("load", () => {
+  alert('load ok');
   target.forEach((index) => {
     let container = document.querySelectorAll(index);
     if (container) {
