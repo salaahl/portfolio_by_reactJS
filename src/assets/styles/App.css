@@ -597,10 +597,10 @@ video {
     padding: 0 5% 0 5%;
   }
 
-  #home > a,
-  #about-me > a,
-  #projects > a,
-  #contact > a {
+  #home nav > a,
+  #about-me nav > a,
+  #projects nav > a,
+  #contact nav > a {
     width: 8%;
     margin: 2%;
   }
@@ -720,10 +720,10 @@ a p {
   height: 100dvh;
 }
 
-#home > a,
-#about-me > a,
-#projects > a,
-#contact > a {
+#home nav > a,
+#about-me nav > a,
+#projects nav > a,
+#contact nav > a {
   display: flex;
   justify-content: center;
   align-items: center;
