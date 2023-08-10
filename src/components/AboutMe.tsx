@@ -7,20 +7,24 @@ interface AboutMeProps {
 
 function AboutMe(props: AboutMeProps) {
     return (
-        <div id="about-me">
-            <a href="#home">
-                <p>{props.arrowUpText}</p>
-                <i className="arrow up"></i>
-            </a>
+        <section id="about-me">
+            <nav>
+                <a href="#home">
+                    <p>{props.arrowUpText}</p>
+                    <i className="arrow up"></i>
+                </a>
+            </nav>
             <div className="content">
                 <h2>{props.title}<span>moi</span></h2>
                 <p>{props.description}</p>
             </div>
-            <a href="#projects">
-                <p>{props.arrowDownText}</p>
-                <i className="arrow down"></i>
-            </a>
-        </div>
+            <nav>
+                <a href="#projects">
+                    <p>{props.arrowDownText}</p>
+                    <i className="arrow down"></i>
+                </a>
+            </nav>
+        </section>
     );
 }
 
