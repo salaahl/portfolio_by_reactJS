@@ -5,10 +5,12 @@ interface HomeProps {
 
 function Home(props: HomeProps) {
     return (
-        <div id="home">
-            <a href="#">
-                <i className="arrow up"></i>
-            </a>
+        <section id="home">
+            <nav>
+                <a href="#">
+                    <i className="arrow up"></i>
+                </a>
+            </nav>
             <div className="bg-doodle"></div>
             <svg viewBox="0 0 600 200">
                 <symbol id="s-text">
@@ -20,11 +22,13 @@ function Home(props: HomeProps) {
                 <use className="text" xlinkHref="#s-text"></use>
                 <use className="text" xlinkHref="#s-text"></use>
             </svg>
-            <a href="#about-me">
-                <p>{props.arrowDownText}</p>
-                <i className="arrow down"></i>
-            </a>
-        </div>
+            <nav>
+                <a href="#about-me">
+                    <p>{props.arrowDownText}</p>
+                    <i className="arrow down"></i>
+                </a>
+            </nav>
+        </section>
     );
 }
 
