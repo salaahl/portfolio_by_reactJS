@@ -6,11 +6,13 @@ interface ProjectsProps {
 
 function Projects(props: ProjectsProps) {
     return (
-        <div id="projects">
-            <a href="#about-me">
-                <p>{props.arrowUpText}</p>
-                <i className="arrow up"></i>
-            </a>
+        <section id="projects">
+            <nav>
+                <a href="#about-me">
+                    <p>{props.arrowUpText}</p>
+                    <i className="arrow up"></i>
+                </a>
+            </nav>
             <div className="content">
                 <Project 
                     title="Interface d'administration"
@@ -53,11 +55,13 @@ function Projects(props: ProjectsProps) {
                     website="https://salaha-sokhona-library-6e6b0019ca6e.herokuapp.com/catalog/"
                 />
             </div>
-            <a href="#contact">
-                <p>{props.arrowDownText}</p>
-                <i className="arrow down"></i>
-            </a>
-        </div>
+            <nav>
+                <a href="#contact">
+                    <p>{props.arrowDownText}</p>
+                    <i className="arrow down"></i>
+                </a>
+            </nav>
+        </section>
     );
 }
 
@@ -78,25 +82,25 @@ interface ProjectProps {
 
 function Project(props: ProjectProps) {
     return (
-        <div className="project">
-            <div className="content">
+        <article className="project">
+            <section className="content">
                 <img src={props.image} />
                 <h4>{props.title}</h4>
                 <p>{props.description}</p>
-            </div>
-            <div className="stack">
+            </section>
+            <section className="stack">
                 <h5>Stack technique :</h5>
                 {props.stack}
-            </div>
-            <div className="links">
+            </section>
+            <section className="links">
                 <a href={props.github} target="_blank">
                     <button className="button-18" role="button">Github</button>
                 </a>
                 <a href={props.website} target="_blank">
                     <button className="button-18" role="button">Site</button>
                 </a>
-            </div>
-        </div>
+            </section>
+        </article>
     )
 };
 
