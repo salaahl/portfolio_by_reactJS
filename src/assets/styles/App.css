@@ -563,10 +563,10 @@ video {
     padding: 0 2% 0 2%;
   }
 
-  #home a,
-  #about-me a,
-  #projects a,
-  #contact a {
+  #home nav,
+  #about-me nav,
+  #projects nav,
+  #contact nav {
     width: 15%;
     margin: 5%;
   }
@@ -597,10 +597,10 @@ video {
     padding: 0 5% 0 5%;
   }
 
-  #home nav > a,
-  #about-me nav > a,
-  #projects nav > a,
-  #contact nav > a {
+  #home > nav,
+  #about-me > nav,
+  #projects > nav,
+  #contact > nav {
     width: 8%;
     margin: 2%;
   }
@@ -720,26 +720,26 @@ a p {
   height: 100dvh;
 }
 
-#home nav > a,
-#about-me nav > a,
-#projects nav > a,
-#contact nav > a {
+#home > nav,
+#about-me > nav,
+#projects > nav,
+#contact > nav {
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
 }
 
-#home a:has(.up),
-#about-me a:has(.up),
-#projects a:has(.up),
-#contact a:has(.up) {
+#home nav:has(.up),
+#about-me nav:has(.up),
+#projects nav:has(.up),
+#contact nav:has(.up) {
   flex-direction: column-reverse;
 }
 
-#home a:has(.down),
-#about-me a:has(.down),
-#projects a:has(.down) {
+#home nav:has(.down),
+#about-me nav:has(.down),
+#projects nav:has(.down) {
   flex-direction: column;
 }
 
