@@ -730,6 +730,14 @@ a p {
   color: white;
 }
 
+#home a,
+#about-me a,
+#projects a,
+#contact a {
+  display: flex;
+  align-items: center;
+}
+
 #home a:has(.up),
 #about-me a:has(.up),
 #projects a:has(.up),
