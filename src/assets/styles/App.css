@@ -730,16 +730,16 @@ a p {
   color: white;
 }
 
-#home nav:has(.up),
-#about-me nav:has(.up),
-#projects nav:has(.up),
-#contact nav:has(.up) {
+#home a:has(.up),
+#about-me a:has(.up),
+#projects a:has(.up),
+#contact a:has(.up) {
   flex-direction: column-reverse;
 }
 
-#home nav:has(.down),
-#about-me nav:has(.down),
-#projects nav:has(.down) {
+#home a:has(.down),
+#about-me a:has(.down),
+#projects a:has(.down) {
   flex-direction: column;
 }
 
