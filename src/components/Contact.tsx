@@ -16,7 +16,7 @@ function Contact(props: ContactProps) {
             <div className="content">
                 <h2><span>Con</span><span>tact</span></h2>
                 <p>
-                    Mail : <a href={props.mailto}>{props.mail}</a>
+                    <a href={props.mailto}>{props.mail}</a>
                 </p>
             </div>
             <nav>
