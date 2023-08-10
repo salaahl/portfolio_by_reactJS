@@ -6,21 +6,25 @@ interface ContactProps {
 
 function Contact(props: ContactProps) {
     return (
-        <div id="contact">
-            <a href="#projects">
-                <p>{props.arrowUpText}</p>
-                <i className="arrow up"></i>
-            </a>
+        <section id="contact">
+            <nav>
+                <a href="#projects">
+                    <p>{props.arrowUpText}</p>
+                    <i className="arrow up"></i>
+                </a>
+            </nav>
             <div className="content">
                 <h2><span>Con</span><span>tact</span></h2>
                 <p>
                     Mail : <a href={props.mailto}>{props.mail}</a>
                 </p>
             </div>
-            <a href="#">
-                <i className="arrow down"></i>
-            </a>
-        </div>
+            <nav>
+                <a href="#">
+                    <i className="arrow down"></i>
+                </a>
+            </nav>
+        </section>
     );
 }
 
