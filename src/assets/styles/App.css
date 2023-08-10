@@ -571,6 +571,10 @@ video {
     margin: 5%;
   }
 
+  .arrow {
+    padding: 3vw;
+  }
+
   #home svg {
     width: 90%;
   }
@@ -603,6 +607,10 @@ video {
   #contact > nav {
     width: 8%;
     margin: 2%;
+  }
+
+  .arrow {
+    padding: 1vw;
   }
 
   #home svg {
@@ -755,7 +763,6 @@ a p {
   border: solid white;
   border-width: 0 1vw 1vw 0;
   display: inline-block;
-  padding: 15%;
 }
 
 .up {
@@ -781,7 +788,7 @@ a p {
   text-transform: uppercase;
 }
 
-#home a:first-of-type {
+#home nav:first-of-type {
   z-index: -1;
 }
 
@@ -879,7 +886,7 @@ a p {
   margin: 0%;
 }
 
-#contact a:last-of-type {
+#contact nav:last-of-type {
   z-index: -1;
 }
 
