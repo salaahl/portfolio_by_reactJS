@@ -54,6 +54,14 @@ function Projects(props: ProjectsProps) {
                     github="https://github.com/salaahl/library"
                     website="https://salaha-sokhona-library-6e6b0019ca6e.herokuapp.com/catalog/"
                 />
+                <Project 
+                    title="Quizz"
+                    image="\images\quizz.jpg"
+                    description="Quizz général sous Angular."
+                    stack="HTML, JS, TypeScript, CSS, SASS, Angular"
+                    github="https://github.com/salaahl/MyQuizz"
+                    website="https://salaha-sokhona-quizz-9443d49695cb.herokuapp.com/"
+                />
             </div>
             <nav>
                 <a href="#contact">
