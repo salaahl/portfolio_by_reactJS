@@ -42,7 +42,7 @@ function Projects(props: ProjectsProps) {
                     title="Site de e-commerce"
                     image="\images\e-commerce.jpg"
                     description="Trouvez le parfum parfait pour chaque occassion sur notre site de e-commerce de parfums."
-                    stack="HTML, JS, CSS, PHP, MySQL, Laravel, Tailwind CSS"
+                    stack="HTML, JS, CSS, PHP, MySQL, Laravel, Blade, Tailwind CSS"
                     github="https://github.com/salaahl/e-commerce-by-laravel"
                     website="https://salaha-sokhona-ecommerce.herokuapp.com/"
                 />
