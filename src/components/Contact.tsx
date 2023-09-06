@@ -1,6 +1,8 @@
 interface ContactProps {
     mailto: string;
     mail: string;
+    linkedin: string;
+    github: string;
     arrowUpText: string;
 }
 
