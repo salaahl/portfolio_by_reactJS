@@ -822,34 +822,11 @@ a p {
 
 .project > section {
   filter: opacity(0);
+  transition: filter 1s;
 }
 
 .project.animate > section {
   filter: opacity(1);
-}
-
-.project:first-child.animate > section {
-  transition: filter .2s;
-}
-
-.project:nth-child(2).animate > section {
-  transition: filter .4s;
-}
-
-.project:nth-child(3).animate > section {
-  transition: filter .6s;
-}
-
-.project:nth-child(4).animate > section {
-  transition: filter .8s;
-}
-
-.project:nth-child(5).animate > section {
-  transition: filter 1s;
-}
-
-.project:last-child.animate > section {
-  transition: filter 1.2s;
 }
 
 .project h4 {
@@ -867,10 +844,6 @@ a p {
 
 .project img {
   border-radius: 200px;
-}
-
-.project.animate {
-  transform: translate(-0%);
 }
 
 .project .links {
