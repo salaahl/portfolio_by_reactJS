@@ -646,10 +646,15 @@ video {
     z-index: 4;
     transform: translate(-300%);
   }
-  
-  .project:last-child {
+
+  .project:nth-child(5) {
     z-index: 5;
     transform: translate(-400%);
+  }
+  
+  .project:last-child {
+    z-index: 6;
+    transform: translate(-500%);
   }
 
   #contact h2 span:first-child {
