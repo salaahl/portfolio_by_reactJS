@@ -628,33 +628,36 @@ video {
     margin: 0 2% 0 2%;
   }
 
-  .project:first-child {
-    z-index: 1;
+  .project > * {
+    filter: opacity(0);
   }
   
-  .project:nth-child(2) {
-    z-index: 2;
-    transform: translate(-100%);
+  .project .animate > * {
+    filter: opacity(1);
   }
   
-  .project:nth-child(3) {
-    z-index: 3;
-    transform: translate(-200%);
+  .project .animate:first-child > * {
+    transition: opacity .2s;
   }
   
-  .project:nth-child(4) {
-    z-index: 4;
-    transform: translate(-300%);
+  .project .animate:nth-child(2) > * {
+    transition: opacity .4s;
+  }
+  
+  .project .animate:nth-child(3) > * {
+    transition: opacity .6s;
+  }
+  
+  .project .animate:nth-child(4) > * {
+    transition: opacity .8s;
   }
 
-  .project:nth-child(5) {
-    z-index: 5;
-    transform: translate(-400%);
+  .project .animate:nth-child(5) > * {
+    transition: opacity 1s;
   }
   
-  .project:last-child {
-    z-index: 6;
-    transform: translate(-500%);
+  .project .animate:last-child > * {
+    transition: opacity 1.2s;
   }
 
   #contact h2 span:first-child {
