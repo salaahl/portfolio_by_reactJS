@@ -636,27 +636,27 @@ video {
     filter: opacity(1);
   }
   
-  .project:first-child .animate > * {
+  .project:first-child.animate > * {
     transition: opacity .2s;
   }
   
-  .project:nth-child(2) .animate > * {
+  .project:nth-child(2).animate > * {
     transition: opacity .4s;
   }
   
-  .project:nth-child(3) .animate > * {
+  .project:nth-child(3).animate > * {
     transition: opacity .6s;
   }
   
-  .project:nth-child(4) .animate > * {
+  .project:nth-child(4).animate > * {
     transition: opacity .8s;
   }
 
-  .project:nth-child(5) .animate > * {
+  .project:nth-child(5).animate > * {
     transition: opacity 1s;
   }
   
-  .project:last-child .animate > * {
+  .project:last-child.animate > * {
     transition: opacity 1.2s;
   }
 
