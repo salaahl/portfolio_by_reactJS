@@ -62,6 +62,14 @@ function Projects(props: ProjectsProps) {
                     github="https://github.com/salaahl/MyQuizz"
                     website="https://salaha-sokhona-quizz-9443d49695cb.herokuapp.com/"
                 />
+                <Project 
+                    title="Bloc-notes"
+                    image="\images\notepad.jpg"
+                    description="Bloc-notes sous expressJS. Compte utilisateur disponible : sokhona.salaha@gmail.com, mdp : Sokhona"
+                    stack="HTML (PUG), JS, CSS, Bulma, MongoDB, Mongoose"
+                    github="https://github.com/salaahl/notepad"
+                    website="https://salaha-sokhona-notepad-ed791a5cfd1e.herokuapp.com/login"
+                />
             </div>
             <nav>
                 <a href="#contact">
