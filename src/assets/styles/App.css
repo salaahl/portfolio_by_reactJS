@@ -643,27 +643,6 @@ video {
 }
 
 
-
-body {
-  --sb-track-color: #232E33;
-  --sb-thumb-color: #ffffff;
-  --sb-size: 10px;
-}
-
-body::-webkit-scrollbar {
-  width: var(--sb-size) 
-}
-
-body::-webkit-scrollbar-track {
-  background: var(--sb-track-color);
-  border-radius: 10px;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: var(--sb-thumb-color);
-  border-radius: 10px;
-}
-
 html,
 body {
   font-family: 'Oswald', sans-serif;
@@ -822,6 +801,26 @@ a p {
   overflow-x: auto;
   height: 80%;
   width: 100%;
+}
+
+#projects > .content {
+  --sb-track-color: #232E33;
+  --sb-thumb-color: #ffffff;
+  --sb-size: 10px;
+}
+
+#projects > .content::-webkit-scrollbar {
+  width: var(--sb-size) 
+}
+
+#projects > .content::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 10px;
+}
+
+#projects > .content::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 10px;
 }
 
 .project {
