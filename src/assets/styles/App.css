@@ -587,10 +587,6 @@ video {
   .project {
     transform: translate(-0%);
   }
-
-  #contact h2 span {
-    margin: 0%;
-  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -629,11 +625,11 @@ video {
   }
 
   #contact h2 span:first-child {
-    margin-right: 10%;
+    transform: translateX(-50%);
   }
   
   #contact h2 span:last-child {
-    margin-left: 10%;
+    transform: translateX(50%);
   }
 }
 
@@ -900,11 +896,12 @@ a p {
 }
 
 #contact h2 span {
+  display: inline-block;
   transition: all 1s;
 }
 
 #contact h2 span.animate {
-  margin: 0%;
+  transform: translateX(0%);
 }
 
 #contact nav:last-of-type {
