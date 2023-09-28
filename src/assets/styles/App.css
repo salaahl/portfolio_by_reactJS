@@ -801,25 +801,20 @@ a p {
   overflow-x: auto;
   height: 80%;
   width: 100%;
-}
-
-#projects > .content {
-  --sb-track-color: #232E33;
-  --sb-thumb-color: #ffffff;
-  --sb-size: 10px;
+  padding: 0.5% 0;
 }
 
 #projects > .content::-webkit-scrollbar {
-  width: var(--sb-size) 
+  width: 10px;
 }
 
 #projects > .content::-webkit-scrollbar-track {
-  background: var(--sb-track-color);
+  background-color: #232E33;
   border-radius: 10px;
 }
 
 #projects > .content::-webkit-scrollbar-thumb {
-  background: var(--sb-thumb-color);
+  background-color: #ffffff;
   border-radius: 10px;
 }
 
@@ -835,6 +830,14 @@ a p {
   border-radius: 10px;
   color: #fff;
   background-color: #343a40;
+}
+
+.project:first-child {
+  margin-left: 0;
+}
+
+.project:last-child {
+  margin-right: 0;
 }
 
 .project .content {
