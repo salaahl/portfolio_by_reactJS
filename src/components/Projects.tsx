@@ -14,13 +14,37 @@ function Projects(props: ProjectsProps) {
                 </a>
             </nav>
             <div className="content">
-                <Project 
-                    title="Interface d'administration"
-                    image="\images\administration.jpg"
-                    description="Interface d'administration d'une franchise de sport. Identifiant administrateur : sokhona.salaha@gmail.com. Mot de passe : Sokhona."
-                    stack="HTML, JS, CSS, PHP, MySQL, JQuery, Bootstrap"
-                    github="https://github.com/salaahl/ECF"
-                    website="https://interface-d-administration.herokuapp.com/login.html"
+                <Project
+                    title="Bibliothèque locale"
+                    image="\images\books.jpg"
+                    description="Bibliothèque numérique de prêt sous python/Django. Compte utilisateur disponible : Ousmane, mdp : Ous75019"
+                    stack="HTML, JS, CSS, Python, Postgres, Django, Bootstrap"
+                    github="https://github.com/salaahl/library"
+                    website="https://salaha-sokhona-library-6e6b0019ca6e.herokuapp.com/catalog/"
+                />
+                <Project
+                    title="DiaShop-b"
+                    image="\images\diashop-b.jpg"
+                    description="Les dernières tendances de la mode pour hommes et femmes."
+                    stack="HTML, JS, CSS, PHP, MySQL, Laravel, Blade, Tailwind CSS"
+                    github="https://github.com/salaahl/"
+                    website="https://diashop-44ca2fd005dc.herokuapp.com/"
+                />
+                <Project
+                    title="Quizz"
+                    image="\images\quizz.jpg"
+                    description="Quizz général sous Angular."
+                    stack="HTML, JS, TypeScript, CSS, SASS, Angular"
+                    github="https://github.com/salaahl/MyQuizz"
+                    website="https://salaha-sokhona-quizz-9443d49695cb.herokuapp.com/"
+                />
+                <Project
+                    title="Bloc-notes"
+                    image="\images\notepad.jpg"
+                    description="Bloc-notes sous expressJS. Compte utilisateur disponible : sokhona.salaha@gmail.com, mdp : Sokhona"
+                    stack="HTML (PUG), JS, CSS, Bulma, MongoDB, Mongoose"
+                    github="https://github.com/salaahl/notepad"
+                    website="https://salaha-sokhona-notepad-ed791a5cfd1e.herokuapp.com/login"
                 />
                 <Project
                     title="Restaurant Le Vingtième"
@@ -30,45 +54,29 @@ function Projects(props: ProjectsProps) {
                     github="https://github.com/salaahl/restaurant_project"
                     website="https://restaurant-le-vingtieme.herokuapp.com/"
                 />
-                <Project 
-                    title="Jeu de dés" 
+                <Project
+                    title="Jeu de dés"
                     image="\images\dice.jpg"
                     description="Jeu de dés developpé sous HTML, CSS et Javascript."
                     stack="HTML, JS, CSS, Bootstrap"
                     github="https://replit.com/@SalahS/EXAM-jeu-STUDI"
                     website="https://exam-jeu-studi.salahs.repl.co/"
                 />
-                <Project 
+                <Project
+                    title="Interface d'administration"
+                    image="\images\administration.jpg"
+                    description="Interface d'administration d'une franchise de sport. Identifiant administrateur : sokhona.salaha@gmail.com. Mot de passe : Sokhona."
+                    stack="HTML, JS, CSS, PHP, MySQL, JQuery, Bootstrap"
+                    github="https://github.com/salaahl/ECF"
+                    website="https://interface-d-administration.herokuapp.com/login.html"
+                />
+                <Project
                     title="Site de e-commerce"
                     image="\images\e-commerce.jpg"
                     description="Trouvez le parfum parfait pour chaque occassion sur notre site de e-commerce de parfums."
                     stack="HTML, JS, CSS, PHP, MySQL, Laravel, Blade, Tailwind CSS"
                     github="https://github.com/salaahl/e-commerce-by-laravel"
                     website="https://salaha-sokhona-ecommerce.herokuapp.com/"
-                />
-                <Project 
-                    title="Bibliothèque locale"
-                    image="\images\books.jpg"
-                    description="Bibliothèque numérique de prêt sous python/Django. Compte utilisateur disponible : Ousmane, mdp : Ous75019"
-                    stack="HTML, JS, CSS, Python, Postgres, Django, Bootstrap"
-                    github="https://github.com/salaahl/library"
-                    website="https://salaha-sokhona-library-6e6b0019ca6e.herokuapp.com/catalog/"
-                />
-                <Project 
-                    title="Quizz"
-                    image="\images\quizz.jpg"
-                    description="Quizz général sous Angular."
-                    stack="HTML, JS, TypeScript, CSS, SASS, Angular"
-                    github="https://github.com/salaahl/MyQuizz"
-                    website="https://salaha-sokhona-quizz-9443d49695cb.herokuapp.com/"
-                />
-                <Project 
-                    title="Bloc-notes"
-                    image="\images\notepad.jpg"
-                    description="Bloc-notes sous expressJS. Compte utilisateur disponible : sokhona.salaha@gmail.com, mdp : Sokhona"
-                    stack="HTML (PUG), JS, CSS, Bulma, MongoDB, Mongoose"
-                    github="https://github.com/salaahl/notepad"
-                    website="https://salaha-sokhona-notepad-ed791a5cfd1e.herokuapp.com/login"
                 />
             </div>
             <nav>
