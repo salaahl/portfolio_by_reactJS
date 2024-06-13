@@ -35,7 +35,7 @@ function Projects(props: ProjectsProps) {
                     image="\images\nutri_verif.jpg"
                     description="Application web de food checking alimentée par l'API d'OpenFactsFood. Sous Vue.js."
                     stack="HTML, JS, TypeScript, CSS, Pinia, Vue.js"
-                    github="https://github.com/salaahl/nutri_verif"
+                    github="https://github.com/salaahl/nutri_verif_by_vue.js"
                     website="https://nutriverif-f4c47efc8590.herokuapp.com/"
                 />
                 <Project
