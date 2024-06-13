@@ -31,6 +31,14 @@ function Projects(props: ProjectsProps) {
                     website="https://diashop-44ca2fd005dc.herokuapp.com/"
                 />
                 <Project
+                    title="NutriVérif"
+                    image="\images\nutri_verif.jpg"
+                    description="Application web de food checking alimentée par l'API d'OpenFactsFood. Sous Vue.js."
+                    stack="HTML, JS, TypeScript, CSS, Pinia, Vue.js"
+                    github="https://github.com/salaahl/nutri_verif"
+                    website="https://nutriverif-f4c47efc8590.herokuapp.com/"
+                />
+                <Project
                     title="Quizz"
                     image="\images\quizz.jpg"
                     description="Quizz général sous Angular."
