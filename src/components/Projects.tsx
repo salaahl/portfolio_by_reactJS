@@ -36,7 +36,7 @@ function Projects(props: ProjectsProps) {
                     description="Application web de food checking alimentée par l'API d'OpenFactsFood. Sous Vue.js."
                     stack="HTML, JS, TypeScript, CSS, Tailwind, Pinia, Vue.js"
                     github="https://github.com/salaahl/nutri_verif_by_vue.js"
-                    website="https://nutriverif-f4c47efc8590.herokuapp.com/"
+                    website="https://nutriverif-71662e666d39.herokuapp.com/"
                 />
                 <Project
                     title="Quizz"
@@ -58,7 +58,7 @@ function Projects(props: ProjectsProps) {
                     title="Restaurant Le Vingtième"
                     image="\images\restaurant.jpg"
                     description="Le Vingtième c'est la cuisine de toutes les gourmandises, alliant jus pressés minute de fruits et légumes & cocktails maison, recettes savoureuses..."
-                    stack="HTML, JS, CSS, PHP, MySQL, Bootstrap"
+                    stack="HTML, JS, CSS, PHP, Symfony, MySQL, Bootstrap"
                     github="https://github.com/salaahl/restaurant_project"
                     website="https://restaurant-le-vingtieme.herokuapp.com/"
                 />
