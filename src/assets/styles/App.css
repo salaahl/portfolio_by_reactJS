@@ -876,6 +876,7 @@ a p {
 
 .project img {
   border-radius: 200px;
+  aspect-ratio: 1;
 }
 
 .project .links {
