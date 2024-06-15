@@ -898,7 +898,7 @@ a p {
 
 #contact h2 span {
   display: inline-block;
-  transition: all 1s;
+  transition: all 1s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 
 #contact h2 span.animate {
