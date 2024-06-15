@@ -5,6 +5,7 @@ if (!'IntersectionObserver' in window &&
     !'intersectionRatio' in window.IntersectionObserverEntry.prototype) {
     target.forEach((selector) => {
       document.querySelectorAll(selector).forEach((ele) => {
+        alert('ok')
         ele.classList.add('animate');
       })
     });
