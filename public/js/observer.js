@@ -1,3 +1,4 @@
+/*
 const target = ['#about-me h2 span', '.project', '#contact h2 span'];
 
 if (!'IntersectionObserver' in window &&
@@ -38,3 +39,4 @@ if (!'IntersectionObserver' in window &&
     });
   }
 }
+*/
