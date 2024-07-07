@@ -3,18 +3,11 @@ interface ContactProps {
     mail: string;
     linkedin: string;
     github: string;
-    arrowUpText: string;
 }
 
 function Contact(props: ContactProps) {
     return (
         <section id="contact">
-            <nav>
-                <a href="#projects">
-                    <p>{props.arrowUpText}</p>
-                    <i className="arrow up"></i>
-                </a>
-            </nav>
             <div className="content">
                 <h2><span>Con</span><span>tact</span></h2>
                 <p>
@@ -27,11 +20,6 @@ function Contact(props: ContactProps) {
                     <a href={props.github}>Github</a>
                 </p>
             </div>
-            <nav>
-                <a href="#">
-                    <i className="arrow down"></i>
-                </a>
-            </nav>
         </section>
     );
 }
@@ -41,7 +29,6 @@ Contact.defaultProps = {
     mail: 'sokhona.salaha@gmail.com',
     linkedin: 'https://www.linkedin.com/in/salaha-sokhona/',
     github: 'https://github.com/salaahl',
-    arrowUpText: 'Mes projets'
 };
 
 export default Contact;

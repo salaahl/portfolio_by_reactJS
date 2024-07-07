@@ -1,18 +1,13 @@
 interface ProjectsProps {
     description: string;
-    arrowUpText: string;
-    arrowDownText: string;
 }
 
 function Projects(props: ProjectsProps) {
     return (
         <section id="projects">
-            <nav>
-                <a href="#about-me">
-                    <p>{props.arrowUpText}</p>
-                    <i className="arrow up"></i>
-                </a>
-            </nav>
+            <div className="header">
+                <h2>Projets</h2>
+            </div>
             <div className="content">
                 <Project
                     title="Bibliothèque locale"
@@ -87,20 +82,12 @@ function Projects(props: ProjectsProps) {
                     website="https://salaha-sokhona-ecommerce.herokuapp.com/"
                 />
             </div>
-            <nav>
-                <a href="#contact">
-                    <p>{props.arrowDownText}</p>
-                    <i className="arrow down"></i>
-                </a>
-            </nav>
         </section>
     );
 }
 
 Projects.defaultProps = {
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    arrowUpText: 'A propos de moi',
-    arrowDownText: 'Contact'
 };
 
 interface ProjectProps {
