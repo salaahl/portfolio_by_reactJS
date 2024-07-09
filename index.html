@@ -25,8 +25,30 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <script type="module" src="/public/js/particles.min.js"></script>
-    <script type="module" src="/public/js/particles.js"></script>
-    <script type="module" src="/public/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+    <script>
+      window.onload = function () {
+        window.Particles.init({
+          selector: '.background',
+          speed: 0.2,
+          color: ['#c6c6c6', '#303030'],
+          connectParticles: true,
+          responsive: [
+            {
+              breakpoint: 1024,
+              options: {
+                maxParticles: 30,
+              },
+            },
+            {
+              breakpoint: 768,
+              options: {
+                maxParticles: 15,
+              },
+            },
+          ],
+        });
+      };
+    </script>
   </body>
 </html>
