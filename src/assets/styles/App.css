@@ -915,7 +915,8 @@ footer {
     height: 50px;
     aspect-ratio: 1;
     padding: 10px;
-    background: white;
+    background-color: rgb(255, 255, 255, 0.5);
+    backdrop-filter: blur(4px);
     border-radius: 99px;
   }
 }
