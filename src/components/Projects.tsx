@@ -11,7 +11,7 @@ function Projects(props: ProjectsProps) {
             <div className="content">
                 <nav>
                     <a href="#" id="slide-left">
-                        <i class="fa-solid fa-chevron-left"></i>
+                        <i className="fa-solid fa-chevron-left"></i>
                     </a>
                 </nav>
                 <Project
@@ -88,7 +88,7 @@ function Projects(props: ProjectsProps) {
                 />
                 <nav>
                     <a href="#" id="slide-right">
-                        <i class="fa-solid fa-chevron-right"></i>
+                        <i className="fa-solid fa-chevron-right"></i>
                     </a>
                 </nav>
             </div>
