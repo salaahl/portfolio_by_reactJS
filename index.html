@@ -29,21 +29,20 @@
     <script>
       window.onload = function () {
         window.Particles.init({
-          selector: '.background',
-          speed: 0.2,
+          selector: '#projects .background',
           color: ['#c6c6c6', '#303030'],
           connectParticles: true,
           responsive: [
             {
               breakpoint: 1024,
               options: {
-                maxParticles: 30,
+                maxParticles: 60,
               },
             },
             {
               breakpoint: 768,
               options: {
-                maxParticles: 15,
+                maxParticles: 30,
               },
             },
           ],

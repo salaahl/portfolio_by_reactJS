@@ -700,6 +700,7 @@ a p {
   padding-top: 5%;
   padding-bottom: 5%;
   font-size: 500%;
+  z-index: 1;
 }
 
 #projects > .content::-webkit-scrollbar {
@@ -713,6 +714,7 @@ a p {
   scroll-snap-type: x mandatory;
   overflow-x: auto;
   width: 100%;
+  z-index: 1;
 }
 
 .project {
@@ -769,11 +771,13 @@ a p {
 }
 
 #projects .background {
-  position: fixed;
+  position: absolute;
   display: block;
   bottom: 0;
   left: 0;
-  z-index: -1;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
 }
 
 #contact {
@@ -1075,7 +1079,7 @@ footer {
 
   47.6%,
   87% {
-    background-color: unset;
+    background-color: rgb(255, 255, 255);
   }
 
   100% {
