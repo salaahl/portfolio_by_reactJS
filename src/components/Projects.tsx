@@ -82,6 +82,7 @@ function Projects(props: ProjectsProps) {
                     website="https://salaha-sokhona-ecommerce.herokuapp.com/"
                 />
             </div>
+            <canvas className="background"></canvas>
         </section>
     );
 }
