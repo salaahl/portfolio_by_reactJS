@@ -1,5 +1,3 @@
-import { Particles } from './particles.min.js';
-
 window.onload = function () {
   Particles.init({
     selector: '.background',
