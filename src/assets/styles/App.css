@@ -902,7 +902,7 @@ footer {
   }
 
   #projects > .content > nav svg {
-    height: 8%;
+    height: 50px;
     aspect-ratio: 1;
     padding: 10px;
     background: white;
