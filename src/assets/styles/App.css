@@ -888,18 +888,17 @@ footer {
 @media only screen and (min-width: 768px) {
   #projects > .content > nav {
     position: sticky;
-    left: -4%;
     align-content: center;
     z-index: 1;
     transition: all 0.5s;
   }
 
   #projects > .content > nav:first-child {
-    left: 0;
+    left: -4%;
   }
 
   #projects > .content > nav:last-child {
-    right: 0;
+    right: -4%;
   }
 
   #projects > .content > nav svg {
