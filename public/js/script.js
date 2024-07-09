@@ -1,5 +1,5 @@
 window.onload = function () {
-  Particles.init({
+  window.Particles.init({
     selector: '.background',
     speed: 0.2,
     color: ['#c6c6c6', '#303030'],
