@@ -47,6 +47,14 @@
             },
           ],
         });
+
+        document.querySelector("#projects #slide-left").onclick = () => {
+          document.querySelector("#projects > .content").scrollLeft += 80;
+        };
+
+        document.querySelector("#projects #slide-right").onclick = () => {
+          document.querySelector("#projects > .content").scrollRight += 80;
+        };        
       };
     </script>
   </body>
