@@ -886,11 +886,21 @@ footer {
 }
 
 @media only screen and (min-width: 768px) {
+  #projects > .content {
+    scroll-behavior: smooth;
+  }
+
   #projects > .content > nav {
     position: sticky;
     align-content: center;
     z-index: 1;
     transition: all 0.5s;
+  }
+
+  #projects > .content > nav > button {
+    padding: 0;
+    border: none;
+    background: none;
   }
 
   #projects > .content > nav:first-child {

@@ -26,38 +26,6 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
-    <script>
-      window.onload = function () {
-        window.Particles.init({
-          selector: '#projects .background',
-          color: ['#c6c6c6', '#303030'],
-          connectParticles: true,
-          responsive: [
-            {
-              breakpoint: 1024,
-              options: {
-                maxParticles: 60,
-              },
-            },
-            {
-              breakpoint: 768,
-              options: {
-                maxParticles: 30,
-              },
-            },
-          ],
-        });
-
-        document.querySelector("#slide-left").onclick = () => {
-          document.querySelector("#projects > .content").scrollLeft += 80;
-          console.log("click");
-        };
-
-        document.querySelector("#slide-right").onclick = () => {
-          document.querySelector("#projects > .content").scrollRight += 80;
-          console.log("click");
-        };        
-      };
-    </script>
+    <script type="module" src="/src/assets/js/script.js"></script>
   </body>
 </html>
