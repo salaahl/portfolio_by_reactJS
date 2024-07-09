@@ -9,6 +9,11 @@ function Projects(props: ProjectsProps) {
                 <h2>Projets</h2>
             </div>
             <div className="content">
+                <nav>
+                    <a href="#" id="slide-left">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </a>
+                </nav>
                 <Project
                     title="Bibliothèque locale"
                     image="\images\books.jpg"
@@ -81,6 +86,11 @@ function Projects(props: ProjectsProps) {
                     github="https://github.com/salaahl/e-commerce-by-laravel"
                     website="https://salaha-sokhona-ecommerce.herokuapp.com/"
                 />
+                <nav>
+                    <a href="#" id="slide-right">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                </nav>
             </div>
             <canvas className="background"></canvas>
         </section>
