@@ -999,8 +999,12 @@ footer {
   }
 
   #about-me h2 span {
-    text-decoration: underline;
-    text-decoration-color: lightgreen;
+    font-size: 150%;
+    line-height: 150%;
+  }
+
+  #about-me h2 span:nth-child(2) {
+    color: rgb(103, 175, 142);
   }
 
   #projects {
