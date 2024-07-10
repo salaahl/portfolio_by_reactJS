@@ -1003,7 +1003,7 @@ footer {
     animation: color-text var(--transition-emphasized);
     animation-timeline: view();
     animation-fill-mode: both;
-    animation-range-start: 40%;
+    animation-range-start: 20%;
     animation-range-end: 60%;
   }
 
