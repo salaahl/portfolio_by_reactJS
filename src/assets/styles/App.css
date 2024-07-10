@@ -1008,8 +1008,6 @@ footer {
   }
 
   #projects > .content {
-    position: sticky;
-    top: 10%;
     animation-range-start: 20%;
     animation-range-end: 100%;
   }
