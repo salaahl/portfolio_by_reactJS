@@ -904,11 +904,11 @@ footer {
   }
 
   #projects > .content > nav:first-child {
-    left: -4%;
+    left: 0;
   }
 
   #projects > .content > nav:last-child {
-    right: -4%;
+    right: 0;
   }
 
   #projects > .content > nav svg {
