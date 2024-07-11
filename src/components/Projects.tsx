@@ -1,3 +1,5 @@
+import imgDiaShop from '../assets/diashop-b.jpg'
+
 interface ProjectsProps {
     description: string;
 }
@@ -26,7 +28,7 @@ function Projects(props: ProjectsProps) {
                 />
                 <Project
                     title="DiaShop-b"
-                    image="\images\diashop-b.jpg"
+                    image={imgDiaShop}
                     description="Les dernières tendances de la mode pour hommes et femmes."
                     stack="HTML, JS, CSS, PHP, MySQL, Laravel, Blade, Tailwind CSS"
                     github="https://github.com/salaahl/"
