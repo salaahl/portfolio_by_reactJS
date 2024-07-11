@@ -1,4 +1,12 @@
-import imgDiaShop from '../assets/diashop-b.jpg'
+import imgLocalLibrary from '../assets/local_library.jpg'
+import imgDiaShop from '../assets/diashop_b.jpg'
+import imgNutriVerif from '../assets/nutri_verif.jpg'
+import imgQuizz from '../assets/quizz.jpg'
+import imgNotepad from '../assets/notepad.jpg'
+import imgRestaurant from '../assets/restaurant.jpg'
+import imgDice from '../assets/dice.jpg'
+import imgAdministration from '../assets/administration.jpg'
+import imgCommerce from '../assets/e_commerce.jpg'
 
 interface ProjectsProps {
     description: string;
@@ -20,7 +28,7 @@ function Projects(props: ProjectsProps) {
                 </nav>
                 <Project
                     title="Bibliothèque locale"
-                    image="\images\books.jpg"
+                    image={imgLocalLibrary}
                     description="Bibliothèque numérique de prêt sous python/Django. Compte utilisateur disponible : Ousmane, mdp : Ous75019"
                     stack="HTML, JS, CSS, Python, Postgres, Django, Bootstrap"
                     github="https://github.com/salaahl/library"
@@ -36,7 +44,7 @@ function Projects(props: ProjectsProps) {
                 />
                 <Project
                     title="NutriVérif"
-                    image="\images\nutri_verif.jpg"
+                    image={imgNutriVerif}
                     description="Application web de food checking alimentée par l'API d'OpenFactsFood. Sous Vue.js."
                     stack="HTML, JS, TypeScript, CSS, Tailwind, Pinia, Vue.js"
                     github="https://github.com/salaahl/nutri_verif_by_vue.js"
@@ -44,7 +52,7 @@ function Projects(props: ProjectsProps) {
                 />
                 <Project
                     title="Quizz"
-                    image="\images\quizz.jpg"
+                    image={imgQuizz}
                     description="Quizz général sous Angular."
                     stack="HTML, JS, TypeScript, CSS, SASS, Angular"
                     github="https://github.com/salaahl/MyQuizz"
@@ -52,7 +60,7 @@ function Projects(props: ProjectsProps) {
                 />
                 <Project
                     title="Bloc-notes"
-                    image="\images\notepad.jpg"
+                    image={imgNotepad}
                     description="Bloc-notes sous expressJS. Compte utilisateur disponible : sokhona.salaha@gmail.com, mdp : Sokhona"
                     stack="HTML (PUG), JS, CSS, Bulma, MongoDB, Mongoose"
                     github="https://github.com/salaahl/notepad"
@@ -60,7 +68,7 @@ function Projects(props: ProjectsProps) {
                 />
                 <Project
                     title="Restaurant Le Vingtième"
-                    image="\images\restaurant.jpg"
+                    image={imgRestaurant}
                     description="Le Vingtième c'est la cuisine de toutes les gourmandises, alliant jus pressés minute de fruits et légumes & cocktails maison, recettes savoureuses..."
                     stack="HTML, JS, CSS, PHP, Symfony, MySQL, Bootstrap"
                     github="https://github.com/salaahl/restaurant_project"
@@ -68,7 +76,7 @@ function Projects(props: ProjectsProps) {
                 />
                 <Project
                     title="Jeu de dés"
-                    image="\images\dice.jpg"
+                    image={imgDice}
                     description="Jeu de dés developpé sous HTML, CSS et Javascript."
                     stack="HTML, JS, CSS, Bootstrap"
                     github="https://replit.com/@SalahS/EXAM-jeu-STUDI"
@@ -76,7 +84,7 @@ function Projects(props: ProjectsProps) {
                 />
                 <Project
                     title="Interface d'administration"
-                    image="\images\administration.jpg"
+                    image={imgAdministration}
                     description="Interface d'administration d'une franchise de sport. Identifiant administrateur : sokhona.salaha@gmail.com. Mot de passe : Sokhona."
                     stack="HTML, JS, CSS, PHP, MySQL, JQuery, Bootstrap"
                     github="https://github.com/salaahl/ECF"
@@ -84,7 +92,7 @@ function Projects(props: ProjectsProps) {
                 />
                 <Project
                     title="Site de e-commerce"
-                    image="\images\e-commerce.jpg"
+                    image={imgCommerce}
                     description="Trouvez le parfum parfait pour chaque occassion sur notre site de e-commerce de parfums."
                     stack="HTML, JS, CSS, PHP, MySQL, Laravel, Blade, Tailwind CSS"
                     github="https://github.com/salaahl/e-commerce-by-laravel"
