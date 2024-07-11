@@ -1,12 +1,12 @@
-import imgLocalLibrary from '../assets/local_library.jpg'
-import imgDiaShop from '../assets/diashop_b.jpg'
-import imgNutriVerif from '../assets/nutri_verif.jpg'
-import imgQuizz from '../assets/quizz.jpg'
-import imgNotepad from '../assets/notepad.jpg'
-import imgRestaurant from '../assets/restaurant.jpg'
-import imgDice from '../assets/dice.jpg'
-import imgAdministration from '../assets/administration.jpg'
-import imgCommerce from '../assets/e_commerce.jpg'
+import imgLocalLibrary from '../assets/images/local_library.jpg'
+import imgDiaShop from '../assets/images/diashop_b.jpg'
+import imgNutriVerif from '../assets/images/nutri_verif.jpg'
+import imgQuizz from '../assets/images/quizz.jpg'
+import imgNotepad from '../assets/images/notepad.jpg'
+import imgRestaurant from '../assets/images/restaurant.jpg'
+import imgDice from '../assets/images/dice.jpg'
+import imgAdministration from '../assets/images/administration.jpg'
+import imgCommerce from '../assets/images/e_commerce.jpg'
 
 interface ProjectsProps {
     description: string;
