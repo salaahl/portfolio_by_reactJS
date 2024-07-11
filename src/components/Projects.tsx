@@ -15,9 +15,9 @@ interface ProjectsProps {
 }
 
 const AsyncImage = (props: any) => {
-    const [loadedSrc, setLoadedSrc] = React.useState(imgPlaceholder);
+    const [loadedSrc, setLoadedSrc] = React.useState(null);
     React.useEffect(() => {
-        setLoadedSrc(imgPlaceholder);
+        setLoadedSrc(null);
         if (props.src) {
             const handleLoad = () => {
                 setLoadedSrc(props.src);
