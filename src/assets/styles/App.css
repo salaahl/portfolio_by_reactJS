@@ -628,7 +628,6 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
 }
 
-#home symbol,
 h2 {
   line-height: 120%;
   font-size: 400%;
@@ -852,6 +851,8 @@ footer {
 
 /* Code du titre d'accueil */
 .text {
+  font-size: 80px;
+  text-transform: uppercase;
   fill: none;
   stroke-width: 3;
   stroke-linejoin: round;
@@ -886,6 +887,10 @@ footer {
 }
 
 @media only screen and (min-width: 768px) {
+  .text {
+    font-size: 60px;
+  }
+
   #projects > .content {
     scroll-behavior: smooth;
   }
@@ -916,13 +921,11 @@ footer {
     aspect-ratio: 1;
     padding: 10px;
     background-color: rgb(255, 255, 255, 0.5);
-    backdrop-filter: blur(4px);
     border-radius: 99px;
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  #home symbol,
   h2 {
     font-size: 500%;
     margin-bottom: 2%;
@@ -955,7 +958,7 @@ footer {
   #projects > .header,
   #projects > .content,
   #contact > * {
-    filter: opacity(0);
+    opacity: 0;
     transform: translateY(25vh);
     animation: fade-y var(--transition-emphasized);
     animation-timeline: view();
@@ -1044,11 +1047,6 @@ footer {
     background: rgb(30, 41, 59);
   }
 
-  #about-me h2 span {
-    font-size: 150%;
-    line-height: 150%;
-  }
-
   #about-me h2 span:nth-child(2) {
     color: rgb(103, 175, 142);
   }
@@ -1123,7 +1121,7 @@ footer {
 
 @keyframes fade-y {
   to {
-    filter: opacity(1);
+    opacity: 1;
     transform: translateY(0vh);
   }
 }
