@@ -1,3 +1,5 @@
+import React from 'react';
+import imgPlaceholder from '../assets/images/placeholder.png'
 import imgLocalLibrary from '../assets/images/local_library.jpg'
 import imgDiaShop from '../assets/images/diashop_b.jpg'
 import imgNutriVerif from '../assets/images/nutri_verif.jpg'
@@ -11,6 +13,30 @@ import imgCommerce from '../assets/images/e_commerce.jpg'
 interface ProjectsProps {
     description: string;
 }
+
+const AsyncImage = (props: any) => {
+    const [loadedSrc, setLoadedSrc] = React.useState(null);
+    React.useEffect(() => {
+        setLoadedSrc(null);
+        if (props.src) {
+            const handleLoad = () => {
+                setLoadedSrc(props.src);
+            };
+            const image = new Image();
+            image.addEventListener('load', handleLoad);
+            image.src = props.src;
+            return () => {
+                image.removeEventListener('load', handleLoad);
+            };
+        }
+    }, [props.src]);
+    if (loadedSrc === props.src) {
+        return (
+            <img {...props} />
+        );
+    }
+    return null;
+};
 
 function Projects(props: ProjectsProps) {
     return (
@@ -128,7 +154,7 @@ function Project(props: ProjectProps) {
     return (
         <article className="project">
             <section className="content">
-                <img src={props.image} />
+                <AsyncImage src={props.image} />
                 <h4>{props.title}</h4>
                 <p>{props.description}</p>
             </section>
