@@ -154,7 +154,7 @@ function Project(props: ProjectProps) {
     return (
         <article className="project">
             <section className="content">
-                <img src={props.image} />
+                <AsyncImage src={props.image} />
                 <h4>{props.title}</h4>
                 <p>{props.description}</p>
             </section>
