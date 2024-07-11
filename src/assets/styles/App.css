@@ -699,7 +699,6 @@ a p {
   padding-top: 5%;
   padding-bottom: 5%;
   font-size: 500%;
-  z-index: 1;
 }
 
 #projects > .content::-webkit-scrollbar {
@@ -707,12 +706,13 @@ a p {
 }
 
 #projects > .content {
+  position: relative;
+  width: 100%;
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
   scroll-snap-type: x mandatory;
   overflow-x: auto;
-  width: 100%;
   z-index: 1;
 }
 
@@ -898,7 +898,6 @@ footer {
   #projects > .content > nav {
     position: sticky;
     align-content: center;
-    z-index: 1;
     transition: all 0.5s;
   }
 
@@ -906,6 +905,7 @@ footer {
     padding: 0;
     border: none;
     background: none;
+    z-index: 2;
   }
 
   #projects > .content > nav:first-child {
