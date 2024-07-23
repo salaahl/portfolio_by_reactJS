@@ -565,6 +565,7 @@ video {
 */
 
 :root {
+  --body-padding-x: 5%;
   --transition-emphasized: linear(
     0 0%,
     0 1.8%,
@@ -618,10 +619,9 @@ body::-webkit-scrollbar-thumb {
 #home,
 #about-me,
 #projects > .header,
-#projects > .content,
 #contact {
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: var(--body-padding-x);
+  padding-right: var(--body-padding-x);
 }
 
 #home svg {
@@ -707,69 +707,71 @@ a p {
 
 #projects > .content {
   position: relative;
-  width: 100%;
+  width: calc(100% - var(--body-padding-x) * 2);
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  scroll-snap-type: x mandatory;
-  overflow-x: auto;
+  flex-wrap: wrap;
   z-index: 1;
 }
 
 .project {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  scroll-snap-align: center;
-  min-width: 230px;
-  max-width: 400px;
-  padding: 2%;
-  margin: 0 5%;
+  width: 100%;
+  margin: 5% 0;
   border-radius: 10px;
-  color: #fff;
-  background-color: rgb(0, 0, 0);
-  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
-    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  overflow: hidden;
+  z-index: 2;
+  transition: all 0.5s var(--transition-emphasized);
 }
 
-.project:first-child {
-  margin-left: 0;
+.project .inner {
+  height: 100%;
+  position: relative;
 }
 
-.project:last-child {
-  margin-right: 0;
+.project .masked-title h3 {
+  color: black;
 }
 
-.project .content {
-  display: block;
-}
-
-.project h4 {
-  font-size: large;
-  text-align: center;
-  padding: 2%;
-  margin: 3% 0 2%;
-  border-radius: 5px;
-  background-color: rgb(52, 58, 64);
-}
-
-.project p {
-  text-align: justify;
+.project .img-container {
+  width: 100%;
+  aspect-ratio: 16/9;
 }
 
 .project img {
-  border-radius: 200px;
-  aspect-ratio: 1;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  z-index: 4;
 }
 
-.project .links {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 5%;
+.project .description {
+  position: relative;
+  color: white;
+  z-index: 3;
+  transition: all 0.5s var(--transition-emphasized);
 }
 
-#projects .background {
+.project p {
+  display: inline;
+  text-align: justify;
+  background-color: rgb(205, 92, 92);
+}
+
+.project .stack .language {
+  display: inline-block;
+  margin-right: 1%;
+  padding: 1px 6px;
+  border-radius: 5px;
+  font-size: small;
+  background-color: rgb(52, 58, 64);
+}
+
+.project .links a {
+  margin-top: 4%;
+  margin-right: 2%;
+}
+
+#projects canvas {
   position: absolute;
   display: block;
   bottom: 0;
@@ -798,55 +800,47 @@ footer {
   backdrop-filter: contrast(0.9);
 }
 
-.button-18 {
-  align-items: center;
-  background-color: rgb(53, 114, 172, 1);
-  border: 0;
-  border-radius: 100px;
-  box-sizing: border-box;
-  color: #ffffff;
-  cursor: pointer;
-  display: inline-flex;
-  font-family: -apple-system, system-ui, system-ui, 'Segoe UI', Roboto,
-    'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Cantarell,
-    'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
-    'Lucida Grande', Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  justify-content: center;
-  line-height: 20px;
-  max-width: 480px;
-  min-height: 40px;
-  min-width: 0px;
+.button-style-1 {
+  display: inline-block;
+  position: relative;
   overflow: hidden;
-  padding: 0px;
-  padding-left: 20px;
-  padding-right: 20px;
-  text-align: center;
-  touch-action: manipulation;
-  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-    box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-    color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-  user-select: none;
-  -webkit-user-select: none;
-  vertical-align: middle;
+  height: 3rem;
+  align-content: center;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: rgb(53, 114, 172, 0.95);
+  background-size: 400%;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
 
-.button-18:hover,
-.button-18:focus {
-  background-color: #16437e;
-  color: #ffffff;
+.button-style-1:hover::before {
+  transform: scaleX(1);
 }
 
-.button-18:active {
-  background: #09223b;
-  color: rgb(255, 255, 255, 0.7);
+.button-style-1-content {
+  position: relative;
+  color: #fff;
+  z-index: 1;
 }
 
-.button-18:disabled {
-  cursor: not-allowed;
-  background: rgba(0, 0, 0, 0.08);
-  color: rgba(0, 0, 0, 0.3);
+.button-style-1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
+    82.3deg,
+    rgb(205, 92, 92) 10.8%,
+    rgb(53, 114, 172, 1) 94.3%
+  );
+  transition: all 0.475s;
 }
 
 /* Code du titre d'accueil */
@@ -894,35 +888,6 @@ footer {
   #projects > .content {
     scroll-behavior: smooth;
   }
-
-  #projects > .content > nav {
-    position: sticky;
-    align-content: center;
-    transition: all 0.5s;
-  }
-
-  #projects > .content > nav > button {
-    padding: 0;
-    border: none;
-    background: none;
-    z-index: 2;
-  }
-
-  #projects > .content > nav:first-child {
-    left: 0;
-  }
-
-  #projects > .content > nav:last-child {
-    right: 0;
-  }
-
-  #projects > .content > nav svg {
-    height: 50px;
-    aspect-ratio: 1;
-    padding: 10px;
-    background-color: rgb(255, 255, 255, 0.5);
-    border-radius: 99px;
-  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -941,9 +906,75 @@ footer {
     font-size: 700%;
   }
 
+  #projects > .content {
+    height: 75vh;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+  }
+
   .project {
+    aspect-ratio: unset;
+    height: 50vh;
+    min-width: 4vw;
+    margin: 0 2px;
+  }
+
+  .project:first-of-type {
+    margin-left: 0;
+  }
+
+  .project:last-of-type {
+    margin-right: 0;
+  }
+
+  .project:hover {
+    height: 100%;
+    min-width: 50vw;
+  }
+
+  .project .masked-title {
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(50px);
+    z-index: 3;
+    transition: all 0.35s var(--transition-emphasized);
+  }
+
+  .project:hover .masked-title {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+    z-index: -1;
+  }
+
+  .project .masked-title h3 {
+    text-wrap: nowrap;
+    color: white;
+    transform: rotate(-90deg);
+  }
+
+  .project .img-container {
+    height: 50vh;
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+
+  .project .description {
+    position: absolute;
+    left: 0;
+    top: 100%;
     padding: 1%;
-    margin: 0 2% 0 2%;
+  }
+
+  .project:hover .description {
+    top: 52vh;
   }
 }
 
@@ -1015,9 +1046,8 @@ footer {
     animation-range-end: 100%;
   }
 
-  #about-me,
-  #projects > .content {
-    height: calc(75vh + 100px);
+  #about-me {
+    height: 50vh;
     padding-bottom: 100px;
   }
 
@@ -1076,11 +1106,6 @@ footer {
     background-position: left;
     color: transparent;
     background-clip: text;
-  }
-
-  #projects > .content {
-    min-height: calc(75vh + 100px);
-    padding-bottom: 100px;
   }
 
   #contact {
