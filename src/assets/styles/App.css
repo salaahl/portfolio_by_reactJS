@@ -734,8 +734,8 @@ video {
   position: sticky;
   top: 0;
   margin-bottom: 0;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
   font-size: 500%;
   background-image: linear-gradient(
     to left,
@@ -843,6 +843,10 @@ video {
 #contact h2 span {
   display: inline-block;
   transition: all 1s var(--in-out-cubic);
+}
+
+#contact p {
+  text-align: center;
 }
 
 footer {
@@ -990,6 +994,10 @@ footer {
     animation-range-start: 40%;
   }
 
+  #projects > .header {
+    height: 25vh;
+  }
+
   #projects > .header > h2 {
     background-color: white;
     background-size: 0% 100%;
@@ -1001,7 +1009,7 @@ footer {
   }
 
   #projects > .content {
-    animation-range-start: 0%;
+    animation-range-start: 20%;
     animation-range-end: 60%;
   }
 
