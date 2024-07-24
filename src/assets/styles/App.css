@@ -1121,6 +1121,7 @@ footer {
   }
 }
 
+/*
 @media (prefers-color-scheme: dark) {
   .dark\:bg-neutral-600 {
     --tw-bg-opacity: 1;
@@ -1142,3 +1143,4 @@ footer {
     color: rgb(163 163 163 / var(--tw-text-opacity));
   }
 }
+*/
