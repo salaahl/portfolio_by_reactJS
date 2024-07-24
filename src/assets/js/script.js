@@ -1,10 +1,9 @@
 window.onload = function () {
   // Fond d'écran de la partie "projets"
 
-  // Ancien fond d'écran
-  /*
+  // Fond d'écran V1
   window.Particles.init({
-    selector: '#projects .background',
+    selector: '#projects canvas',
     color: ['#c6c6c6', '#303030'],
     connectParticles: true,
     responsive: [
@@ -22,12 +21,9 @@ window.onload = function () {
       },
     ],
   });
-  */
 
-  /*          *     .        *  .    *    *   . 
- .  *  move your mouse to over the stars   .
- *  .  .   change these values:   .  *
-   .      * .        .          * .       */
+  // Fond d'écran V2
+  /*
   const STAR_COLOR = '#000';
   const STAR_SIZE = 3;
   const STAR_MIN_SCALE = 0.2;
@@ -220,4 +216,5 @@ window.onload = function () {
     pointerX = null;
     pointerY = null;
   }
+  */
 };
