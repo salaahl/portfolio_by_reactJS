@@ -222,7 +222,11 @@ window.onload = function () {
 
   // V3
   /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-  window.particlesJS.load('particles-js', 'src/assets/js/particles.json', function() {
-    console.log('callback - particles.js config loaded');
-  });
+  window.particlesJS.load(
+    'particles-js',
+    'src/assets/js/particles.json',
+    function () {
+      console.log('callback - particles.js config loaded');
+    }
+  );
 };
