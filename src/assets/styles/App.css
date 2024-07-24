@@ -962,24 +962,36 @@ footer {
   #home > *,
   #about-me > *,
   #projects > .header,
-  #projects > .content,
   #contact > * {
     opacity: 0;
     transform: translateY(25vh);
     animation: fade-y var(--in-out-cubic);
     animation-timeline: view();
+    animation-range-end: 80%;
     animation-fill-mode: both;
   }
-
-  #home > *,
-  #about-me > *,
-  #projects > .header,
-  #contact > * {
-    animation-range-end: 80%;
+  
+  @media (max-width: 1023px) {
+    #projects > .header {
+      height: 100vh;
+    }
   }
 
-  #about-me,
-  #projects > * {
+  @media (min-width: 1024px) {
+    #projects > * {
+      height: 75vh;
+    }
+
+    #projects > .content {
+      opacity: 0;
+      transform: translateY(25vh);
+      animation: fade-y var(--in-out-cubic);
+      animation-timeline: view();
+      animation-fill-mode: both;
+    }
+  }
+
+  #about-me {
     height: 75vh;
   }
 
@@ -1000,10 +1012,6 @@ footer {
 
   #about-me h2 span:last-child {
     animation-range-start: 40%;
-  }
-
-  #projects > .header {
-    height: 25vh;
   }
 
   #projects > .header > h2 {
