@@ -1,14 +1,14 @@
 import React from 'react';
 import imgPlaceholder from '../assets/images/placeholder.png'
-import imgLocalLibrary from '../assets/images/local_library.jpg'
+import imgLocalLibrary from '../assets/images/library.png'
 import imgDiaShop from '../assets/images/diashop_b.png'
-import imgNutriVerif from '../assets/images/nutri_verif.jpg'
-import imgQuizz from '../assets/images/quizz.jpg'
-import imgNotepad from '../assets/images/notepad.jpg'
-import imgRestaurant from '../assets/images/restaurant.jpg'
-import imgDice from '../assets/images/dice.jpg'
-import imgAdministration from '../assets/images/administration.jpg'
-import imgCommerce from '../assets/images/e_commerce.jpg'
+import imgNutriVerif from '../assets/images/nutriverif.png'
+import imgQuizz from '../assets/images/quizz.png'
+import imgNotepad from '../assets/images/notepad.png'
+import imgRestaurant from '../assets/images/restauration.png'
+import imgDice from '../assets/images/dice.png'
+import imgAdministration from '../assets/images/administration.png'
+import imgCommerce from '../assets/images/e_commerce.png'
 
 interface ProjectsProps {
     description: string;
@@ -46,15 +46,15 @@ function Projects(props: ProjectsProps) {
             </div>
             <div className="content">
                 <Project
-                    title="Bibliothèque locale"
+                    title="Bibliothèque numérique"
                     image={imgLocalLibrary}
-                    description="Bibliothèque numérique de prêt sous python/Django. Compte utilisateur disponible : Ousmane, mdp : Ous75019"
+                    description="Bibliothèque numérique de prêt. Compte utilisateur disponible : Ousmane, mdp : Ous75019."
                     stack={["HTML", "JS", "CSS", "Python", "PostgreSQL", "Django", "Bootstrap"]}
                     github="https://github.com/salaahl/library"
                     website="https://salaha-sokhona-library-6e6b0019ca6e.herokuapp.com/catalog/"
                 />
                 <Project
-                    title="DiaShop-b"
+                    title="Site de prêt à porter"
                     image={imgDiaShop}
                     description="Les dernières tendances de la mode pour hommes et femmes."
                     stack={["HTML", "JS", "CSS", "PHP", "MySQL", "Laravel", "Blade", "Tailwind CSS"]}
@@ -62,17 +62,17 @@ function Projects(props: ProjectsProps) {
                     website="https://diashop-44ca2fd005dc.herokuapp.com/"
                 />
                 <Project
-                    title="NutriVérif"
+                    title="Appli de food-checking"
                     image={imgNutriVerif}
-                    description="Application web de food checking alimentée par l'API d'OpenFactsFood. Sous Vue.js."
+                    description="Application web de food checking alimentée par l'API d'OpenFactsFood."
                     stack={["HTML", "JS", "TypeScript", "CSS", "Tailwind", "Pinia", "Vue.js"]}
                     github="https://github.com/salaahl/nutri_verif_by_vue.js"
                     website="https://nutriverif-71662e666d39.herokuapp.com/"
                 />
                 <Project
-                    title="Quizz"
+                    title="Quizz général"
                     image={imgQuizz}
-                    description="Quizz général sous Angular."
+                    description="Quizz général."
                     stack={["HTML", "JS", "TypeScript", "CSS", "SASS", "Angular"]}
                     github="https://github.com/salaahl/MyQuizz"
                     website="https://salaha-sokhona-quizz-9443d49695cb.herokuapp.com/"
@@ -80,7 +80,7 @@ function Projects(props: ProjectsProps) {
                 <Project
                     title="Bloc-notes"
                     image={imgNotepad}
-                    description="Bloc-notes sous expressJS. Compte utilisateur disponible : sokhona.salaha@gmail.com, mdp : Sokhona"
+                    description="Bloc-notes inspiré de Google Keep. Compte utilisateur disponible : sokhona.salaha@gmail.com, mdp : Sokhona."
                     stack={["HTML (PUG)", "JS", "CSS", "Bulma", "MongoDB", "Mongoose"]}
                     github="https://github.com/salaahl/notepad"
                     website="https://salaha-sokhona-notepad-ed791a5cfd1e.herokuapp.com/login"
@@ -96,7 +96,7 @@ function Projects(props: ProjectsProps) {
                 <Project
                     title="Jeu de dés"
                     image={imgDice}
-                    description="Jeu de dés developpé sous HTML, CSS et Javascript."
+                    description="Jeu de dés."
                     stack={["HTML", "JS", "CSS", "Bootstrap"]}
                     github="https://replit.com/@SalahS/EXAM-jeu-STUDI"
                     website="https://exam-jeu-studi.salahs.repl.co/"
@@ -104,13 +104,13 @@ function Projects(props: ProjectsProps) {
                 <Project
                     title="Interface d'administration"
                     image={imgAdministration}
-                    description="Interface d'administration d'une franchise de sport. Identifiant administrateur : sokhona.salaha@gmail.com. Mot de passe : Sokhona."
+                    description="Interface d'administration d'une marque de sport. Identifiant administrateur : sokhona.salaha@gmail.com. Mot de passe : Sokhona."
                     stack={["HTML", "JS", "CSS", "PHP", "MySQL", "JQuery", "Bootstrap"]}
                     github="https://github.com/salaahl/ECF"
                     website="https://interface-d-administration.herokuapp.com/login.html"
                 />
                 <Project
-                    title="Site de e-commerce"
+                    title="E-commerce de parfums"
                     image={imgCommerce}
                     description="Trouvez le parfum parfait pour chaque occassion sur notre site de e-commerce de parfums."
                     stack={["HTML", "JS", "CSS", "PHP", "MySQL", "Laravel", "Blade", "Tailwind CSS"]}
