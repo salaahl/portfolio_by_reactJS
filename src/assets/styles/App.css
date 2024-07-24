@@ -796,6 +796,10 @@ video {
   z-index: 4;
 }
 
+.project .masked-title {
+    margin-top: 2%;
+  }
+
 .project .description {
   position: relative;
   color: white;
@@ -856,16 +860,14 @@ footer {
   backdrop-filter: contrast(0.9);
 }
 
-@media only screen and (min-width: 768px) {
-  #home .text {
-    font-size: 60px;
-  }
-}
-
 @media only screen and (min-width: 1024px) {
   h2 {
     font-size: 500%;
     margin-bottom: 2%;
+  }
+
+  #home .text {
+    font-size: 60px;
   }
 
   #home svg {
@@ -912,6 +914,7 @@ footer {
     bottom: 0;
     height: 100%;
     width: 100%;
+    margin-top: 0;
     z-index: 3;
   }
 
