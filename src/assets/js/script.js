@@ -2,6 +2,7 @@ window.onload = function () {
   // Fond d'écran de la partie "projets"
 
   // Fond d'écran V1
+  /*
   window.Particles.init({
     selector: '#projects canvas',
     color: ['#c6c6c6', '#303030'],
@@ -21,8 +22,9 @@ window.onload = function () {
       },
     ],
   });
+  */
 
-  // Fond d'écran V2
+  // V2
   /*
   const STAR_COLOR = '#000';
   const STAR_SIZE = 3;
@@ -217,4 +219,10 @@ window.onload = function () {
     pointerY = null;
   }
   */
+
+  // V3
+  /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+  window.particlesJS.load('particles-js', 'src/assets/js/particles.json', function() {
+    console.log('callback - particles.js config loaded');
+  });
 };
