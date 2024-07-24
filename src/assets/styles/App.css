@@ -913,6 +913,10 @@ footer {
     z-index: 3;
   }
 
+  .project:hover .masked-title {
+    z-index: -1;
+  }
+
   .project .masked-title h3 {
     text-wrap: nowrap;
     background-color: unset;
@@ -928,9 +932,7 @@ footer {
   }
 
   .project:hover .img-container {
-    opacity: 0;
     filter: blur(0px);
-    z-index: -1;
   }
 
   .project .description {
