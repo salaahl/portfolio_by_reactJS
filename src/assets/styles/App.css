@@ -910,15 +910,7 @@ footer {
     bottom: 0;
     height: 100%;
     width: 100%;
-    backdrop-filter: blur(50px);
     z-index: 3;
-    transition: all 0.35s var(--in-out-cubic);
-  }
-
-  .project:hover .masked-title {
-    opacity: 0;
-    backdrop-filter: blur(0px);
-    z-index: -1;
   }
 
   .project .masked-title h3 {
@@ -931,6 +923,14 @@ footer {
     height: 50vh;
     width: 100%;
     aspect-ratio: 16/9;
+    filter: blur(50px);
+    transition: all 0.35s var(--in-out-cubic);
+  }
+
+  .project:hover .img-container {
+    opacity: 0;
+    filter: blur(0px);
+    z-index: -1;
   }
 
   .project .description {
@@ -1010,7 +1010,7 @@ footer {
 
   #projects > .content {
     animation-range-start: 20%;
-    animation-range-end: 60%;
+    animation-range-end: 50%;
   }
 
   #contact h2 span:first-child {
