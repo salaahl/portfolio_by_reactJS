@@ -727,7 +727,7 @@ video {
 }
 
 #projects > .header {
-  height: 50vh;
+  height: 40vh;
 }
 
 #projects > .header > h2 {
@@ -797,8 +797,8 @@ video {
 }
 
 .project .masked-title {
-    margin-top: 2%;
-  }
+  margin-top: 2%;
+}
 
 .project .description {
   position: relative;
@@ -822,7 +822,14 @@ video {
   background-color: rgb(52, 58, 64);
 }
 
+.project .links {
+  display: flex;
+}
+
 .project .links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 4%;
   margin-right: 2%;
 }
