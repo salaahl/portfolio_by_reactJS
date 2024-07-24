@@ -757,6 +757,8 @@ video {
   width: calc(100% - var(--body-padding-x) * 2);
   display: flex;
   flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
   z-index: 1;
 }
 
@@ -783,7 +785,7 @@ video {
 
 .project .img-container {
   width: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 1440/720;
 }
 
 .project img {
@@ -876,7 +878,6 @@ footer {
 
   #projects > .content {
     height: 75vh;
-    margin: 0 auto;
     flex-wrap: nowrap;
     overflow-x: hidden;
   }
