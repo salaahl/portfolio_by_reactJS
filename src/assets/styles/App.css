@@ -787,6 +787,8 @@ video {
 .project .img-container {
   width: 100%;
   aspect-ratio: 2/1;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .project img {
@@ -952,7 +954,6 @@ footer {
     aspect-ratio: unset;
     filter: blur(25px);
     border: 4px solid rgb(0, 0, 0, 0.05);
-    border-radius: 10px;
     transition: all 0.35s var(--in-out-cubic);
   }
 
@@ -1001,11 +1002,7 @@ footer {
       height: 150vh;
     }
 
-    #projects > .header {
-      height: 75vh;
-    }
-
-    #projects > .content:has(.project:hover) {
+    #projects > .header, #projects > .content:has(.project:hover) {
       height: 75vh;
     }
 
