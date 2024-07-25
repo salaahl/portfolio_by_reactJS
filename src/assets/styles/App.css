@@ -769,7 +769,7 @@ video {
   border-radius: 10px;
   overflow: hidden;
   z-index: 2;
-  transition: all 0.5s var(--in-out-cubic);
+  transition: min-width 0.5s var(--in-out-cubic);
 }
 
 .project .inner {
@@ -779,21 +779,20 @@ video {
 
 .project .masked-title h3 {
   display: inline;
-  color: white;
   filter: unset;
+  color: white;
   background-color: rgb(53, 114, 172, 0.95);
 }
 
 .project .img-container {
   width: 100%;
-  aspect-ratio: 1440/720;
+  aspect-ratio: 2/1;
 }
 
 .project img {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  border-radius: 10px;
   z-index: 4;
 }
 
@@ -900,10 +899,10 @@ footer {
   }
 
   .project {
-    aspect-ratio: unset;
-    height: 50vh;
+    height: calc(50vh + 8px);
     min-width: 4vw;
     margin: 0 2px;
+    border: 4px solid rgb(0, 0, 0, 0.05);
   }
 
   .project:first-of-type {
@@ -916,7 +915,8 @@ footer {
 
   .project:hover {
     height: 100%;
-    min-width: 100vh;
+    min-width: calc(100vh + 8px);
+    border: 0px solid rgb(0, 0, 0, 0.05);
   }
 
   .project .masked-title {
@@ -926,14 +926,16 @@ footer {
     justify-content: center;
     position: absolute;
     left: 0;
-    bottom: 0;
-    height: 100%;
+    top: 0;
+    height: calc(50vh + 8px);
     width: 100%;
     margin-top: 0;
     z-index: 3;
+    transition: all .5s;
   }
 
   .project:hover .masked-title {
+    opacity: 0;
     z-index: -1;
   }
 
@@ -945,10 +947,12 @@ footer {
   }
 
   .project .img-container {
-    height: 50vh;
+    height: calc(50vh + 8px);
     width: 100%;
-    aspect-ratio: 16/9;
+    aspect-ratio: unset;
     filter: blur(25px);
+    border: 4px solid rgb(0, 0, 0, 0.05);
+    border-radius: 10px;
     transition: all 0.35s var(--in-out-cubic);
   }
 
