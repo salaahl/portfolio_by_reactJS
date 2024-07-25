@@ -712,14 +712,21 @@ video {
   animation-delay: -6s;
 }
 
-#about-me {
+#about-me .content {
+  display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+  padding: 2%;
+  border-radius: 999px;
   color: white;
+  background: linear-gradient(to bottom, rgb(255, 255, 255, 0.1), rgb(255, 255, 255, 0.0));
+  backdrop-filter: blur(10px);
 }
 
 #about-me h2 {
   -webkit-text-stroke: thin;
-  -webkit-text-stroke-color: black;
 }
 
 #projects {
@@ -883,6 +890,11 @@ footer {
     width: 75%;
   }
 
+  #about-me .content {
+    flex-wrap: nowrap;
+    padding: 5%;
+  }
+
   #projects {
     min-height: 150vh;
   }
@@ -903,7 +915,7 @@ footer {
   .project {
     height: calc(50vh + 8px);
     min-width: 4vw;
-    margin: 0 2px;
+    margin: 0 1px;
     border: 4px solid rgb(0, 0, 0, 0.05);
   }
 
@@ -1019,12 +1031,9 @@ footer {
     height: 75vh;
   }
 
-  #about-me h2 span:nth-child(2) {
-    animation: scale var(--in-out-cubic);
-    animation-timeline: view();
-    animation-fill-mode: both;
-    animation-range-start: 20%;
-    animation-range-end: 60%;
+  #about-me h2 {
+    margin-right: 5%;
+    margin-bottom: 0;
   }
 
   #projects > .header > h2 {
@@ -1066,10 +1075,6 @@ footer {
 
   #about-me {
     background: rgb(30, 41, 59);
-  }
-
-  #about-me h2 span:nth-child(2) {
-    color: rgb(103, 175, 142);
   }
 
   #projects {
