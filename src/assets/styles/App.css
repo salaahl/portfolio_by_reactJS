@@ -718,12 +718,17 @@ video {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  aspect-ratio: 1;
   color: white;
 }
 
 #about-me h2 {
+  margin-bottom: 20%;
+  font-size: 400%;
   -webkit-text-stroke: thin;
+}
+
+#about-me span {
+  display: block;
 }
 
 #projects {
@@ -872,7 +877,7 @@ footer {
   backdrop-filter: contrast(0.9);
 }
 
-@media only screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   h2 {
     font-size: 500%;
     margin-bottom: 2%;
@@ -888,6 +893,7 @@ footer {
 
   #about-me .content {
     height: 75vh;
+    aspect-ratio: 1;
     flex-wrap: nowrap;
     padding: 5%;
     border-radius: 999px;
@@ -899,8 +905,11 @@ footer {
     backdrop-filter: blur(10px);
   }
 
+  #about-me .content > * {
+    width: 50%;
+  }
+
   #about-me h2 {
-    margin-right: 5%;
     margin-bottom: 0;
   }
 
@@ -1041,6 +1050,22 @@ footer {
     height: 75vh;
   }
 
+  #about-me h2 > span {
+    text-shadow:
+      0 0 0px #fff,
+      0 0 0px #fff,
+      0 0 0px #fff,
+      0 0 0px #fff,
+      0 0 0px #fff,
+      0 0 0px #fff,
+      0 0 0px #fff,
+      0 0 0px #fff;
+    animation: glow var(--in-out-cubic);
+    animation-timeline: view();
+    animation-fill-mode: both;
+    animation-range: 0%;
+  }
+
   #projects > .header > h2 {
     background-color: white;
     background-size: 0% 100%;
@@ -1136,9 +1161,17 @@ footer {
   }
 }
 
-@keyframes scale {
+@keyframes glow {
   to {
-    font-size: 150%;
+    text-shadow:
+      0 0 2px #fff,
+      0 0 5px #fff,
+      0 0 9px #fff,
+      0 0 19px #fff,
+      0 0 36.5px #fff,
+      0 0 40px #fff,
+      0 0 47px #fff,
+      0 0 70px #fff;
   }
 }
 
