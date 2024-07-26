@@ -978,7 +978,7 @@ footer {
   }
 
   .project:hover .img-container {
-    filter: blur(0px);
+    filter: blur(0px) brightness(1);
   }
 
   .project .description {
