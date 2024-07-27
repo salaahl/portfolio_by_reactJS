@@ -821,7 +821,7 @@ video {
   border-radius: 100px;
   overflow: hidden;
   z-index: 2;
-  transition: border-radius 0.5s var(--in-out-cubic), min-width 0.5s var(--in-out-cubic);
+  transition: border 0s var(--in-out-cubic), border-radius 0.5s var(--in-out-cubic), min-width 0.5s var(--in-out-cubic);
 }
 
 .project .inner {
