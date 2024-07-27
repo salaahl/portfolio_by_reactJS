@@ -31,9 +31,7 @@
     1 86.4%,
     1 100%
   );
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
+  --tranendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;

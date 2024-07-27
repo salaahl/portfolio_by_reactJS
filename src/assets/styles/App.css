@@ -796,6 +796,7 @@ video {
   width: 100%;
   aspect-ratio: 2/1;
   border-radius: 10px;
+  border: 4px solid rgb(0, 0, 0, 0.05);
   overflow: hidden;
 }
 
@@ -917,6 +918,14 @@ footer {
     min-height: calc(40vh + 50vw + 8px);
   }
 
+  #projects > *:not(.content) {
+    transition: filter 0.5s var(--in-out-cubic);
+  }
+
+  #projects:has(.project:hover) > *:not(.content) {
+    filter: blur(10px);
+  }
+
   #projects > .header > h2 {
     font-size: 700%;
   }
@@ -982,7 +991,6 @@ footer {
     height: calc(30vw + 8px);
     aspect-ratio: unset;
     filter: blur(40px) brightness(0.9);
-    border: 4px solid rgb(0, 0, 0, 0.05);
     transition: all 0.35s var(--in-out-cubic);
   }
 
@@ -1051,15 +1059,8 @@ footer {
   }
 
   #about-me h2 > span {
-    text-shadow:
-      0 0 0px #fff,
-      0 0 0px #fff,
-      0 0 0px #fff,
-      0 0 0px #fff,
-      0 0 0px #fff,
-      0 0 0px #fff,
-      0 0 0px #fff,
-      0 0 0px #fff;
+    text-shadow: 0 0 0px #fff, 0 0 0px #fff, 0 0 0px #fff, 0 0 0px #fff,
+      0 0 0px #fff, 0 0 0px #fff, 0 0 0px #fff, 0 0 0px #fff;
     animation: glow var(--in-out-cubic);
     animation-timeline: view();
     animation-fill-mode: both;
@@ -1104,18 +1105,20 @@ footer {
     background: rgb(0, 0, 0);
   }
 
+  #about-me h2 > span {
+    text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 9px #fff, 0 0 19px #fff,
+      0 0 36.5px #fff, 0 0 40px #fff, 0 0 47px #fff, 0 0 70px #fff;
+  }
+
   #projects {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: backdrop-filter 0.5s var(--in-out-cubic);
   }
 
-  @media (min-width: 1024px) {
-    #projects:has(.project:hover) {
-      backdrop-filter: brightness(0.8);
-      transition-delay: 0.35s;
-    }
+  #projects:has(.project:hover) {
+    backdrop-filter: brightness(0.9);
+    transition: backdrop-filter 0.5s var(--in-out-cubic);
   }
 
   #contact {
@@ -1163,15 +1166,8 @@ footer {
 
 @keyframes glow {
   to {
-    text-shadow:
-      0 0 2px #fff,
-      0 0 5px #fff,
-      0 0 9px #fff,
-      0 0 19px #fff,
-      0 0 36.5px #fff,
-      0 0 40px #fff,
-      0 0 47px #fff,
-      0 0 70px #fff;
+    text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 9px #fff, 0 0 19px #fff,
+      0 0 36.5px #fff, 0 0 40px #fff, 0 0 47px #fff, 0 0 70px #fff;
   }
 }
 
