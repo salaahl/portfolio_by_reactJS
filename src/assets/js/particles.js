@@ -871,8 +871,7 @@ var pJS = function (tag_id, params) {
         init();
       }
     } else if (
-
-    /* on click event */
+      /* on click event */
       pJS.interactivity.events.onclick.enable &&
       isInArray('bubble', pJS.interactivity.events.onclick.mode)
     ) {
@@ -1560,4 +1559,15 @@ window.particlesJS.load = function (tag_id, path_config_json, callback) {
     }
   };
   xhr.send();
+};
+
+/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+window.onload = function () {
+  window.particlesJS.load(
+    'particles-js',
+    'src/assets/js/particles.json',
+    function () {
+      console.log('callback - particles.js config loaded');
+    }
+  );
 };

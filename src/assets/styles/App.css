@@ -676,6 +676,64 @@ video {
   transition: all 0.475s;
 }
 
+#home > svg,
+#about-me > .content > *,
+#projects > .header,
+.project,
+#contact > .content {
+  opacity: 0;
+  transform: translateY(25vh);
+}
+
+.project:nth-child(1).animate {
+  animation-delay: 0.1s;
+}
+
+.project:nth-child(2).animate {
+  animation-delay: 0.2s;
+}
+
+.project:nth-child(3).animate {
+  animation-delay: 0.3s;
+}
+
+.project:nth-child(4).animate {
+  animation-delay: 0.4s;
+}
+
+.project:nth-child(5).animate {
+  animation-delay: 0.5s;
+}
+
+.project:nth-child(6).animate {
+  animation-delay: 0.6s;
+}
+
+.project:nth-child(7).animate {
+  animation-delay: 0.7s;
+}
+
+.project:nth-child(8).animate {
+  animation-delay: 0.8s;
+}
+
+.project:nth-child(9).animate {
+  animation-delay: 0.9s;
+}
+
+.project:nth-child(10).animate {
+  animation-delay: 1s;
+}
+
+#home > svg.animate,
+#about-me > .content > *.animate,
+#projects > .header.animate,
+.project.animate,
+#contact > .content.animate {
+  animation: translateY 0.5s var(--in-out-cubic) forwards,
+    show 1s var(--in-out-cubic) forwards;
+}
+
 #home,
 #about-me,
 #projects > .header,
@@ -765,10 +823,9 @@ video {
   -webkit-text-stroke: thin;
 }
 
-
 #about-me h2 > span {
   display: block;
-  font-family: "Poiret One", sans-serif;
+  font-family: 'Poiret One', sans-serif;
   font-weight: 400;
   font-style: normal;
   animation: flicker 1.5s infinite alternate;
@@ -821,7 +878,8 @@ video {
   border-radius: 100px;
   overflow: hidden;
   z-index: 2;
-  transition: border 0s var(--in-out-cubic), border-radius 0.5s var(--in-out-cubic), min-width 0.5s var(--in-out-cubic);
+  transition: border 0s var(--in-out-cubic),
+    border-radius 0.5s var(--in-out-cubic), min-width 0.5s var(--in-out-cubic);
 }
 
 .project .inner {
@@ -938,7 +996,7 @@ footer {
 
   #about-me .content {
     height: 75vh;
-    aspect-ratio: 1;
+    width: 75vh;
     flex-wrap: nowrap;
     padding: 5%;
     border-radius: 999px;
@@ -1017,7 +1075,7 @@ footer {
     margin-top: 0;
     z-index: 3;
     transition: all 0.5s;
-    transition-delay: .15s;
+    transition-delay: 0.15s;
   }
 
   .project:hover .masked-title {
@@ -1041,7 +1099,7 @@ footer {
     aspect-ratio: unset;
     filter: blur(40px) brightness(0.9);
     transition: all 0.35s var(--in-out-cubic);
-    transition-delay: .15s;
+    transition-delay: 0.15s;
   }
 
   .project:hover .img-container {
@@ -1055,7 +1113,7 @@ footer {
     top: 100%;
     filter: opacity(0);
     transition: all 0.35s var(--in-out-cubic);
-    transition-delay: .15s;
+    transition-delay: 0.15s;
   }
 
   .project:hover .description {
@@ -1069,16 +1127,6 @@ footer {
   #root {
     animation: bg-color var(--in-out-cubic);
     animation-timeline: scroll();
-  }
-
-  #home > svg,
-  #about-me > *,
-  #projects > .header,
-  #contact > * {
-    animation: fade-y var(--in-out-cubic);
-    animation-timeline: view();
-    animation-range-end: 80%;
-    animation-fill-mode: both;
   }
 
   #home > .arrow {
@@ -1100,12 +1148,6 @@ footer {
     #projects > .header {
       height: 75vh;
     }
-
-    #projects > .content {
-      animation: fade-y var(--in-out-cubic);
-      animation-timeline: view();
-      animation-fill-mode: both;
-    }
   }
 
   #about-me {
@@ -1120,11 +1162,6 @@ footer {
     animation-range-end: 60%;
   }
 
-  #projects > .content {
-    animation-range-start: 20%;
-    animation-range-end: 50%;
-  }
-
   #contact h2 span:first-child {
     transform: translateX(-50%);
   }
@@ -1137,8 +1174,8 @@ footer {
     animation: translate var(--in-out-cubic);
     animation-timeline: view();
     animation-fill-mode: both;
-    animation-range-start: 20%;
-    animation-range-end: 80%;
+    animation-range-start: 40%;
+    animation-range-end: 60%;
   }
 }
 
@@ -1190,11 +1227,6 @@ footer {
 }
 
 @keyframes fade-y {
-  from {
-    opacity: 0;
-    transform: translateY(25vh);
-  }
-
   to {
     opacity: 1;
     transform: translateY(0vh);
@@ -1222,19 +1254,20 @@ footer {
 }
 
 @keyframes flicker {
-  0%, 18%, 22%, 25%, 53%, 57%, 100% {
-    text-shadow:
-    0 0 4px #fff,
-    0 0 11px #fff,
-    0 0 19px #fff,
-    0 0 40px #fff,
-    0 0 80px #fff,
-    0 0 90px #fff,
-    0 0 100px #fff,
-    0 0 150px #fff;
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #fff,
+      0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
   }
 
-  20%, 24%, 55% {        
+  20%,
+  24%,
+  55% {
     text-shadow: none;
   }
 }
@@ -1242,6 +1275,18 @@ footer {
 @keyframes translate {
   to {
     transform: translateX(0%);
+  }
+}
+
+@keyframes translateY {
+  to {
+    transform: translateY(0vh);
+  }
+}
+
+@keyframes show {
+  to {
+    opacity: 1;
   }
 }
 
