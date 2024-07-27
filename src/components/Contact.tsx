@@ -14,10 +14,10 @@ function Contact(props: ContactProps) {
                     <a href={props.mailto}>Mail</a>
                 </p>
                 <p>
-                    <a href={props.linkedin}>LinkedIn</a>
+                    <a href={props.linkedin} target="_blank">LinkedIn</a>
                 </p>
                 <p>
-                    <a href={props.github}>Github</a>
+                    <a href={props.github} target="_blank">Github</a>
                 </p>
             </div>
         </section>
