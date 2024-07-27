@@ -74,7 +74,7 @@ function Projects(props: ProjectsProps) {
                     title="Blagues et sourires"
                     image={imgJokes}
                     description="Une application web amusante affichant des blagues aléatoires via une API personnalisée."
-                    stack={["HTML", "JS", "TypeScript", "CSS", "Tailwind", "PHP", "Twig", "API Platform", "React"]}
+                    stack={["HTML", "JS", "TypeScript", "CSS", "Tailwind", "PHP", "Twig", "Symfony", "API Platform", "React"]}
                     github="https://github.com/salaahl/jokes_app_by_reactJS"
                     website="https://salaha-sokhona-jokes-app-f2c846554a50.herokuapp.com/"
                 />
