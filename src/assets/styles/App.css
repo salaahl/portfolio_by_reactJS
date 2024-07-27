@@ -1000,7 +1000,7 @@ footer {
     height: 100%;
     min-width: calc(60vw + 8px);
     border: 0px solid rgb(0, 0, 0, 0.05);
-    transition-delay: .0s;
+    transition-delay: 0s;
   }
 
   .project .masked-title {
@@ -1016,11 +1016,13 @@ footer {
     margin-top: 0;
     z-index: 3;
     transition: all 0.5s;
+    transition-delay: .15s;
   }
 
   .project:hover .masked-title {
     opacity: 0;
     z-index: -1;
+    transition-delay: 0s;
   }
 
   .project .masked-title h3 {
@@ -1038,10 +1040,12 @@ footer {
     aspect-ratio: unset;
     filter: blur(40px) brightness(0.9);
     transition: all 0.35s var(--in-out-cubic);
+    transition-delay: .15s;
   }
 
   .project:hover .img-container {
     filter: blur(0px) brightness(1);
+    transition-delay: 0s;
   }
 
   .project .description {
@@ -1050,11 +1054,13 @@ footer {
     top: 100%;
     filter: opacity(0);
     transition: all 0.35s var(--in-out-cubic);
+    transition-delay: .15s;
   }
 
   .project:hover .description {
     top: 32vw;
     filter: opacity(1);
+    transition-delay: 0s;
   }
 }
 
