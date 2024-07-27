@@ -1,6 +1,5 @@
 interface ContactProps {
     mailto: string;
-    mail: string;
     linkedin: string;
     github: string;
 }
@@ -26,7 +25,6 @@ function Contact(props: ContactProps) {
 
 Contact.defaultProps = {
     mailto: 'mailto:sokhona.salaha@gmail.com',
-    mail: 'sokhona.salaha@gmail.com',
     linkedin: 'https://www.linkedin.com/in/salaha-sokhona/',
     github: 'https://github.com/salaahl',
 };
