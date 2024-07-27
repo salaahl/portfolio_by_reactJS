@@ -150,7 +150,7 @@ function Project(props: ProjectProps) {
         <article className="project">
             <div className="inner">
                 <section className="img-container">
-                    <img src={props.image} />
+                    <img src={props.image} alt={props.title} />
                 </section>
                 <section className="masked-title">
                     <h3 className="font-bold">{props.title}</h3>
