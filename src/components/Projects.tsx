@@ -3,6 +3,7 @@ import imgPlaceholder from '../assets/images/placeholder.png'
 import imgLocalLibrary from '../assets/images/library.png'
 import imgDiaShop from '../assets/images/diashop_b.png'
 import imgNutriVerif from '../assets/images/nutriverif.png'
+import imgJokes from '../assets/images/jokes.png'
 import imgQuizz from '../assets/images/quizz.png'
 import imgNotepad from '../assets/images/notepad.png'
 import imgRestaurant from '../assets/images/restauration.png'
@@ -68,6 +69,14 @@ function Projects(props: ProjectsProps) {
                     stack={["HTML", "JS", "TypeScript", "CSS", "Tailwind", "Pinia", "Vue.js"]}
                     github="https://github.com/salaahl/nutri_verif_by_vue.js"
                     website="https://nutriverif-71662e666d39.herokuapp.com/"
+                />
+                 <Project
+                    title="Blagues et sourires"
+                    image={imgJokes}
+                    description="Une application web amusante affichant des blagues aléatoires via une API personnalisée."
+                    stack={["HTML", "JS", "TypeScript", "CSS", "Tailwind", "PHP", "Twig", "API Platform", "React"]}
+                    github="https://github.com/salaahl/jokes_app_by_reactJS"
+                    website="https://salaha-sokhona-jokes-app-f2c846554a50.herokuapp.com/"
                 />
                 <Project
                     title="Quizz général"
