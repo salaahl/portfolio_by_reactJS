@@ -1549,7 +1549,7 @@ window.particlesJS.load = function (tag_id, path_config_json, callback) {
   xhr.onreadystatechange = function (data) {
     if (xhr.readyState == 4) {
       if (xhr.status == 200) {
-        console.log(data)
+        console.log(data.currentTarget.response)
         var params = JSON.parse(data.currentTarget.response);
         window.particlesJS(tag_id, params);
         if (callback) callback();
@@ -1566,7 +1566,7 @@ window.particlesJS.load = function (tag_id, path_config_json, callback) {
 window.onload = function () {
   window.particlesJS.load(
     'particles-js',
-    '/js/particles.json',
+    'js/particles.json',
     function () {
       console.log('callback - particles.js config loaded');
     }
