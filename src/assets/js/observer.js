@@ -1,4 +1,3 @@
-alert('hi');
 const target = [
   '#home > svg',
   '#about-me > .content > p',
@@ -39,4 +38,6 @@ window.addEventListener('load', () => {
       }
     }
   });
+
+  alert('hi');
 });
