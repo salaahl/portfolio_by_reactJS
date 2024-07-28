@@ -7,7 +7,7 @@ const target = [
 ];
 
 const options = {
-  threshold: 0.4,
+  threshold: 0.5,
 };
 
 const observer = new IntersectionObserver(handleIntersection, options);

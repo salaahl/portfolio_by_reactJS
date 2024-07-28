@@ -682,47 +682,6 @@ video {
 .project,
 #contact > .content {
   opacity: 0;
-  transform: translateY(25vh);
-}
-
-.project:nth-child(1).animate {
-  animation-delay: 0.1s;
-}
-
-.project:nth-child(2).animate {
-  animation-delay: 0.2s;
-}
-
-.project:nth-child(3).animate {
-  animation-delay: 0.3s;
-}
-
-.project:nth-child(4).animate {
-  animation-delay: 0.4s;
-}
-
-.project:nth-child(5).animate {
-  animation-delay: 0.5s;
-}
-
-.project:nth-child(6).animate {
-  animation-delay: 0.6s;
-}
-
-.project:nth-child(7).animate {
-  animation-delay: 0.7s;
-}
-
-.project:nth-child(8).animate {
-  animation-delay: 0.8s;
-}
-
-.project:nth-child(9).animate {
-  animation-delay: 0.9s;
-}
-
-.project:nth-child(10).animate {
-  animation-delay: 1s;
 }
 
 #home > svg.animate,
@@ -730,8 +689,7 @@ video {
 #projects > .header.animate,
 .project.animate,
 #contact > .content.animate {
-  animation: translateY 0.5s var(--in-out-cubic) forwards,
-    show 1s var(--in-out-cubic) forwards;
+  animation: translateY 0.5s var(--in-out-cubic) 0s 1 normal forwards, show 1s var(--in-out-cubic) 0s 1 normal forwards;
 }
 
 #home,
@@ -875,7 +833,6 @@ video {
 .project {
   width: 100%;
   margin: 5% 0;
-  border-radius: 100px;
   overflow: hidden;
   z-index: 2;
   transition: border 0s var(--in-out-cubic),
@@ -897,7 +854,7 @@ video {
 .project .img-container {
   width: 100%;
   aspect-ratio: 2/1;
-  border-radius: 25px;
+  border-radius: 10px;
   border: 4px solid rgb(0, 0, 0, 0.05);
   overflow: hidden;
 }
@@ -1043,15 +1000,50 @@ footer {
     min-width: 3vw;
     margin: 0 1px;
     border: 4px solid rgb(0, 0, 0, 0.05);
+    border-radius: 100px;
     transition-delay: 0.15s;
   }
 
-  .project:first-of-type {
+  .project:nth-child(1).animate {
     margin-left: 0;
+    animation-delay: 0.1s;
   }
 
-  .project:last-of-type {
+  .project:nth-child(2).animate {
+    animation-delay: 0.2s;
+  }
+
+  .project:nth-child(3).animate {
+    animation-delay: 0.3s;
+  }
+
+  .project:nth-child(4).animate {
+    animation-delay: 0.4s;
+  }
+
+  .project:nth-child(5).animate {
+    animation-delay: 0.5s;
+  }
+
+  .project:nth-child(6).animate {
+    animation-delay: 0.6s;
+  }
+
+  .project:nth-child(7).animate {
+    animation-delay: 0.7s;
+  }
+
+  .project:nth-child(8).animate {
+    animation-delay: 0.8s;
+  }
+
+  .project:nth-child(9).animate {
+    animation-delay: 0.9s;
+  }
+
+  .project:nth-child(10).animate {
     margin-right: 0;
+    animation-delay: 1s;
   }
 
   .project:hover {
@@ -1097,6 +1089,7 @@ footer {
     left: 0;
     height: calc(30vw + 8px);
     aspect-ratio: unset;
+    border-radius: 25px;
     filter: blur(40px) brightness(0.9);
     transition: all 0.35s var(--in-out-cubic);
     transition-delay: 0.15s;
@@ -1185,9 +1178,11 @@ footer {
     background: rgb(0, 0, 0);
   }
 
-  #projects:has(.project:hover) {
-    backdrop-filter: brightness(0.9);
-    transition: backdrop-filter 0.5s var(--in-out-cubic);
+  @media (min-width: 1024px) {
+    #projects:has(.project:hover) {
+      backdrop-filter: brightness(0.9);
+      transition: backdrop-filter 0.5s var(--in-out-cubic);
+    }
   }
 
   #contact {
@@ -1279,6 +1274,10 @@ footer {
 }
 
 @keyframes translateY {
+  from {
+    transform: translateY(25vh);
+  }
+
   to {
     transform: translateY(0vh);
   }
