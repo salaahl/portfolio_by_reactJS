@@ -10,14 +10,10 @@ let options;
 
 if (window.innerWidth < 1024) {
   options = {
-    root:null,
-    rootMargin:'0px',
     threshold: 0.1,
   };
 } else {
   options = {
-    root:null,
-    rootMargin:'0px',
     threshold: 0.1,
   };
 }
