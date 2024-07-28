@@ -18,8 +18,6 @@ if (window.innerWidth < 1024) {
   };
 }
 
-const observer = new IntersectionObserver(handleIntersection, options);
-
 function handleIntersection(entries) {
   entries.map((entry) => {
     if (entry.isIntersecting) {
@@ -29,9 +27,13 @@ function handleIntersection(entries) {
   });
 }
 
+const observer = new IntersectionObserver(handleIntersection, options);
+
 window.addEventListener('load', () => {
   target.forEach((index) => {
     let container = document.querySelectorAll(index);
+    observer.observe(container[1]);
+
     if (container) {
       alert('oui');
 
