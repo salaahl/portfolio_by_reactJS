@@ -24,7 +24,7 @@ window.addEventListener('load', () => {
   function handleIntersection(entries) {
     entries.map((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('animate');
+        entry.target.style.opacity = 1;
       }
     });
   }
