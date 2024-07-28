@@ -33,11 +33,14 @@ window.addEventListener('load', () => {
   target.forEach((index) => {
     let container = document.querySelectorAll(index);
     if (container) {
+      alert('oui');
+
       for (let i = 0; i < container.length; i++) {
         observer.observe(container[i]);
       }
+    } else {
+      alert('non');
+
     }
   });
-
-  alert(container[0]);
 });
