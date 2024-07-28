@@ -1,14 +1,22 @@
 const target = [
   '#home > svg',
-  '#about-me > .content > *',
+  '#about-me > .content > p',
   '#projects > .header',
   '.project',
   '#contact > .content',
 ];
 
-const options = {
-  threshold: 0.5,
-};
+let options;
+
+if (window.innerWidth < 1024) {
+  options = {
+    threshold: 0.5,
+  };
+} else {
+  options = {
+    threshold: 1,
+  };
+}
 
 const observer = new IntersectionObserver(handleIntersection, options);
 

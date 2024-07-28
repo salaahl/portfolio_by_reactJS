@@ -677,7 +677,7 @@ video {
 }
 
 #home > svg,
-#about-me > .content > *,
+#about-me > .content > p,
 #projects > .header,
 .project,
 #contact > .content {
@@ -685,11 +685,12 @@ video {
 }
 
 #home > svg.animate,
-#about-me > .content > *.animate,
+#about-me > .content > p.animate,
 #projects > .header.animate,
 .project.animate,
 #contact > .content.animate {
-  animation: translateY 0.5s var(--in-out-cubic) 0s 1 normal forwards, show 1s var(--in-out-cubic) 0s 1 normal forwards;
+  animation: translate-content 0.5s var(--in-out-cubic) 0s 1 normal forwards,
+    show-content 1s var(--in-out-cubic) 0s 1 normal forwards;
 }
 
 #home,
@@ -1167,7 +1168,7 @@ footer {
     animation: translate var(--in-out-cubic);
     animation-timeline: view();
     animation-fill-mode: both;
-    animation-range-start: 40%;
+    animation-range-start: 20vh;
     animation-range-end: 60%;
   }
 }
@@ -1273,7 +1274,7 @@ footer {
   }
 }
 
-@keyframes translateY {
+@keyframes translate-content {
   from {
     transform: translateY(25vh);
   }
@@ -1283,7 +1284,7 @@ footer {
   }
 }
 
-@keyframes show {
+@keyframes show-content {
   to {
     opacity: 1;
   }
