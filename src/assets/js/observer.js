@@ -10,11 +10,15 @@ let options;
 
 if (window.innerWidth < 1024) {
   options = {
-    threshold: 0.5,
+    root:null,
+    rootMargin:'0px',
+    threshold: 0.1,
   };
 } else {
   options = {
-    threshold: 1,
+    root:null,
+    rootMargin:'0px',
+    threshold: 0.1,
   };
 }
 
@@ -32,6 +36,7 @@ const observer = new IntersectionObserver(handleIntersection, options);
 window.addEventListener('load', () => {
   if ('IntersectionObserver' in window) {
     alert('oui.');
+    console.log(observer)
 
     // Ajoutez vos éléments à observer ici, par exemple :
     // observer.observe(document.querySelector('.element-to-observe'));
