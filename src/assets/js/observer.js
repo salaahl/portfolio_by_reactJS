@@ -27,8 +27,17 @@ function handleIntersection(entries) {
   });
 }
 
-const observer = new IntersectionObserver(handleIntersection, options);
+let observer;
 
+if ('IntersectionObserver' in window) {
+  observer = new IntersectionObserver(handleIntersection, options);
+  // Ajoutez vos éléments à observer ici, par exemple :
+  // observer.observe(document.querySelector('.element-to-observe'));
+} else {
+  // Fallback pour les navigateurs qui ne supportent pas IntersectionObserver
+  alert('IntersectionObserver n’est pas pris en charge par ce navigateur.');
+  // Vous pouvez implémenter un polyfill ou une autre solution ici
+}
 window.addEventListener('load', () => {
   target.forEach((index) => {
     let container = document.querySelector(index);
