@@ -1430,7 +1430,7 @@ var pJS = function (tag_id, params) {
 
 /* ---------- global functions - vendors ------------ */
 
-Object.deepExtend = function (destination, source) {
+Object.deepExtend = function f(destination, source) {
   for (var property in source) {
     if (
       source[property] &&
@@ -1438,7 +1438,7 @@ Object.deepExtend = function (destination, source) {
       source[property].constructor === Object
     ) {
       destination[property] = destination[property] || {};
-      arguments.callee(destination[property], source[property]);
+      f(destination[property], source[property]);
     } else {
       destination[property] = source[property];
     }
