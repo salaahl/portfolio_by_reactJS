@@ -766,6 +766,8 @@ video {
 }
 
 #about-me h2 > span {
+  --text-shadow: 0 0 2px #fff, 0 0 5.5px #fff, 0 0 9.5px #fff, 0 0 20px #fff,
+  0 0 40px #fff, 0 0 45px #fff, 0 0 50px #fff, 0 0 75px #fff;
   display: block;
   font-family: 'Poiret One', sans-serif;
   font-weight: 400;
@@ -974,6 +976,11 @@ footer {
 
   #about-me h2 {
     margin-bottom: 0;
+  }
+
+  #about-me h2 > span {
+    --text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #fff,
+    0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
   }
 
   #projects {
@@ -1259,8 +1266,7 @@ footer {
   53%,
   57%,
   100% {
-    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #fff,
-      0 0 80px #fff, 0 0 90px #fff, 0 0 100px #fff, 0 0 150px #fff;
+    text-shadow: var(--text-shadow);
   }
 
   20%,
