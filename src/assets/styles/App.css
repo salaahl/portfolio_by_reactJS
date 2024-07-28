@@ -689,6 +689,7 @@ video {
 #projects > .header.animate,
 .project.animate,
 #contact > .content.animate {
+  opacity: 1;
   animation: translate-content 0.5s var(--in-out-cubic) 0s 1 normal forwards,
     show-content 1s var(--in-out-cubic) 0s 1 normal forwards;
 }
