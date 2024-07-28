@@ -6,23 +6,21 @@ window.addEventListener('load', () => {
     '.project',
     '#contact > .content',
   ];
-  
+
   let options;
-  
+
   if (window.innerWidth < 1024) {
     options = {
-      root: document.body,
-      threshold: 0.000001
+      threshold: 0.5,
     };
   } else {
     options = {
-      root: document.body,
-      threshold: 0.000001
+      threshold: 1,
     };
   }
-  
+
   const observer = new IntersectionObserver(handleIntersection, options);
-  
+
   function handleIntersection(entries) {
     entries.map((entry) => {
       if (entry.isIntersecting) {
@@ -30,7 +28,7 @@ window.addEventListener('load', () => {
       }
     });
   }
-  
+
   target.forEach((index) => {
     let container = document.querySelectorAll(index);
     if (container) {
