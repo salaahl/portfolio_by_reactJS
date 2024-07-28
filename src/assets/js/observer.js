@@ -35,9 +35,8 @@ window.addEventListener('load', () => {
     if (container) {
       for (let i = 0; i < container.length; i++) {
         observer.observe(container[i]);
+        alert(target[0]);
       }
     }
   });
-
-  alert('hi');
 });
