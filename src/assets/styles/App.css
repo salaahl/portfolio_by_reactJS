@@ -702,7 +702,7 @@ video {
 
 #home > .arrow {
   position: absolute;
-  bottom: 5%;
+  bottom: 15%;
   left: 0;
   width: 100%;
   display: flex;
@@ -766,7 +766,7 @@ video {
 }
 
 #about-me h2 > span {
-  --text-shadow: 0 0 0.8px #fff, 0 0 1.2px #fff, 0 0 1.6px #fff, 0 0 40px rgb(255, 255, 255, 0.4), 0 0 60px rgb(255, 255, 255, 0.2), 0 0 80px rgb(255, 255, 255, 0.1);
+  --text-shadow: 0 0 0.8px #fff, 0 0 1.6px #fff, 0 0 3.2px #fff;
   display: block;
   font-family: 'Poiret One', sans-serif;
   font-weight: 400;
@@ -951,8 +951,12 @@ footer {
     font-size: 60px;
   }
 
-  #home svg {
+  #home > svg {
     width: 75%;
+  }
+
+  #home > .arrow {
+    bottom: 5%;
   }
 
   #about-me .content {
@@ -979,7 +983,7 @@ footer {
 
   #about-me h2 > span {
     --text-shadow: 0 0 0.8px #fff, 0 0 2.2px #fff, 0 0 3.8px #fff, 0 0 8px #fff,
-    0 0 16px #fff, 0 0 18px #fff, 0 0 20px #fff, 0 0 30px #fff;
+      0 0 16px #fff, 0 0 18px #fff, 0 0 20px #fff, 0 0 30px #fff;
   }
 
   #projects {
