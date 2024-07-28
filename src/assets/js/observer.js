@@ -39,5 +39,5 @@ window.addEventListener('load', () => {
     }
   });
 
-  alert(target[0]);
+  alert(container[0]);
 });
