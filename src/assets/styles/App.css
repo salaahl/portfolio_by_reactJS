@@ -767,7 +767,7 @@ video {
 
 #about-me h2 > span {
   --text-shadow: 0 0 0.8px #fff, 0 0 1.6px #fff, 0 0 2.2px #fff,
-    0 0 20px rgb(255, 255, 255, 0.4) 0 0 10px rgb(255, 255, 255, 0.6),
+    0 0 10px rgb(255, 255, 255, 0.6),
     0 0 20px rgb(255, 255, 255, 0.4), 0 0 40px rgb(255, 255, 255, 0.2);
   display: block;
   font-family: 'Poiret One', sans-serif;
