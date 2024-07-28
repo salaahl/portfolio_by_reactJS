@@ -31,11 +31,13 @@ const observer = new IntersectionObserver(handleIntersection, options);
 
 window.addEventListener('load', () => {
   target.forEach((index) => {
-    let container = document.querySelectorAll(index);
-    observer.observe(container[1]);
+    let container = document.querySelector(index);
+
+    console.log(container)
+    observer.observe(container);
+
 
     if (container) {
-      alert('oui');
 
       for (let i = 0; i < container.length; i++) {
         observer.observe(container[i]);
