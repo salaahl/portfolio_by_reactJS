@@ -1549,6 +1549,7 @@ window.particlesJS.load = function (tag_id, path_config_json, callback) {
   xhr.onreadystatechange = function (data) {
     if (xhr.readyState == 4) {
       if (xhr.status == 200) {
+        console.log(data)
         var params = JSON.parse(data.currentTarget.response);
         window.particlesJS(tag_id, params);
         if (callback) callback();
