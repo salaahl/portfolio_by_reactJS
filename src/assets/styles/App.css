@@ -676,23 +676,6 @@ video {
   transition: all 0.475s;
 }
 
-#home > svg,
-#about-me > .content > p,
-#projects > .header,
-.project,
-#contact > .content {
-  opacity: 0;
-}
-
-#home > svg.animate,
-#about-me > .content > p.animate,
-#projects > .header.animate,
-.project.animate,
-#contact > .content.animate {
-  animation: translate-content 0.5s var(--in-out-cubic) 0s 1 normal forwards,
-    show-content 1s var(--in-out-cubic) 0s 1 normal forwards;
-}
-
 #home,
 #about-me,
 #projects > .header,
@@ -944,6 +927,25 @@ footer {
     margin-bottom: 2%;
   }
 
+  #home > svg,
+  #about-me > .content > p,
+  #projects > .header,
+  .project,
+  #contact > .content {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  #home > svg.animate,
+  #about-me > .content > p.animate,
+  #projects > .header.animate,
+  .project.animate,
+  #contact > .content.animate {
+    pointer-events: initial;
+    animation: translate-content 0.5s var(--in-out-cubic) 0s 1 normal forwards,
+      show-content 1s var(--in-out-cubic) 0s 1 normal forwards;
+  }
+
   #home .text {
     font-size: 60px;
   }
@@ -1152,8 +1154,8 @@ footer {
     animation: color-text var(--in-out-cubic);
     animation-timeline: view();
     animation-fill-mode: both;
-    animation-range-start: 20%;
-    animation-range-end: 60%;
+    animation-range-start: 30%;
+    animation-range-end: 70%;
   }
 
   #contact h2 span:first-child {
