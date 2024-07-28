@@ -10,10 +10,12 @@ let options;
 
 if (window.innerWidth < 1024) {
   options = {
+    root: document.body,
     threshold: 0.1,
   };
 } else {
   options = {
+    root: document.body,
     threshold: 0.1,
   };
 }
