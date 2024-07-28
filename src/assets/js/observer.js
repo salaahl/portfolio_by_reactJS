@@ -11,15 +11,15 @@ window.addEventListener('load', () => {
 
   if (window.innerWidth < 1024) {
     options = {
+      root: document.querySelector('body'),
       threshold: 0.5,
     };
   } else {
     options = {
+      root: document.querySelector('body'),
       threshold: 1,
     };
   }
-
-  const observer = new IntersectionObserver(handleIntersection, options);
 
   function handleIntersection(entries) {
     entries.map((entry) => {
@@ -28,6 +28,10 @@ window.addEventListener('load', () => {
       }
     });
   }
+
+  const observer = new IntersectionObserver(handleIntersection, options);
+
+  observer.root.style.border = "10px solid #44aa44";
 
   target.forEach((index) => {
     let container = document.querySelectorAll(index);
