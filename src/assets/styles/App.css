@@ -689,8 +689,6 @@ video {
 #projects > .header.animate,
 .project.animate,
 #contact > .content.animate {
-  opacity: 0;
-  -webkit-animation: show-content 1s forwards; /* Safari and other WebKit browsers */
   animation: translate-content 0.5s var(--in-out-cubic) 0s 1 normal forwards,
     show-content 1s var(--in-out-cubic) 0s 1 normal forwards;
 }
@@ -1283,12 +1281,6 @@ footer {
 
   to {
     transform: translateY(0vh);
-  }
-}
-
-@-webkit-keyframes show-content {
-  to {
-    opacity: 1;
   }
 }
 

@@ -1,3 +1,4 @@
+alert('hi');
 const target = [
   '#home > svg',
   '#about-me > .content > p',
@@ -23,6 +24,7 @@ const observer = new IntersectionObserver(handleIntersection, options);
 function handleIntersection(entries) {
   entries.map((entry) => {
     if (entry.isIntersecting) {
+      entry.target.style.opacity = 1.0;
       entry.target.classList.add('animate');
     }
   });
