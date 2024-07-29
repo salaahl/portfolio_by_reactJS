@@ -676,6 +676,62 @@ video {
   transition: all 0.475s;
 }
 
+.App > *:not(#loader) {
+  opacity: 0;
+  transition: opacity 0.8s var(--in-out-cubic);
+}
+
+#loader {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  z-index: 99;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  background: #353535;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotationBack 1s ease-in-out infinite reverse;
+}
+
+.loader::before {
+  content: '';
+  box-sizing: border-box;
+  left: 0;
+  top: 0;
+  transform: rotate(45deg);
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background: #2e2e2e;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: rgb(0, 0, 0);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
 #home,
 #about-me,
 #projects > .header,
@@ -940,12 +996,17 @@ footer {
   }
 
   #home > svg.animate,
-  #about-me > .content > p.animate,
   #projects > .header.animate,
   .project.animate,
   #contact > .content.animate {
     pointer-events: initial;
-    animation: translate-content 0.5s var(--in-out-cubic) 0s 1 normal forwards,
+    animation: translate-content-y 0.5s var(--in-out-cubic) 0s 1 normal forwards,
+      show-content 1s var(--in-out-cubic) 0s 1 normal forwards;
+  }
+
+  #about-me > .content > p.animate {
+    pointer-events: initial;
+    animation: translate-content-x 0.5s var(--in-out-cubic) 0s 1 normal forwards,
       show-content 1s var(--in-out-cubic) 0s 1 normal forwards;
   }
 
@@ -1158,10 +1219,6 @@ footer {
     }
   }
 
-  #about-me {
-    height: 75vh;
-  }
-
   #projects > .header > h2 {
     animation: color-text var(--in-out-cubic);
     animation-timeline: view();
@@ -1191,6 +1248,10 @@ footer {
   #home,
   #about-me {
     background: rgb(0, 0, 0);
+  }
+
+  #projects {
+    background-color: rgb(255, 255, 255);
   }
 
   @media (min-width: 1024px) {
@@ -1233,6 +1294,16 @@ footer {
 
   100% {
     background-color: rgb(103, 175, 142);
+  }
+}
+
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
   }
 }
 
@@ -1287,7 +1358,17 @@ footer {
   }
 }
 
-@keyframes translate-content {
+@keyframes translate-content-x {
+  from {
+    transform: translateX(-100px);
+  }
+
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes translate-content-y {
   from {
     transform: translateY(25vh);
   }
