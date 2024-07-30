@@ -6,10 +6,10 @@ import SplitType from 'split-type';
 gsap.registerPlugin(ScrollTrigger, Draggable, MotionPathPlugin);
 
 window.addEventListener('load', () => {
-  /* animation isolée : fond d'écran */
-  
 
-  gsap.fromTo(
+  /* animation : fond d'écran */
+  var tl = gsap.timeline();
+  tl.fromTo(
     '#root',
     {
       backgroundColor: 'rgb(0, 0, 0)',
@@ -35,7 +35,7 @@ window.addEventListener('load', () => {
     }
   );
 
-  gsap.fromTo(
+  tl.fromTo(
     '#root',
     {
       backgroundColor: 'rgb(255, 255, 255)',
@@ -61,7 +61,25 @@ window.addEventListener('load', () => {
     }
   );
 
-  /* animation isolée : arrow */
+  /* animation : fadeIn */
+  let target = [{name: '#home', start: '15% 50%'}, {name: '#about-me', start: '15% 50%'}, {name: '#projects > .header', start: '0% 75%'}, {name: '#contact', start: '15% 50%'}];
+  for (let i = 0; i < target.length; i++) {
+    gsap.from(target[i].name + '> *', {
+      opacity: 0,
+      y: '25%',
+      duration: 0.5,
+      ease: 'power1.out',
+
+      scrollTrigger: {
+        trigger: target[i].name,
+        start: target[i].start,
+        end: target[i].end ? target[i].end : false,
+        markers: true
+      },
+    });
+  }
+
+  /* animation : arrow */
   gsap.to('#home > .arrow', {
     opacity: 0,
     ease: 'power1.out',
@@ -73,23 +91,6 @@ window.addEventListener('load', () => {
       scrub: true,
     },
   });
-
-  // fade de mes div
-  let target = ['#home', '#about-me', '#contact'];
-  for (let i = 0; i < target.length; i++) {
-    gsap.from(target[i] + '> *:first-child', {
-      opacity: 0,
-      y: 250,
-      duration: 0.5,
-      ease: 'power1.out',
-
-      scrollTrigger: {
-        trigger: target[i],
-        start: 'top center',
-        end: '+=50%',
-      },
-    });
-  }
 
   /* animation isolée : paragraphe de la section "apropos" */
   // 1er paramètre : la div à découper
@@ -149,7 +150,6 @@ window.addEventListener('load', () => {
           trigger: project,
           start: '0% 75%',
           end: '100% 75%',
-          scrub: true,
         },
       });
     })
