@@ -208,7 +208,5 @@ window.addEventListener('load', () => {
   });
 
   /* onload */
-  setTimeout(() => {
-    document.querySelector('#loader').style.display = 'none';
-  }, 1000);
+  document.querySelector('#loader').style.display = 'none';
 });
