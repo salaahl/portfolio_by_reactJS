@@ -20,7 +20,6 @@ window.addEventListener('load', () => {
         start: '-150%',
         end: '33%',
         scrub: true,
-        markers: true
       },
     },
     {
@@ -137,20 +136,23 @@ window.addEventListener('load', () => {
 
   /* animation isolée : mes projets */
   if(window.innerWidth < 1024) {
-    gsap.from('#projects .project', {
-      pointerEvents: 'none',
-      y: '20%',
-      opacity: 0,
-      duration: 0.5,
-      ease: 'power1.out',
-      stagger: 0.1,
+    const projects = gsap.utils.toArray('#projects .project');
+    projects.forEach(project => {
+      gsap.from(project, {
+        pointerEvents: 'none',
+        y: '25%',
+        opacity: 0,
+        duration: 0.5,
+        ease: 'power1.out',
 
-      scrollTrigger: {
-        trigger: '#projects > .content',
-        start: '0% 25%',
-        end: '100%',
-      },
-    });
+        scrollTrigger: {
+          trigger: project,
+          start: '0% 75%',
+          end: '100% 75%',
+          scrub: true,
+        },
+      });
+    })
   } else {
     gsap.from('#projects .project', {
       pointerEvents: 'none',
