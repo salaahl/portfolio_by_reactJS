@@ -1,9 +1,9 @@
 // or all tools are exported from the "all" file (excluding members-only plugins):
-import { gsap, ScrollTrigger, Draggable, MotionPathPlugin } from 'gsap/all';
+import { gsap, ScrollTrigger } from 'gsap/all';
 import SplitType from 'split-type';
 
 // don't forget to register plugins
-gsap.registerPlugin(ScrollTrigger, Draggable, MotionPathPlugin);
+gsap.registerPlugin(ScrollTrigger);
 
 window.addEventListener('load', () => {
   /* animation : fond d'écran */
@@ -199,4 +199,6 @@ window.addEventListener('load', () => {
       scrub: true,
     },
   });
+
+  document.querySelector('.loader').style.display = 'none';
 });

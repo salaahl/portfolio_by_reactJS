@@ -678,6 +678,57 @@ video {
   transition: all 0.475s;
 }
 
+#loader {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  z-index: 99;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  background: #353535;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotationBack 1s ease-in-out infinite reverse;
+}
+
+.loader::before {
+  content: '';
+  box-sizing: border-box;
+  left: 0;
+  top: 0;
+  transform: rotate(45deg);
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background: #2e2e2e;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: rgb(0, 0, 0);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
 #home,
 #about-me,
 #projects > .header,
@@ -770,8 +821,9 @@ video {
 }
 
 #about-me h2 > span {
-  --text-shadow: 0px 0px 5px #b393d3, 0px 0px 10px #b393d3, 0px 0px 10px #b393d3,
-  0px 0px 20px #b393d3;
+  --text-shadow: 0 0 0.8px #fff, 0 0 1.6px #fff, 0 0 2.2px #fff,
+    0 0 10px rgb(255, 255, 255, 0.6), 0 0 20px rgb(255, 255, 255, 0.4),
+    0 0 40px rgb(255, 255, 255, 0.2);
   display: block;
   font-family: 'Poiret One', sans-serif;
   font-weight: 400;
