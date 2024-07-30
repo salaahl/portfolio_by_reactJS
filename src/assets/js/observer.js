@@ -199,7 +199,4 @@ window.addEventListener('load', () => {
       scrub: true,
     },
   });
-
-  /* onload */
-  document.querySelector('#loader').style.display = 'none';
 });
