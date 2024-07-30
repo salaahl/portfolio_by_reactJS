@@ -15,8 +15,33 @@ window.addEventListener('load', () => {
       ease: 'power1.out',
 
       scrollTrigger: {
+        trigger: '#home',
+        start: '-50% 0%',
+        scrub: true,
+        markers: true,
+      },
+    },
+    {
+      backgroundColor: 'rgb(0, 0, 0)',
+      ease: 'power1.out',
+
+      scrollTrigger: {
+        trigger: '#home',
+        start: '100%',
+        scrub: true,
+      },
+    }
+  );
+
+  tl.fromTo(
+    '#root',
+    {
+      backgroundColor: 'rgb(0, 0, 0)',
+      ease: 'power1.out',
+
+      scrollTrigger: {
         trigger: '#about-me',
-        start: '-150%',
+        start: '0%',
         end: window.innerWidth < 1024 ? '33%' : '50%',
         scrub: true,
       },
@@ -111,7 +136,7 @@ window.addEventListener('load', () => {
     scrollTrigger: {
       trigger: '#about-me', // la div à surveiller pour lancer l'animation
       start: window.innerWidth < 1024 ? '50% 75%' : '15% 50%', // la zone de la div SURVEILLEE à partir de laquelle mon animation commence ET la position du curseur dans la fenêtre
-      end: window.innerWidth < 1024 ? '80% 75%' : '50% 50%',
+      end: window.innerWidth < 1024 ? '75% 75%' : '50% 50%',
       scrub: true, // l'animation suit le scroll
     },
   });

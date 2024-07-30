@@ -784,8 +784,6 @@ video {
 }
 
 #projects > .header > h2 {
-  position: sticky;
-  top: 0;
   margin-bottom: 0;
   padding-top: 5vh;
   padding-bottom: 5vh;
