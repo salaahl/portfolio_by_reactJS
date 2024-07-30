@@ -16,9 +16,8 @@ window.addEventListener('load', () => {
 
       scrollTrigger: {
         trigger: '#home',
-        start: '0% 0%',
+        start: '0% 15%',
         scrub: true,
-        markers: true,
       },
     },
     {
@@ -26,9 +25,11 @@ window.addEventListener('load', () => {
       ease: 'power1.out',
 
       scrollTrigger: {
-        trigger: '#home',
-        start: '100%',
+        trigger: '#about-me',
+        start: '0%',
+        end: window.innerWidth < 1024 ? '33%' : '50%',
         scrub: true,
+        markers: true,
       },
     }
   );
