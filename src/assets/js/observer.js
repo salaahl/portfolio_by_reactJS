@@ -6,7 +6,6 @@ import SplitType from 'split-type';
 gsap.registerPlugin(ScrollTrigger, Draggable, MotionPathPlugin);
 
 window.addEventListener('load', () => {
-
   /* animation : fond d'écran */
   var tl = gsap.timeline();
   tl.fromTo(
@@ -54,7 +53,7 @@ window.addEventListener('load', () => {
 
       scrollTrigger: {
         trigger: '#contact',
-        start: '0%',
+        start: '-50%',
         end: '0%',
         scrub: true,
       },
@@ -62,7 +61,12 @@ window.addEventListener('load', () => {
   );
 
   /* animation : fadeIn */
-  let target = [{name: '#home', start: '15% 50%'}, {name: '#about-me', start: '15% 50%'}, {name: '#projects > .header', start: '0% 75%'}, {name: '#contact', start: '15% 50%'}];
+  let target = [
+    { name: '#home', start: '15% 50%' },
+    { name: '#about-me', start: '15% 50%' },
+    { name: '#projects > .header', start: '0% 75%' },
+    { name: '#contact', start: '15% 50%' },
+  ];
   for (let i = 0; i < target.length; i++) {
     gsap.from(target[i].name + '> *', {
       opacity: 0,
@@ -74,7 +78,6 @@ window.addEventListener('load', () => {
         trigger: target[i].name,
         start: target[i].start,
         end: target[i].end ? target[i].end : false,
-        markers: true
       },
     });
   }
@@ -136,9 +139,9 @@ window.addEventListener('load', () => {
   );
 
   /* animation isolée : mes projets */
-  if(window.innerWidth < 1024) {
+  if (window.innerWidth < 1024) {
     const projects = gsap.utils.toArray('#projects .project');
-    projects.forEach(project => {
+    projects.forEach((project) => {
       gsap.from(project, {
         pointerEvents: 'none',
         y: '25%',
@@ -152,7 +155,7 @@ window.addEventListener('load', () => {
           end: '100% 75%',
         },
       });
-    })
+    });
   } else {
     gsap.from('#projects .project', {
       pointerEvents: 'none',
