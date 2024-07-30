@@ -680,7 +680,6 @@ video {
 
 #home,
 #about-me,
-#projects > .header,
 #contact {
   position: relative;
   display: flex;
@@ -977,7 +976,14 @@ footer {
   }
 
   #projects > .header {
-    height: 75vh;
+    height: 37.5vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: var(--body-padding-x);
+    padding-right: var(--body-padding-x);
   }
 
   #projects > .header > h2 {

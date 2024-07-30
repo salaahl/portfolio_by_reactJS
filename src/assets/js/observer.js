@@ -17,7 +17,7 @@ window.addEventListener('load', () => {
       scrollTrigger: {
         trigger: '#about-me',
         start: '-150%',
-        end: '33%',
+        end: window.innerWidth < 1024 ? '33%' : '50%',
         scrub: true,
       },
     },
@@ -27,8 +27,8 @@ window.addEventListener('load', () => {
 
       scrollTrigger: {
         trigger: '#about-me',
-        start: '33%',
-        end: '33%',
+        start: window.innerWidth < 1024 ? '33%' : '50%',
+        end: window.innerWidth < 1024 ? '33%' : '50%',
         scrub: true,
       },
     }
@@ -64,7 +64,7 @@ window.addEventListener('load', () => {
   let target = [
     { name: '#home', start: '15% 50%' },
     { name: '#about-me', start: '15% 50%' },
-    { name: '#projects > .header', start: '0% 75%' },
+    { name: '#projects > .header', start: '15% 75%' },
     { name: '#contact', start: '15% 50%' },
   ];
 
@@ -110,7 +110,7 @@ window.addEventListener('load', () => {
 
     scrollTrigger: {
       trigger: '#about-me', // la div à surveiller pour lancer l'animation
-      start: window.innerWidth < 1024 ? '50% 75%' : '0% 50%', // la zone de la div SURVEILLEE à partir de laquelle mon animation commence ET la position du curseur dans la div
+      start: window.innerWidth < 1024 ? '50% 75%' : '15% 50%', // la zone de la div SURVEILLEE à partir de laquelle mon animation commence ET la position du curseur dans la fenêtre
       end: window.innerWidth < 1024 ? '80% 75%' : '50% 50%',
       scrub: true, // l'animation suit le scroll
     },
@@ -131,8 +131,7 @@ window.addEventListener('load', () => {
 
       scrollTrigger: {
         trigger: '#about-me',
-        start: '33% 0%',
-        // end: window.innerWidth < 1024 ? '0% 0%' : '50% 100%',
+        start: window.innerWidth < 1024 ? '33% 0%' : '50% 0%',
         scrub: true,
       },
     }
@@ -153,23 +152,21 @@ window.addEventListener('load', () => {
           trigger: project,
           start: '0% 75%',
           end: '100% 75%',
-          markers: true,
         },
       });
     });
   } else {
     gsap.from('#projects .project', {
       pointerEvents: 'none',
-      y: '20%',
+      y: '25%',
       opacity: 0,
       duration: 0.5,
       ease: 'power1.out',
       stagger: 0.1,
 
       scrollTrigger: {
-        trigger: '#projects > .content',
-        start: '0% 25%',
-        end: '100%',
+        trigger: '#projects > .header',
+        start: '0% 0%',
       },
     });
   }
