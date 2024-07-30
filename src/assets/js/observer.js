@@ -143,12 +143,6 @@ window.addEventListener('load', () => {
       backgroundSize: '0% 100%',
       ease: 'power1.out',
       stagger: 0.1,
-
-      scrollTrigger: {
-        trigger: '#projects > .header',
-        start: '0% 25%',
-        scrub: true,
-      },
     },
     {
       backgroundSize: '100% 100%',
@@ -156,29 +150,47 @@ window.addEventListener('load', () => {
       stagger: 0.1,
 
       scrollTrigger: {
-        trigger: '#projects > .header',
-        start: '25% 50%',
-        end: '100% 50%',
+        trigger: window.innerWidth < 1024 ? '#projects > .content' : '#projects > .header',
+        start: window.innerWidth < 1024 ? '0% 25%' : '25% 50%',
+        end: window.innerWidth < 1024 ? '0% 25%' : '100% 50%',
         scrub: true,
+        markers: true
       },
     }
   );
 
   /* animation isolée : mes projets */
-  gsap.from('#projects .project', {
-    pointerEvents: 'none',
-    y: '20%',
-    opacity: 0,
-    duration: 0.5,
-    ease: 'power1.out',
-    stagger: 0.1,
+  if(window.innerWidth < 1024) {
+    gsap.from('#projects .project', {
+      pointerEvents: 'none',
+      y: '20%',
+      opacity: 0,
+      duration: 0.5,
+      ease: 'power1.out',
+      stagger: 0.1,
 
-    scrollTrigger: {
-      trigger: '#projects > .content',
-      start: '0% 25%',
-      end: '100%',
-    },
-  });
+      scrollTrigger: {
+        trigger: '#projects > .content',
+        start: '0% 25%',
+        end: '100%',
+      },
+    });
+  } else {
+    gsap.from('#projects .project', {
+      pointerEvents: 'none',
+      y: '20%',
+      opacity: 0,
+      duration: 0.5,
+      ease: 'power1.out',
+      stagger: 0.1,
+
+      scrollTrigger: {
+        trigger: '#projects > .content',
+        start: '0% 25%',
+        end: '100%',
+      },
+    });
+  }
 
   /* animation isolée : contact */
   gsap.from('#contact h2 span:first-child', {

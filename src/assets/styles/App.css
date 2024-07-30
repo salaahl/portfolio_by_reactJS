@@ -834,10 +834,6 @@ video {
   position: relative;
 }
 
-#projects > .header {
-  height: 75vh;
-}
-
 #projects > .header > h2 {
   position: sticky;
   top: 0;
@@ -1028,6 +1024,10 @@ footer {
 
   #projects:has(.project:hover) > *:not(.content) {
     filter: blur(10px);
+  }
+
+  #projects > .header {
+    height: 75vh;
   }
 
   #projects > .header > h2 {
