@@ -18,6 +18,7 @@ window.addEventListener('load', () => {
         trigger: '#home',
         start: '0% 15%',
         scrub: true,
+        markers: true,
       },
     },
     {
