@@ -67,6 +67,7 @@ window.addEventListener('load', () => {
     { name: '#projects > .header', start: '0% 75%' },
     { name: '#contact', start: '15% 50%' },
   ];
+
   for (let i = 0; i < target.length; i++) {
     gsap.from(target[i].name + '> *', {
       opacity: 0,
@@ -77,7 +78,6 @@ window.addEventListener('load', () => {
       scrollTrigger: {
         trigger: target[i].name,
         start: target[i].start,
-        end: target[i].end ? target[i].end : false,
       },
     });
   }
@@ -153,6 +153,7 @@ window.addEventListener('load', () => {
           trigger: project,
           start: '0% 75%',
           end: '100% 75%',
+          markers: true,
         },
       });
     });
@@ -199,6 +200,4 @@ window.addEventListener('load', () => {
       scrub: true,
     },
   });
-
-  document.querySelector('.loader').style.display = 'none';
 });
