@@ -743,8 +743,9 @@ video {
 
 #home,
 #about-me,
+#projects,
 #contact {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 #home > svg {
@@ -834,7 +835,7 @@ video {
 }
 
 #projects > .header {
-  height: 40vh;
+  height: 75vh;
 }
 
 #projects > .header > h2 {
@@ -1021,20 +1022,12 @@ footer {
       0 0 16px #fff, 0 0 18px #fff, 0 0 20px #fff, 0 0 30px #fff;
   }
 
-  #projects {
-    min-height: calc(75vh + 50vw + 8px);
-  }
-
   #projects > *:not(.content) {
     transition: filter 0.5s var(--in-out-cubic);
   }
 
   #projects:has(.project:hover) > *:not(.content) {
     filter: blur(10px);
-  }
-
-  #projects > .header {
-    height: 75vh;
   }
 
   #projects > .header > h2 {

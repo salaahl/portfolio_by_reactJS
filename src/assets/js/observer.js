@@ -15,8 +15,8 @@ window.addEventListener('load', () => {
 
       scrollTrigger: {
         trigger: '#about-me',
-        start: '-10%',
-        end: '75%',
+        start: '-150%',
+        end: window.innerWidth < 1024 ? '100%' : '75%',
         scrub: true,
       },
     },
@@ -26,8 +26,8 @@ window.addEventListener('load', () => {
 
       scrollTrigger: {
         trigger: '#about-me',
-        start: '-10%',
-        end: '75%',
+        start: '-150%',
+        end: window.innerWidth < 1024 ? '100%' : '75%',
         scrub: true,
       },
     }
@@ -41,7 +41,7 @@ window.addEventListener('load', () => {
 
       scrollTrigger: {
         trigger: '#projects',
-        start: '-25%',
+        start: window.innerWidth < 1024 ? '0%' : '-25%',
         end: '100%',
         scrub: true,
       },
@@ -52,7 +52,7 @@ window.addEventListener('load', () => {
 
       scrollTrigger: {
         trigger: '#projects',
-        start: '-25%',
+        start: window.innerWidth < 1024 ? '0%' : '-25%',
         end: '100%',
         scrub: true,
       },
@@ -93,7 +93,7 @@ window.addEventListener('load', () => {
     scrollTrigger: {
       trigger: '#home',
       start: '0%',
-      end: '25%',
+      end: '50%',
       scrub: true,
     },
   });
@@ -166,6 +166,7 @@ window.addEventListener('load', () => {
 
   /* animation isolée : mes projets */
   gsap.from('#projects .project', {
+    pointerEvents: 'none',
     y: '20%',
     opacity: 0,
     duration: 0.5,
@@ -173,8 +174,8 @@ window.addEventListener('load', () => {
     stagger: 0.1,
 
     scrollTrigger: {
-      trigger: '#projects > .header > h2',
-      start: '0%',
+      trigger: '#projects > .content',
+      start: '0% 25%',
       end: '100%',
     },
   });
@@ -203,14 +204,6 @@ window.addEventListener('load', () => {
       start: '-50%',
       end: '0%',
       scrub: true,
-
-      markers: {
-        startColor: 'pink',
-        endColor: 'blue',
-        fontSize: '4rem',
-        indent: 100,
-        fontWeight: 'bold',
-      },
     },
   });
 
