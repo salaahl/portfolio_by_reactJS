@@ -614,6 +614,7 @@ body::-webkit-scrollbar-thumb {
   height: 100%;
   width: 100%;
   overflow-x: clip;
+  transition: background-color 0.4s;
 }
 
 h2 {
@@ -674,11 +675,6 @@ video {
     rgb(53, 114, 172, 1) 94.3%
   );
   transition: all 0.475s;
-}
-
-.App > *:not(#loader) {
-  opacity: 0;
-  transition: opacity 0.8s var(--in-out-cubic);
 }
 
 #loader {
@@ -816,6 +812,7 @@ video {
 }
 
 #about-me h2 {
+  width: 100%;
   margin-bottom: 20%;
   font-size: 400%;
   -webkit-text-stroke: thin;
@@ -969,7 +966,6 @@ video {
 
 #contact h2 span {
   display: inline-block;
-  transition: all 1s var(--in-out-cubic);
 }
 
 #contact p {
@@ -984,30 +980,6 @@ footer {
   h2 {
     font-size: 500%;
     margin-bottom: 2%;
-  }
-
-  #home > svg,
-  #about-me > .content > p,
-  #projects > .header,
-  .project,
-  #contact > .content {
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  #home > svg.animate,
-  #projects > .header.animate,
-  .project.animate,
-  #contact > .content.animate {
-    pointer-events: initial;
-    animation: translate-content-y 0.5s var(--in-out-cubic) 0s 1 normal forwards,
-      show-content 1s var(--in-out-cubic) 0s 1 normal forwards;
-  }
-
-  #about-me > .content > p.animate {
-    pointer-events: initial;
-    animation: translate-content-x 0.5s var(--in-out-cubic) 0s 1 normal forwards,
-      show-content 1s var(--in-out-cubic) 0s 1 normal forwards;
   }
 
   #home .text {
@@ -1033,7 +1005,6 @@ footer {
       rgb(255, 255, 255, 0.1),
       rgb(255, 255, 255, 0)
     );
-    backdrop-filter: blur(10px);
   }
 
   #about-me .content > * {
@@ -1041,6 +1012,7 @@ footer {
   }
 
   #about-me h2 {
+    width: 50%;
     margin-bottom: 0;
   }
 
@@ -1050,7 +1022,7 @@ footer {
   }
 
   #projects {
-    min-height: calc(40vh + 50vw + 8px);
+    min-height: calc(75vh + 50vw + 8px);
   }
 
   #projects > *:not(.content) {
@@ -1059,6 +1031,10 @@ footer {
 
   #projects:has(.project:hover) > *:not(.content) {
     filter: blur(10px);
+  }
+
+  #projects > .header {
+    height: 75vh;
   }
 
   #projects > .header > h2 {
@@ -1080,46 +1056,12 @@ footer {
     transition-delay: 0.15s;
   }
 
-  .project:nth-child(1).animate {
+  .project:first-child {
     margin-left: 0;
-    animation-delay: 0.1s;
   }
 
-  .project:nth-child(2).animate {
-    animation-delay: 0.2s;
-  }
-
-  .project:nth-child(3).animate {
-    animation-delay: 0.3s;
-  }
-
-  .project:nth-child(4).animate {
-    animation-delay: 0.4s;
-  }
-
-  .project:nth-child(5).animate {
-    animation-delay: 0.5s;
-  }
-
-  .project:nth-child(6).animate {
-    animation-delay: 0.6s;
-  }
-
-  .project:nth-child(7).animate {
-    animation-delay: 0.7s;
-  }
-
-  .project:nth-child(8).animate {
-    animation-delay: 0.8s;
-  }
-
-  .project:nth-child(9).animate {
-    animation-delay: 0.9s;
-  }
-
-  .project:nth-child(10).animate {
+  .project:last-child {
     margin-right: 0;
-    animation-delay: 1s;
   }
 
   .project:hover {
@@ -1192,108 +1134,9 @@ footer {
   }
 }
 
-@supports (animation-timeline: view()) {
-  #root {
-    animation: bg-color var(--in-out-cubic);
-    animation-timeline: scroll();
-  }
-
-  #home > .arrow {
-    animation: hide var(--in-out-cubic);
-    animation-timeline: scroll();
-  }
-
-  @media (max-width: 1023px) {
-    #projects > .header {
-      min-height: 100vh;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    #projects {
-      min-height: calc(75vh + 50vw + 8px);
-    }
-
-    #projects > .header {
-      height: 75vh;
-    }
-  }
-
-  #projects > .header > h2 {
-    animation: color-text var(--in-out-cubic);
-    animation-timeline: view();
-    animation-fill-mode: both;
-    animation-range-start: 30%;
-    animation-range-end: 70%;
-  }
-
-  #contact h2 span:first-child {
-    transform: translateX(-50%);
-  }
-
-  #contact h2 span:last-child {
-    transform: translateX(50%);
-  }
-
-  #contact h2 span {
-    animation: translate var(--in-out-cubic);
-    animation-timeline: view();
-    animation-fill-mode: both;
-    animation-range-start: 20vh;
-    animation-range-end: 60%;
-  }
-}
-
-@supports not (animation-timeline: view()) {
-  #home,
-  #about-me {
-    background: rgb(0, 0, 0);
-  }
-
-  #projects {
-    background-color: rgb(255, 255, 255);
-  }
-
-  @media (min-width: 1024px) {
-    #projects:has(.project:hover) {
-      backdrop-filter: brightness(0.9);
-      transition: backdrop-filter 0.5s var(--in-out-cubic);
-    }
-  }
-
-  #contact {
-    background-color: rgb(103, 175, 142);
-  }
-
-  footer {
-    background-color: rgb(103, 175, 142, 0.9);
-  }
-}
-
 @keyframes stroke {
   100% {
     stroke-dashoffset: -400;
-  }
-}
-
-@keyframes bg-color {
-  0%,
-  13% {
-    background-color: rgb(0, 0, 0);
-  }
-
-  30.3%,
-  35% {
-    background-color: rgb(0, 0, 0);
-  }
-
-  47.6%,
-  87% {
-    background-color: rgb(255, 255, 255);
-  }
-
-  100% {
-    background-color: rgb(103, 175, 142);
   }
 }
 
@@ -1304,13 +1147,6 @@ footer {
 
   100% {
     transform: rotate(-360deg);
-  }
-}
-
-@keyframes fade-y {
-  to {
-    opacity: 1;
-    transform: translateY(0vh);
   }
 }
 
@@ -1325,12 +1161,6 @@ footer {
 
   100% {
     transform: translateY(0px);
-  }
-}
-
-@keyframes hide {
-  15% {
-    opacity: 0;
   }
 }
 
@@ -1349,47 +1179,5 @@ footer {
   24%,
   55% {
     text-shadow: none;
-  }
-}
-
-@keyframes translate {
-  to {
-    transform: translateX(0%);
-  }
-}
-
-@keyframes translate-content-x {
-  from {
-    transform: translateX(-100px);
-  }
-
-  to {
-    transform: translateX(0px);
-  }
-}
-
-@keyframes translate-content-y {
-  from {
-    transform: translateY(25vh);
-  }
-
-  to {
-    transform: translateY(0vh);
-  }
-}
-
-@keyframes show-content {
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes color-text {
-  from {
-    background-size: 0% 100%;
-  }
-
-  to {
-    background-size: 100% 100%;
   }
 }
