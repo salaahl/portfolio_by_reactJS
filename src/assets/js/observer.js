@@ -16,7 +16,7 @@ window.addEventListener('load', () => {
 
       scrollTrigger: {
         trigger: '#home',
-        start: '-50% 0%',
+        start: '0% 0%',
         scrub: true,
         markers: true,
       },
