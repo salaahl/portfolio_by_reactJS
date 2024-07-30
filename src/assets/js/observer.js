@@ -9,7 +9,7 @@ window.addEventListener('load', () => {
   /* animation : fond d'écran */
   var tl = gsap.timeline();
   tl.fromTo(
-    '#root',
+    'body',
     {
       backgroundColor: 'rgb(0, 0, 0)',
       ease: 'power1.out',
@@ -36,7 +36,7 @@ window.addEventListener('load', () => {
   );
 
   tl.fromTo(
-    '#root',
+    'body',
     {
       backgroundColor: 'rgb(0, 0, 0)',
       ease: 'power1.out',
@@ -62,7 +62,7 @@ window.addEventListener('load', () => {
   );
 
   tl.fromTo(
-    '#root',
+    'body',
     {
       backgroundColor: 'rgb(255, 255, 255)',
       ease: 'power1.out',
