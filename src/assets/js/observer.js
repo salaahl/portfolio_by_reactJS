@@ -130,8 +130,8 @@ window.addEventListener('load', () => {
 
     scrollTrigger: {
       trigger: '#about-me', // la div à surveiller pour lancer l'animation
-      start: '0% 50%', // la zone de la div à partir de laquelle mon animation commence ET la position du curseur dans la div
-      end: '50% 50%',
+      start: window.innerWidth < 1024 ? '50% 75%' : '0% 50%', // la zone de la div SURVEILLEE à partir de laquelle mon animation commence ET la position du curseur dans la div
+      end: window.innerWidth < 1024 ? '80% 75%' : '50% 50%',
       scrub: true, // l'animation suit le scroll
     },
   });
