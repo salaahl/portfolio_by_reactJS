@@ -16,7 +16,7 @@ window.addEventListener('load', () => {
       scrollTrigger: {
         trigger: '#about-me',
         start: '-150%',
-        end: window.innerWidth < 1024 ? '100%' : '75%',
+        end: '75%',
         scrub: true,
       },
     },
@@ -27,7 +27,7 @@ window.addEventListener('load', () => {
       scrollTrigger: {
         trigger: '#about-me',
         start: '-150%',
-        end: window.innerWidth < 1024 ? '100%' : '75%',
+        end: '75%',
         scrub: true,
       },
     }
@@ -40,10 +40,10 @@ window.addEventListener('load', () => {
       ease: 'power1.out',
 
       scrollTrigger: {
-        trigger: '#projects',
-        start: window.innerWidth < 1024 ? '0%' : '-25%',
-        end: '100%',
+        trigger: '#about-me',
+        start: '75% 75%',
         scrub: true,
+        markers: true
       },
     },
     {
@@ -51,10 +51,10 @@ window.addEventListener('load', () => {
       ease: 'power1.out',
 
       scrollTrigger: {
-        trigger: '#projects',
-        start: window.innerWidth < 1024 ? '0%' : '-25%',
-        end: '100%',
+        trigger: '#contact',
+        start: '50% 50%',
         scrub: true,
+        markers: true
       },
     }
   );
@@ -67,21 +67,13 @@ window.addEventListener('load', () => {
 
       scrollTrigger: {
         trigger: '#contact',
-        start: '0%',
-        end: '100%',
+        start: '50% 50%',
         scrub: true,
       },
     },
     {
       backgroundColor: 'rgb(103, 175, 142)',
       ease: 'power1.out',
-
-      scrollTrigger: {
-        trigger: '#contact',
-        start: '0%',
-        end: '50%',
-        scrub: true,
-      },
     }
   );
 
@@ -150,11 +142,10 @@ window.addEventListener('load', () => {
       stagger: 0.1,
 
       scrollTrigger: {
-        trigger: window.innerWidth < 1024 ? '#projects > .content' : '#projects > .header',
-        start: window.innerWidth < 1024 ? '0% 25%' : '25% 50%',
-        end: window.innerWidth < 1024 ? '0% 25%' : '100% 50%',
+        trigger: '#projects > .content',
+        start: window.innerWidth < 1024 ? false : '0% 100%',
+        end: window.innerWidth < 1024 ? '0% 0%' : '50% 100%',
         scrub: true,
-        markers: true
       },
     }
   );
