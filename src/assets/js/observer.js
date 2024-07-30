@@ -7,6 +7,8 @@ gsap.registerPlugin(ScrollTrigger, Draggable, MotionPathPlugin);
 
 window.addEventListener('load', () => {
   /* animation isolée : fond d'écran */
+  
+
   gsap.fromTo(
     '#root',
     {
@@ -16,18 +18,19 @@ window.addEventListener('load', () => {
       scrollTrigger: {
         trigger: '#about-me',
         start: '-150%',
-        end: '75%',
+        end: '33%',
         scrub: true,
+        markers: true
       },
     },
     {
-      backgroundColor: 'rgb(0, 0, 0)',
+      backgroundColor: 'rgb(255, 255, 255)',
       ease: 'power1.out',
 
       scrollTrigger: {
         trigger: '#about-me',
-        start: '-150%',
-        end: '75%',
+        start: '33%',
+        end: '33%',
         scrub: true,
       },
     }
@@ -40,40 +43,22 @@ window.addEventListener('load', () => {
       ease: 'power1.out',
 
       scrollTrigger: {
-        trigger: '#about-me',
-        start: '75% 75%',
-        scrub: true,
-        markers: true
-      },
-    },
-    {
-      backgroundColor: 'rgb(255, 255, 255)',
-      ease: 'power1.out',
-
-      scrollTrigger: {
         trigger: '#contact',
-        start: '50% 50%',
-        scrub: true,
-        markers: true
-      },
-    }
-  );
-
-  gsap.fromTo(
-    '#root',
-    {
-      backgroundColor: 'rgb(103, 175, 142)',
-      ease: 'power1.out',
-
-      scrollTrigger: {
-        trigger: '#contact',
-        start: '50% 50%',
+        start: '-50%',
+        end: '-50%',
         scrub: true,
       },
     },
     {
       backgroundColor: 'rgb(103, 175, 142)',
       ease: 'power1.out',
+
+      scrollTrigger: {
+        trigger: '#contact',
+        start: '0%',
+        end: '0%',
+        scrub: true,
+      },
     }
   );
 
@@ -115,7 +100,7 @@ window.addEventListener('load', () => {
   });
 
   gsap.from('#about-me p .word', {
-    opacity: 0.3, // l'opacité de départ de la balise span
+    opacity: 0.1, // l'opacité de départ de la balise span
     duration: 0.5, // la duree de l'animation
     ease: 'power1.out', // l'effet de l'animation
     stagger: 0.1, // équivaut à un animation-delay, va mettre 0.1 entre chaque mot
@@ -142,9 +127,9 @@ window.addEventListener('load', () => {
       stagger: 0.1,
 
       scrollTrigger: {
-        trigger: '#projects > .content',
-        start: window.innerWidth < 1024 ? false : '0% 100%',
-        end: window.innerWidth < 1024 ? '0% 0%' : '50% 100%',
+        trigger: '#about-me',
+        start: '33% 0%',
+        // end: window.innerWidth < 1024 ? '0% 0%' : '50% 100%',
         scrub: true,
       },
     }
@@ -186,26 +171,26 @@ window.addEventListener('load', () => {
   /* animation isolée : contact */
   gsap.from('#contact h2 span:first-child', {
     opacity: 0, // l'opacité de départ de la balise span
-    x: -250,
+    x: '-100%',
     ease: 'power1.out', // l'effet de l'animation
 
     scrollTrigger: {
       trigger: '#contact',
-      start: '-50%',
-      end: '0%',
+      start: '0% 50%',
+      end: '50% 50%',
       scrub: true,
     },
   });
 
   gsap.from('#contact h2 span:last-child', {
     opacity: 0, // l'opacité de depart de la balise span
-    x: 250,
+    x: '100%',
     ease: 'power1.out', // l'effet de l'animation
 
     scrollTrigger: {
       trigger: '#contact',
-      start: '-50%',
-      end: '0%',
+      start: '0% 50%',
+      end: '50% 50%',
       scrub: true,
     },
   });
