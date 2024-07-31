@@ -598,12 +598,6 @@ body {
   font-family: 'Oswald', sans-serif;
 }
 
-body {
-  min-height: 300vh;
-  background-color: rgb(0, 0, 0);
-  transition: background-color 0.4s;
-}
-
 body::-webkit-scrollbar {
   width: 10px;
 }
@@ -699,6 +693,15 @@ video {
 #projects,
 #contact {
   min-height: 100vh;
+  transition: background-color 0.4s;
+}
+
+#home, #about-me, #projects {
+  background-color: rgb(0, 0, 0);
+}
+
+#contact {
+  background-color: rgb(255, 255, 255);
 }
 
 #home > svg {
@@ -785,11 +788,6 @@ video {
 
 #projects {
   position: relative;
-}
-
-#projects > .header {
-  position: relative;
-  z-index: 1;
 }
 
 #projects > .header > h2 {

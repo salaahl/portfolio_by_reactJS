@@ -8,11 +8,11 @@ gsap.registerPlugin(ScrollTrigger);
 window.addEventListener('load', () => {
   /* animation : fond d'écran */
   var tl = gsap.timeline();
-  
+
   tl.to(
-    'body',
+    '#about-me',
     {
-      backgroundColor: 'rgb(0, 0, 0)',
+      backgroundColor: 'rgb(255, 255, 255)',
       ease: 'power1.out',
 
       scrollTrigger: {
@@ -20,58 +20,13 @@ window.addEventListener('load', () => {
         start: '100% 100%',
         end: '100% 100%',
         scrub: true,
-        markers: true
-      },
-    }
-  );
-
-  tl.fromTo(
-    'body',
-    {
-      backgroundColor: 'rgb(255, 255, 255)',
-      ease: 'power1.out',
-
-      scrollTrigger: {
-        trigger: '#projets',
-        start: '10% 0%',
-        end: '10% 0%',
-        scrub: true,
-        markers: true
-      },
-    },
-    {
-      backgroundColor: 'rgb(255, 255, 255)',
-      ease: 'power1.out',
-
-      scrollTrigger: {
-        trigger: '#projets',
-        start: '90% 0%',
-        end: '90% 0%',
-        scrub: true,
-        markers: true
+        markers: true,
       },
     }
   );
 
   tl.to(
-    'body',
-    {
-      backgroundColor: 'rgb(103, 175, 142)',
-      ease: 'power1.out',
-
-      scrollTrigger: {
-        trigger: '#contact',
-        start: '100% 100%',
-        end: '100% 100%',
-        scrub: true,
-        markers: true
-      },
-    }
-  );
-
-  /*
-  tl.fromTo(
-    'body',
+    '#projects',
     {
       backgroundColor: 'rgb(255, 255, 255)',
       ease: 'power1.out',
@@ -79,37 +34,44 @@ window.addEventListener('load', () => {
       scrollTrigger: {
         trigger: '#projects > .header > h2',
         start: '100% 100%',
+        end: '100% 100%',
         scrub: true,
+        markers: true,
       },
     }
   );
 
-  tl.fromTo(
-    'body',
+  tl.to(
+    '#projects',
     {
       backgroundColor: 'rgb(255, 255, 255)',
       ease: 'power1.out',
 
       scrollTrigger: {
         trigger: '#contact',
-        start: '0%',
-        end: '0%',
+        start: '0% 0%',
+        end: '0% 0%',
         scrub: true,
+        markers: true,
       },
-    },
+    }
+  );
+
+  tl.to(
+    '#contact',
     {
       backgroundColor: 'rgb(103, 175, 142)',
       ease: 'power1.out',
 
       scrollTrigger: {
         trigger: '#contact',
-        start: '0%',
-        end: '0%',
+        start: '0% 0%',
+        end: '0% 0%',
         scrub: true,
+        markers: true,
       },
     }
   );
-  */
 
   /* animation : fadeIn */
   let target = [
@@ -181,10 +143,9 @@ window.addEventListener('load', () => {
       stagger: 0.1,
 
       scrollTrigger: {
-        trigger: '#projets',
-        start: '10% 0%',
+        trigger: '#about-me',
+        start: window.innerWidth < 1024 ? '33% 0%' : '50% 0%',
         scrub: true,
-        markers: true
       },
     }
   );
