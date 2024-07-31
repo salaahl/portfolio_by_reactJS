@@ -697,11 +697,8 @@ section {
 #projects,
 #contact {
   min-height: 100vh;
-  transition: background-color 0.4s;
-}
-
-#home, #about-me, #projects {
   background-color: rgb(0, 0, 0);
+  transition: background-color 0.4s;
 }
 
 #contact {
