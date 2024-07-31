@@ -45,8 +45,8 @@ window.addEventListener('load', () => {
 
       scrollTrigger: {
         trigger: '#contact',
-        start: '0 0',
-        end: '0 0',
+        start: '0% 0%',
+        end: '0% 0%',
         scrub: true,
         markers: true,
       },
@@ -61,8 +61,8 @@ window.addEventListener('load', () => {
 
       scrollTrigger: {
         trigger: '#contact',
-        start: '0 0',
-        end: '0 0',
+        start: '0% 0%',
+        end: '0% 0%',
         scrub: true,
         markers: true,
       },
@@ -73,7 +73,7 @@ window.addEventListener('load', () => {
   let target = [
     { name: '#home', start: '15% 50%' },
     { name: '#about-me', start: '15% 50%' },
-    { name: '#projects > .header', start: '15% 75%' },
+    { name: '#projects > .header', trigger: '#projects > .header > h2', start: '100% 100%' },
     { name: '#contact', start: '15% 50%' },
   ];
 
@@ -85,7 +85,7 @@ window.addEventListener('load', () => {
       ease: 'power1.out',
 
       scrollTrigger: {
-        trigger: target[i].name,
+        trigger: target[i].trigger ? target[i].trigger : target[i].name,
         start: target[i].start,
       },
     });
@@ -139,9 +139,10 @@ window.addEventListener('load', () => {
       stagger: 0.1,
 
       scrollTrigger: {
-        trigger: '#about-me',
-        start: window.innerWidth < 1024 ? '33% 0%' : '50% 0%',
+        trigger: '#projects > .header > h2',
+        start: '100% 100%',
         scrub: true,
+        markers: true
       },
     }
   );

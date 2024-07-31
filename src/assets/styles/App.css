@@ -676,6 +676,10 @@ video {
   transition: all 0.475s;
 }
 
+section {
+  border: 0px;
+}
+
 #home,
 #about-me,
 #contact {
@@ -696,7 +700,7 @@ video {
   transition: background-color 0.4s;
 }
 
-.App > section:not(.App > section:last-child) {
+#home, #about-me, #projects {
   background-color: rgb(0, 0, 0);
 }
 
@@ -924,7 +928,8 @@ video {
 }
 
 footer {
-  backdrop-filter: contrast(0.9);
+  background-color: rgb(103, 175, 142);
+  filter: brightness(0.9);
 }
 
 @media (min-width: 1024px) {
