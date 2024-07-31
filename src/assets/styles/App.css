@@ -696,7 +696,7 @@ video {
   transition: background-color 0.4s;
 }
 
-#home, #about-me, #projects {
+.App > section:not(.App > section:last-child) {
   background-color: rgb(0, 0, 0);
 }
 
