@@ -598,6 +598,12 @@ body {
   font-family: 'Oswald', sans-serif;
 }
 
+body {
+  min-height: 300vh;
+  background-color: rgb(0, 0, 0);
+  transition: background-color 0.4s;
+}
+
 body::-webkit-scrollbar {
   width: 10px;
 }
@@ -614,8 +620,6 @@ body::-webkit-scrollbar-thumb {
   height: 100%;
   width: 100%;
   overflow-x: clip;
-  background-color: rgb(0, 0, 0);
-  transition: background-color 0.4s;
 }
 
 h2 {
@@ -781,6 +785,11 @@ video {
 
 #projects {
   position: relative;
+}
+
+#projects > .header {
+  position: relative;
+  z-index: 1;
 }
 
 #projects > .header > h2 {

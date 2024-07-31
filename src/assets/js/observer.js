@@ -8,43 +8,16 @@ gsap.registerPlugin(ScrollTrigger);
 window.addEventListener('load', () => {
   /* animation : fond d'écran */
   var tl = gsap.timeline();
+  
   tl.fromTo(
-    '#root',
+    'body',
     {
       backgroundColor: 'rgb(0, 0, 0)',
       ease: 'power1.out',
 
       scrollTrigger: {
-        trigger: '#home',
-        start: '0% 15%',
-        scrub: true,
-        markers: true,
-      },
-    },
-    {
-      backgroundColor: 'rgb(0, 0, 0)',
-      ease: 'power1.out',
-
-      scrollTrigger: {
-        trigger: '#about-me',
-        start: '0%',
-        end: window.innerWidth < 1024 ? '33%' : '50%',
-        scrub: true,
-        markers: true,
-      },
-    }
-  );
-
-  tl.fromTo(
-    '#root',
-    {
-      backgroundColor: 'rgb(0, 0, 0)',
-      ease: 'power1.out',
-
-      scrollTrigger: {
-        trigger: '#about-me',
-        start: '0%',
-        end: window.innerWidth < 1024 ? '33%' : '50%',
+        trigger: '#projects > .header > h2',
+        start: '100% 100%',
         scrub: true,
       },
     },
@@ -53,39 +26,14 @@ window.addEventListener('load', () => {
       ease: 'power1.out',
 
       scrollTrigger: {
-        trigger: '#about-me',
-        start: window.innerWidth < 1024 ? '33%' : '50%',
-        end: window.innerWidth < 1024 ? '33%' : '50%',
+        trigger: '#projects > .header > h2',
+        end: '100% 100%',
         scrub: true,
       },
     }
   );
 
-  tl.fromTo(
-    '#root',
-    {
-      backgroundColor: 'rgb(255, 255, 255)',
-      ease: 'power1.out',
-
-      scrollTrigger: {
-        trigger: '#contact',
-        start: '-50%',
-        end: '-50%',
-        scrub: true,
-      },
-    },
-    {
-      backgroundColor: 'rgb(103, 175, 142)',
-      ease: 'power1.out',
-
-      scrollTrigger: {
-        trigger: '#contact',
-        start: '-50%',
-        end: '0%',
-        scrub: true,
-      },
-    }
-  );
+  
 
   /* animation : fadeIn */
   let target = [
@@ -157,8 +105,8 @@ window.addEventListener('load', () => {
       stagger: 0.1,
 
       scrollTrigger: {
-        trigger: '#about-me',
-        start: window.innerWidth < 1024 ? '33% 0%' : '50% 0%',
+        trigger: '#projects > .header > h2',
+        start: '100% 100%',
         scrub: true,
       },
     }
