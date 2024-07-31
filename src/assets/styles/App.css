@@ -921,8 +921,7 @@ section {
 }
 
 footer {
-  background-color: rgb(103, 175, 142);
-  filter: brightness(0.9);
+  backdrop-filter: contrast(0.9);
 }
 
 @media (min-width: 1024px) {
