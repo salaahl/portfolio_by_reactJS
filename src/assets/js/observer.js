@@ -8,14 +8,14 @@ gsap.registerPlugin(ScrollTrigger);
 window.addEventListener('load', () => {
   /* animation : fond d'écran */
   gsap.to(
-    '#about-me',
+    ['#home', '#about-me'],
     {
       backgroundColor: 'rgb(255, 255, 255)',
       ease: 'power1.out',
 
       scrollTrigger: {
         trigger: '#projects > .header > h2',
-        start: '100% 100%',
+        start: '0% 100%',
         end: '100% 100%',
         scrub: true,
       },
@@ -30,7 +30,7 @@ window.addEventListener('load', () => {
 
       scrollTrigger: {
         trigger: '#projects > .header > h2',
-        start: '100% 100%',
+        start: '0% 100%',
         end: '100% 100%',
         scrub: true,
       },
@@ -45,24 +45,23 @@ window.addEventListener('load', () => {
 
       scrollTrigger: {
         trigger: '#contact',
-        start: '0% 0%',
-        end: '0% 0%',
+        start: '100% 0%',
+        end: '100% 0%',
         scrub: true,
-        markers: true,
       },
     }
   );
 
   gsap.to(
-    '#contact',
+    ['#projects', '#contact'],
     {
       backgroundColor: 'rgb(103, 175, 142)',
       ease: 'power1.out',
 
       scrollTrigger: {
         trigger: '#contact',
-        start: '0% 0%',
-        end: '0% 0%',
+        start: '50% 100%',
+        end: '100% 100%',
         scrub: true,
         markers: true,
       },
@@ -142,7 +141,6 @@ window.addEventListener('load', () => {
         trigger: '#projects > .header > h2',
         start: '100% 100%',
         scrub: true,
-        markers: true
       },
     }
   );
