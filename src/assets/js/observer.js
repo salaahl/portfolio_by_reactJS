@@ -49,8 +49,8 @@ window.addEventListener('load', () => {
 
       scrollTrigger: {
         trigger: '#contact',
-        start: '0% 0%',
-        end: '0% 0%',
+        start: '100% 100%',
+        end: '100% 100%',
         scrub: true,
         markers: true
       },
@@ -65,8 +65,8 @@ window.addEventListener('load', () => {
 
       scrollTrigger: {
         trigger: '#contact',
-        start: '0% 0%',
-        end: '0% 0%',
+        start: '100% 100%',
+        end: '100% 100%',
         scrub: true,
         markers: true
       },
