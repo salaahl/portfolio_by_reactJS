@@ -7,9 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 window.addEventListener('load', () => {
   /* animation : fond d'écran */
-  var tl = gsap.timeline();
-
-  tl.to(
+  gsap.to(
     '#about-me',
     {
       backgroundColor: 'rgb(255, 255, 255)',
@@ -20,12 +18,11 @@ window.addEventListener('load', () => {
         start: '100% 100%',
         end: '100% 100%',
         scrub: true,
-        markers: true,
       },
     }
   );
 
-  tl.to(
+  gsap.to(
     '#projects',
     {
       backgroundColor: 'rgb(255, 255, 255)',
@@ -36,12 +33,11 @@ window.addEventListener('load', () => {
         start: '100% 100%',
         end: '100% 100%',
         scrub: true,
-        markers: true,
       },
     }
   );
 
-  tl.to(
+  gsap.from(
     '#projects',
     {
       backgroundColor: 'rgb(255, 255, 255)',
@@ -49,15 +45,15 @@ window.addEventListener('load', () => {
 
       scrollTrigger: {
         trigger: '#contact',
-        start: '0% 0%',
-        end: '0% 0%',
+        start: '0 0',
+        end: '0 0',
         scrub: true,
         markers: true,
       },
     }
   );
 
-  tl.to(
+  gsap.to(
     '#contact',
     {
       backgroundColor: 'rgb(103, 175, 142)',
@@ -65,8 +61,8 @@ window.addEventListener('load', () => {
 
       scrollTrigger: {
         trigger: '#contact',
-        start: '0% 0%',
-        end: '0% 0%',
+        start: '0 0',
+        end: '0 0',
         scrub: true,
         markers: true,
       },
