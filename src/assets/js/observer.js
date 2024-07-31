@@ -71,7 +71,7 @@ window.addEventListener('load', () => {
   let target = [
     { name: '#home', start: '15% 50%' },
     { name: '#about-me', start: '15% 50%' },
-    { name: '#projects > .header', trigger: '#projects > .header', start: '100% 100%' },
+    { name: '#projects > .header', start: '100% 100%' },
     { name: '#contact', start: '15% 50%' },
   ];
 
@@ -83,7 +83,7 @@ window.addEventListener('load', () => {
       ease: 'power1.out',
 
       scrollTrigger: {
-        trigger: target[i].trigger ? target[i].trigger : target[i].name,
+        trigger: target[i].name,
         start: target[i].start,
       },
     });
@@ -129,22 +129,21 @@ window.addEventListener('load', () => {
     {
       backgroundSize: '0% 100%',
       ease: 'power1.out',
-      stagger: 0.1,
 
       scrollTrigger: {
         trigger: '#projects > .header',
         start: '100% 100%',
+        end: '0% 0%',
         scrub: true,
-        markers: true
       },
     },
     {
       backgroundSize: '100% 100%',
       ease: 'power1.out',
-      stagger: 0.1,
 
       scrollTrigger: {
         trigger: '#projects > .header',
+        start: '100% 100%',
         end: '0% 0%',
         scrub: true,
       },

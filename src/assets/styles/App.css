@@ -701,6 +701,10 @@ section {
   transition: background-color 0.4s;
 }
 
+.force-bg-color {
+  background-color: rgb(0, 0, 0)!important;
+}
+
 #contact {
   background-color: rgb(255, 255, 255);
 }
