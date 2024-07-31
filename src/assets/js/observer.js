@@ -7,9 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 window.addEventListener('load', () => {
   /* animation : fond d'écran */
-  var tl = gsap.timeline();
-  
-  tl.fromTo(
+  gsap.to(
     'body',
     {
       backgroundColor: 'rgb(0, 0, 0)',
@@ -17,23 +15,115 @@ window.addEventListener('load', () => {
 
       scrollTrigger: {
         trigger: '#projects > .header > h2',
-        start: '100% 100%',
+        start: '0% 100%',
+        end: '0% 100%',
         scrub: true,
+        markers: true
       },
-    },
+      onUpdate: (self) => {
+        console.log('home et about-me');
+      }
+    }
+  );
+
+  gsap.to(
+    'body',
     {
       backgroundColor: 'rgb(255, 255, 255)',
       ease: 'power1.out',
 
       scrollTrigger: {
         trigger: '#projects > .header > h2',
+        start: '100% 100%',
         end: '100% 100%',
+        scrub: true,
+        markers: true
+      },
+      onUpdate: (self) => {
+        console.log('about-me vers projets');
+      }
+    }
+  );
+
+  gsap.to(
+    'body',
+    {
+      backgroundColor: 'rgb(255, 255, 255)',
+      ease: 'power1.out',
+
+      scrollTrigger: {
+        trigger: '#projects',
+        start: '95% 0%',
+        end: '95% 0%',
+        scrub: true,
+        markers: true
+      },
+      onUpdate: (self) => {
+        console.log('projets vers contact');
+      }
+    }
+  );
+
+  gsap.to(
+    'body',
+    {
+      backgroundColor: 'rgb(103, 175, 142)',
+      ease: 'power1.out',
+
+      scrollTrigger: {
+        trigger: '#contact',
+        start: '0% 0%',
+        end: '0% 0%',
+        scrub: true,
+        markers: true
+      },
+      onUpdate: (self) => {
+        console.log('contact');
+      }
+    }
+  );
+
+  /*
+  tl.fromTo(
+    'body',
+    {
+      backgroundColor: 'rgb(255, 255, 255)',
+      ease: 'power1.out',
+
+      scrollTrigger: {
+        trigger: '#projects > .header > h2',
+        start: '100% 100%',
         scrub: true,
       },
     }
   );
 
-  
+  tl.fromTo(
+    'body',
+    {
+      backgroundColor: 'rgb(255, 255, 255)',
+      ease: 'power1.out',
+
+      scrollTrigger: {
+        trigger: '#contact',
+        start: '0%',
+        end: '0%',
+        scrub: true,
+      },
+    },
+    {
+      backgroundColor: 'rgb(103, 175, 142)',
+      ease: 'power1.out',
+
+      scrollTrigger: {
+        trigger: '#contact',
+        start: '0%',
+        end: '0%',
+        scrub: true,
+      },
+    }
+  );
+  */
 
   /* animation : fadeIn */
   let target = [
