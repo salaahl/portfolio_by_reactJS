@@ -25,32 +25,28 @@ window.addEventListener('load', () => {
     }
   );
 
-  tl.to(
+  tl.fromTo(
     'body',
     {
       backgroundColor: 'rgb(255, 255, 255)',
       ease: 'power1.out',
 
       scrollTrigger: {
-        trigger: '#projects > .header > h2',
-        start: '100% 100%',
-        end: '100% 100%',
+        trigger: '#projets',
+        start: '10% 0%',
+        end: '10% 0%',
         scrub: true,
         markers: true
       },
-    }
-  );
-
-  tl.to(
-    'body',
+    },
     {
       backgroundColor: 'rgb(255, 255, 255)',
       ease: 'power1.out',
 
       scrollTrigger: {
-        trigger: '#contact',
-        start: '100% 100%',
-        end: '100% 100%',
+        trigger: '#projets',
+        start: '90% 0%',
+        end: '90% 0%',
         scrub: true,
         markers: true
       },
@@ -185,9 +181,10 @@ window.addEventListener('load', () => {
       stagger: 0.1,
 
       scrollTrigger: {
-        trigger: '#projects > .header > h2',
-        start: '100% 100%',
+        trigger: '#projets',
+        start: '10% 0%',
         scrub: true,
+        markers: true
       },
     }
   );
