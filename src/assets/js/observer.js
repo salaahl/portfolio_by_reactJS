@@ -63,7 +63,6 @@ window.addEventListener('load', () => {
         start: '50% 100%',
         end: '100% 100%',
         scrub: true,
-        markers: true,
       },
     }
   );
