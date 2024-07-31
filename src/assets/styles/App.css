@@ -668,11 +668,9 @@ video {
   width: 100%;
   height: inherit;
   border-radius: inherit;
-  background: linear-gradient(
-    82.3deg,
-    rgb(205, 92, 92) 10.8%,
-    rgb(53, 114, 172, 1) 94.3%
-  );
+  background: linear-gradient(82.3deg,
+      rgb(205, 92, 92) 10.8%,
+      rgb(53, 114, 172, 1) 94.3%);
   transition: all 0.475s;
 }
 
@@ -697,24 +695,19 @@ section {
 #projects,
 #contact {
   min-height: 100vh;
+}
+
+#root {
   background-color: rgb(0, 0, 0);
   transition: background-color 0.4s;
 }
 
-.force-bg-color {
-  background-color: rgb(0, 0, 0)!important;
-}
-
-#contact {
-  background-color: rgb(255, 255, 255);
-}
-
-#home > svg {
+#home>svg {
   width: 100%;
   margin: auto;
 }
 
-#home > .arrow {
+#home>.arrow {
   position: absolute;
   bottom: 15%;
   left: 0;
@@ -723,7 +716,7 @@ section {
   justify-content: center;
 }
 
-#home > .arrow > svg {
+#home>.arrow>svg {
   width: 20px;
   animation: arrow-animate 1s var(--in-out-cubic) infinite;
 }
@@ -780,7 +773,7 @@ section {
   -webkit-text-stroke: thin;
 }
 
-#about-me h2 > span {
+#about-me h2>span {
   --text-shadow: 0 0 0.8px #fff, 0 0 1.6px #fff, 0 0 2.2px #fff,
     0 0 10px rgb(255, 255, 255, 0.6), 0 0 20px rgb(255, 255, 255, 0.4),
     0 0 40px rgb(255, 255, 255, 0.2);
@@ -795,28 +788,27 @@ section {
   position: relative;
 }
 
-#projects > .header > h2 {
-  margin-bottom: 0;
+#projects>.header>h2 {
+  width: fit-content;
+  margin: auto auto 0 auto;
   padding-top: 5vh;
   padding-bottom: 5vh;
   font-size: 500%;
   background-color: white;
-  background-image: linear-gradient(
-    to left,
-    indianred 15%,
-    rgb(53, 114, 172, 1) 10%
-  );
+  background-image: linear-gradient(to left,
+      indianred 15%,
+      rgb(53, 114, 172, 1) 10%);
   background-repeat: no-repeat;
   background-position: left;
   color: transparent;
   background-clip: text;
 }
 
-#projects > .content::-webkit-scrollbar {
+#projects>.content::-webkit-scrollbar {
   display: none;
 }
 
-#projects > .content {
+#projects>.content {
   position: relative;
   width: calc(100% - var(--body-padding-x) * 2);
   display: flex;
@@ -943,11 +935,11 @@ footer {
     font-size: 60px;
   }
 
-  #home > svg {
+  #home>svg {
     width: 75%;
   }
 
-  #home > .arrow {
+  #home>.arrow {
     bottom: 5%;
   }
 
@@ -957,14 +949,12 @@ footer {
     flex-wrap: nowrap;
     padding: 5%;
     border-radius: 999px;
-    background: linear-gradient(
-      to bottom,
-      rgb(255, 255, 255, 0.1),
-      rgb(255, 255, 255, 0)
-    );
+    background: linear-gradient(to bottom,
+        rgb(255, 255, 255, 0.1),
+        rgb(255, 255, 255, 0));
   }
 
-  #about-me .content > * {
+  #about-me .content>* {
     width: 50%;
   }
 
@@ -973,20 +963,20 @@ footer {
     margin-bottom: 0;
   }
 
-  #about-me h2 > span {
+  #about-me h2>span {
     --text-shadow: 0 0 0.8px #fff, 0 0 2.2px #fff, 0 0 3.8px #fff, 0 0 8px #fff,
       0 0 16px #fff, 0 0 18px #fff, 0 0 20px #fff, 0 0 30px #fff;
   }
 
-  #projects > *:not(.content) {
+  #projects>*:not(.content) {
     transition: filter 0.5s var(--in-out-cubic);
   }
 
-  #projects:has(.project:hover) > *:not(.content) {
+  #projects:has(.project:hover)>*:not(.content) {
     filter: blur(10px);
   }
 
-  #projects > .header {
+  #projects>.header {
     height: 37.5vh;
     position: relative;
     display: flex;
@@ -997,11 +987,11 @@ footer {
     padding-right: var(--body-padding-x);
   }
 
-  #projects > .header > h2 {
+  #projects>.header>h2 {
     font-size: 700%;
   }
 
-  #projects > .content {
+  #projects>.content {
     flex-wrap: nowrap;
     height: calc(50vw + 8px);
     overflow-x: hidden;
