@@ -677,6 +677,41 @@ video {
   transition: all 0.475s;
 }
 
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 25px 0;
+  z-index: 1000;
+}
+
+.sticky-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  margin: auto;
+  padding: 5px 2.5px;
+  background-color: rgb(255, 255, 255, 0.5);
+  backdrop-filter: invert(0.25);
+  border-radius: 25px;
+}
+
+.sticky-nav ul li {
+  margin: 0 8px;
+}
+
+.sticky-nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.sticky-nav ul li a:hover {
+  color: #f0f0f0;
+}
+
 section {
   border: 0px;
 }
@@ -719,7 +754,7 @@ section {
   justify-content: center;
 }
 
-#home > .arrow > svg {
+#home > .arrow svg {
   width: 20px;
   animation: arrow-animate 1s var(--in-out-cubic) infinite;
 }
@@ -933,6 +968,10 @@ footer {
   h2 {
     font-size: 500%;
     margin-bottom: 2%;
+  }
+
+  .sticky-nav ul li {
+    margin: 0 15px;
   }
 
   #home .text {

@@ -9,6 +9,14 @@ function App() {
 
   return (
     <div className="App">
+      <nav className="sticky-nav">
+        <ul>
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#about-me">A propos de moi</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
       <Home />
       <AboutMe />
       <Projects />
