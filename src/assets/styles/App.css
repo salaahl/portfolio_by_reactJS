@@ -692,8 +692,7 @@ video {
   width: fit-content;
   margin: auto;
   padding: 5px 2.5px;
-  background-color: rgb(255, 255, 255, 0.5);
-  backdrop-filter: invert(0.25);
+  background-color: rgb(255, 255, 255, 0.15);
   border-radius: 25px;
 }
 
@@ -702,7 +701,7 @@ video {
 }
 
 .sticky-nav ul li a {
-  color: black;
+  color: white;
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;

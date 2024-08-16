@@ -19,6 +19,14 @@ function changeBackground(color) {
   });
 }
 
+function invertColor(bgColor) {
+  gsap.to('.sticky-nav ul', {
+    backgroundColor: bgColor,
+    duration: 1, // Peut être ajusté si nécessaire
+    ease: 'power1.out',
+  });
+}
+
 // Création des animations ScrollTrigger
 window.addEventListener('load', () => {
   // Animation de fond d'écran
@@ -32,30 +40,19 @@ window.addEventListener('load', () => {
 
   ScrollTrigger.create({
     trigger: '#contact',
-    start: '100% 100%',
+    start: '99% 100%',
     end: '100% 100%',
     onEnter: () => changeBackground('rgb(103, 175, 142)'),
     onEnterBack: () => changeBackground('rgb(255, 255, 255)'),
   });
 
-  // Animation des cibles
-  const targets = [
-    { name: '#home', start: '15% 50%' },
-    { name: '#about-me', start: '15% 50%' },
-    { name: '#projects > .header', start: '100% 100%' },
-    { name: '#contact', start: '15% 50%' },
-  ];
-
-  targets.forEach(({ name, start }) => {
-    gsap.from(`${name} > *`, {
-      opacity: 0,
-      y: '25%',
-      duration: 0.5,
-      scrollTrigger: {
-        trigger: name,
-        start,
-      },
-    });
+  // Inversion des couleurs de la barre de navigation
+  ScrollTrigger.create({
+    trigger: '#projects > .header',
+    start: '100% 100%',
+    end: '100% 100%',
+    onEnter: () => invertColor('rgb(0, 0, 0, 0.8)'),
+    onEnterBack: () => invertColor('rgb(255, 255, 255, 0.15)'),
   });
 
   // Animation de la flèche
@@ -84,7 +81,6 @@ window.addEventListener('load', () => {
       trigger: '#about-me',
       start: window.innerWidth < 1024 ? '50% 75%' : '15% 50%',
       end: window.innerWidth < 1024 ? '75% 75%' : '50% 50%',
-      scrub: true,
     },
   });
 
