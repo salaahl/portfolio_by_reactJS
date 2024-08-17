@@ -830,7 +830,7 @@ section {
 #projects > .header > h2 {
   width: fit-content;
   margin: auto auto 0 auto;
-  padding-top: 5vh;
+  padding-top: 10vh;
   padding-bottom: 5vh;
   font-size: 500%;
   background-color: white;
@@ -1034,6 +1034,7 @@ footer {
   }
 
   #projects > .header > h2 {
+    padding-top: 5vh;
     font-size: 700%;
   }
 
