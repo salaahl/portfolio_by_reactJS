@@ -87,11 +87,15 @@ window.addEventListener('load', () => {
   // Animation de la taille du fond du h2
   gsap.fromTo(
     '#projects > .header > h2',
-    { backgroundSize: '0% 100%' },
+    { 
+      backgroundSize: '0% 100%',
+      duration: 1.5,
+      stagger: 1.5,
+    },
     {
       backgroundSize: '100% 100%',
-      duration: 0.5,
-      stagger: 0.5,
+      duration: 1.5,
+      stagger: 1.5,
       scrollTrigger: {
         trigger: '#projects > .header',
         start: '100% 100%',
