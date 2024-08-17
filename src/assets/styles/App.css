@@ -589,8 +589,10 @@ video {
 */
 
 :root {
-  --body-padding-x: 5%;
   --in-out-cubic: cubic-bezier(0.4, 0, 0.2, 1);
+  --body-padding-x: 5%;
+  --project-height: 30vw;
+  --project-witdh: 60vw;
 }
 
 html,
@@ -1021,7 +1023,7 @@ footer {
   }
 
   #projects > .header {
-    height: 37.5vh;
+    height: fit-content;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -1046,7 +1048,7 @@ footer {
   }
 
   .project {
-    height: calc(30vw + 8px);
+    height: calc(var(--project-height) + 8px);
     min-width: 3vw;
     margin: 0 1px;
     border: 4px solid rgb(0, 0, 0, 0.05);
@@ -1064,7 +1066,7 @@ footer {
 
   .project:hover {
     height: 100%;
-    min-width: calc(60vw + 8px);
+    min-width: calc(var(--project-width) + 8px);
     border: 0px solid rgb(0, 0, 0, 0.05);
     border-radius: 25px;
     transition-delay: 0s;
@@ -1078,7 +1080,7 @@ footer {
     position: absolute;
     left: 0;
     top: 0;
-    height: calc(30vw + 8px);
+    height: calc(var(--project-height) + 8px);
     width: 100%;
     margin-top: 0;
     z-index: 3;
@@ -1103,7 +1105,7 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
-    height: calc(30vw + 8px);
+    height: calc(var(--project-height) + 8px);
     aspect-ratio: unset;
     border-radius: 25px;
     filter: blur(20px) brightness(0.9);
