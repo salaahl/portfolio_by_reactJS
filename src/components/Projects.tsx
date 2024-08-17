@@ -43,7 +43,7 @@ function Projects(props: ProjectsProps) {
     return (
         <section id="projects">
             <div className="header">
-                <h2>Projets</h2>
+                <h2 id="projects-anchor">Projets</h2>
             </div>
             <div className="content">
                 <Project
