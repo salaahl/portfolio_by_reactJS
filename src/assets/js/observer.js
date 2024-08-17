@@ -76,7 +76,7 @@ window.addEventListener('load', () => {
     opacity: 0.1,
     duration: 0.5,
     ease: 'power1.out',
-    stagger: 0.1,
+    stagger: 0.05,
     scrollTrigger: {
       trigger: '#about-me',
       start: window.innerWidth < 1024 ? '50% 75%' : '15% 50%',
