@@ -592,7 +592,7 @@ video {
   --in-out-cubic: cubic-bezier(0.4, 0, 0.2, 1);
   --body-padding-x: 5%;
   --project-height: 30vw;
-  --project-witdh: 60vw;
+  --project-width: 60vw;
 }
 
 html,
