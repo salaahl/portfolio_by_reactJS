@@ -90,6 +90,8 @@ window.addEventListener('load', () => {
     { backgroundSize: '0% 100%' },
     {
       backgroundSize: '100% 100%',
+      duration: 0.5,
+      stagger: 0.5,
       scrollTrigger: {
         trigger: '#projects > .header',
         start: '100% 100%',
