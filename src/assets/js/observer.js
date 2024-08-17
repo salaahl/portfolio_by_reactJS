@@ -125,7 +125,7 @@ window.addEventListener('load', () => {
       stagger: 0.1,
       scrollTrigger: {
         trigger: '#projects > .header',
-        start: '0% 0%',
+        start: '0% 1%',
       },
     });
   });
