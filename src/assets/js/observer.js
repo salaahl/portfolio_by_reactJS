@@ -10,12 +10,17 @@ gsap.config({
 });
 gsap.defaults({ ease: 'power1.out' });
 
+gsap.matchMedia().add('(min-width: 1024px)', () => {
+  ScrollTrigger.defaults({
+    scroller: '#root', // Conteneur de défilement personnalisé
+  });
+});
+
 // Fonction pour changer le fond d'écran
 function changeBackground(color) {
-  gsap.to('#root', {
+  gsap.to(['body', '#root'], {
     backgroundColor: color,
     duration: 0, // Peut être ajusté si nécessaire
-    ease: 'power1.out',
   });
 }
 
@@ -23,7 +28,6 @@ function invertColor(bgColor) {
   gsap.to('.sticky-nav ul', {
     backgroundColor: bgColor,
     duration: 1, // Peut être ajusté si nécessaire
-    ease: 'power1.out',
   });
 }
 
@@ -40,19 +44,21 @@ window.addEventListener('load', () => {
 
   ScrollTrigger.create({
     trigger: '#contact',
-    start: '99% 100%',
+    start: '98% 100%',
     end: '100% 100%',
     onEnter: () => changeBackground('rgb(103, 175, 142)'),
     onEnterBack: () => changeBackground('rgb(255, 255, 255)'),
   });
 
   // Inversion des couleurs de la barre de navigation
-  ScrollTrigger.create({
-    trigger: '#projects > .header',
-    start: '100% 100%',
-    end: '100% 100%',
-    onEnter: () => invertColor('rgb(0, 0, 0, 0.8)'),
-    onEnterBack: () => invertColor('rgb(255, 255, 255, 0.15)'),
+  gsap.matchMedia().add('(max-width: 1023px)', () => {
+    ScrollTrigger.create({
+      trigger: '#projects > .header',
+      start: '100% 100%',
+      end: '100% 100%',
+      onEnter: () => invertColor('rgb(0, 0, 0, 0.8)'),
+      onEnterBack: () => invertColor('rgb(255, 255, 255, 0.15)'),
+    });
   });
 
   // Animation de la flèche
@@ -75,7 +81,6 @@ window.addEventListener('load', () => {
   gsap.from('#about-me p .word', {
     opacity: 0.1,
     duration: 0.5,
-    ease: 'power1.out',
     stagger: 0.05,
     scrollTrigger: {
       trigger: '#about-me',
@@ -87,7 +92,7 @@ window.addEventListener('load', () => {
   // Animation de la taille du fond du h2
   gsap.fromTo(
     '#projects > .header > h2',
-    { 
+    {
       backgroundSize: '0% 100%',
       duration: 1.5,
       stagger: 1.5,

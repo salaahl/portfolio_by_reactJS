@@ -590,9 +590,6 @@ video {
 
 :root {
   --in-out-cubic: cubic-bezier(0.4, 0, 0.2, 1);
-  --body-padding-x: 5%;
-  --project-height: 30vw;
-  --project-width: 60vw;
 }
 
 html,
@@ -600,22 +597,31 @@ body {
   font-family: 'Oswald', sans-serif;
 }
 
-body::-webkit-scrollbar {
+body::-webkit-scrollbar,
+#root::-webkit-scrollbar {
   width: 10px;
 }
 
-body::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track,
+#root::-webkit-scrollbar-track {
   background-color: #232e33;
 }
 
-body::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb,
+#root::-webkit-scrollbar-thumb {
   background-color: #ffffff;
+}
+
+body,
+#root {
+  background-color: rgb(0, 0, 0);
 }
 
 #root {
   height: 100%;
   width: 100%;
-  background-color: rgb(0, 0, 0);
+  scroll-behavior: smooth;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
   overflow-x: clip;
 }
 
@@ -699,7 +705,9 @@ video {
 }
 
 .sticky-nav ul li {
+  height: 30px;
   margin: 0 8px;
+  overflow: hidden;
 }
 
 .sticky-nav ul li a {
@@ -707,8 +715,9 @@ video {
   text-decoration: none;
 }
 
-.sticky-nav ul li a:hover {
-  color: #f0f0f0;
+.sticky-nav ul li img {
+  height: 100%;
+  transition: all 0.25s var(--in-out-cubic);
 }
 
 section {
@@ -723,14 +732,14 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-left: var(--body-padding-x);
-  padding-right: var(--body-padding-x);
+  padding-left: var(--root-padding-x);
+  padding-right: var(--root-padding-x);
 }
 
 #home,
 #about-me,
 #contact {
-  min-height: 100vh;
+  min-height: calc(var(--vh-withdrawal) + 100vh);
 }
 
 #root {
@@ -848,7 +857,7 @@ section {
 
 #projects > .content {
   position: relative;
-  width: calc(100% - var(--body-padding-x) * 2);
+  width: calc(100% - var(--root-padding-x) * 2);
   display: flex;
   flex-wrap: wrap;
   margin-left: auto;
@@ -962,14 +971,68 @@ footer {
   backdrop-filter: contrast(0.9);
 }
 
+@media (max-width: 1023px) {
+  :root {
+    --vh-withdrawal: 0vh;
+    --root-padding-x: 5%;
+  }
+}
+
 @media (min-width: 1024px) {
+  :root {
+    --vh-withdrawal: -15vh;
+    --root-padding-x: 20px;
+    --project-height: 35vh;
+    --project-width: 70vh;
+  }
+
+  #root {
+    aspect-ratio: 4 / 3;
+    max-height: 85vh;
+    margin: auto 10%;
+    overflow: auto;
+    border: 5px solid;
+    border-radius: 5px;
+  }
+
   h2 {
     font-size: 500%;
     margin-bottom: 2%;
   }
 
+  .sticky-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 7.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: unset;
+  }
+
+  .sticky-nav ul {
+    background-color: whitesmoke;
+  }
+
   .sticky-nav ul li {
     margin: 0 15px;
+  }
+
+  .sticky-nav ul li:hover img {
+    height: 0%;
+  }
+
+  .sticky-nav ul li .text {
+    display: inline-block;
+    height: 0%;
+    font-family: 'Poiret One', sans-serif;
+    color: #000;
+  }
+
+  .sticky-nav ul li:hover .text {
+    height: 100%;
   }
 
   #home .text {
@@ -980,13 +1043,9 @@ footer {
     width: 75%;
   }
 
-  #home > .arrow {
-    bottom: 5%;
-  }
-
   #about-me .content {
-    height: 75vh;
-    width: 75vh;
+    height: calc(var(--vh-withdrawal) + 80vh);
+    width: calc(var(--vh-withdrawal) + 80vh);
     flex-wrap: nowrap;
     padding: 5%;
     border-radius: 999px;
@@ -1003,12 +1062,18 @@ footer {
 
   #about-me h2 {
     width: 50%;
+    font-size: 350%;
     margin-bottom: 0;
   }
 
   #about-me h2 > span {
     --text-shadow: 0 0 0.8px #fff, 0 0 2.2px #fff, 0 0 3.8px #fff, 0 0 8px #fff,
       0 0 16px #fff, 0 0 18px #fff, 0 0 20px #fff, 0 0 30px #fff;
+  }
+
+  #projects #particles-js {
+    position: fixed;
+    z-index: -1;
   }
 
   #projects > *:not(.content) {
@@ -1026,8 +1091,8 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-left: var(--body-padding-x);
-    padding-right: var(--body-padding-x);
+    padding-left: var(--root-padding-x);
+    padding-right: var(--root-padding-x);
   }
 
   #projects > .header > h2 {
@@ -1037,7 +1102,7 @@ footer {
 
   #projects > .content {
     flex-wrap: nowrap;
-    height: calc(var(--project-height) * 1.5);
+    height: calc(var(--project-height) * 2);
     overflow-x: hidden;
   }
 
