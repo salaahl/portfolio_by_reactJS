@@ -598,31 +598,26 @@ body {
 }
 
 body::-webkit-scrollbar,
-#root::-webkit-scrollbar {
+.App::-webkit-scrollbar {
   width: 10px;
 }
 
 body::-webkit-scrollbar-track,
-#root::-webkit-scrollbar-track {
+.App::-webkit-scrollbar-track {
   background-color: #232e33;
 }
 
 body::-webkit-scrollbar-thumb,
-#root::-webkit-scrollbar-thumb {
+.App::-webkit-scrollbar-thumb {
   background-color: #ffffff;
 }
 
-body,
-#root {
-  background-color: rgb(0, 0, 0);
-}
-
-#root {
-  height: 100%;
-  width: 100%;
-  scroll-behavior: smooth;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
-  overflow-x: clip;
+body {
+  background: radial-gradient(
+    circle,
+    rgba(214, 204, 194, 1) 0%,
+    rgba(245, 235, 224, 1) 100%
+  );
 }
 
 h2 {
@@ -685,9 +680,29 @@ video {
   transition: all 0.475s;
 }
 
+#root {
+  height: 100%;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  overflow: hidden;
+}
+
+.App {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+  background-color: rgb(0, 0, 0);
+  overflow-x: hidden;
+  z-index: 1;
+  transition: background-color 0.4s;
+}
+
 .sticky-nav {
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   padding: 25px 0;
   z-index: 1000;
@@ -740,11 +755,6 @@ section {
 #about-me,
 #contact {
   min-height: calc(var(--vh-withdrawal) + 100vh);
-}
-
-#root {
-  background-color: rgb(0, 0, 0);
-  transition: background-color 0.4s;
 }
 
 #home > svg {
@@ -939,16 +949,6 @@ section {
   margin-right: 12.5px;
 }
 
-#projects #particles-js {
-  position: absolute;
-  display: block;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 0;
-}
-
 #contact {
   flex-wrap: wrap;
   color: black;
@@ -990,7 +990,6 @@ footer {
     aspect-ratio: 4 / 3;
     max-height: 85vh;
     margin: auto 10%;
-    overflow: auto;
     border: 5px solid;
     border-radius: 5px;
   }
@@ -1001,10 +1000,6 @@ footer {
   }
 
   .sticky-nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
     height: 7.5vh;
     display: flex;
     align-items: center;
@@ -1013,7 +1008,7 @@ footer {
   }
 
   .sticky-nav ul {
-    background-color: whitesmoke;
+    background-color: rgba(255, 255, 255, 0.5);
   }
 
   .sticky-nav ul li {
@@ -1069,11 +1064,6 @@ footer {
   #about-me h2 > span {
     --text-shadow: 0 0 0.8px #fff, 0 0 2.2px #fff, 0 0 3.8px #fff, 0 0 8px #fff,
       0 0 16px #fff, 0 0 18px #fff, 0 0 20px #fff, 0 0 30px #fff;
-  }
-
-  #projects #particles-js {
-    position: fixed;
-    z-index: -1;
   }
 
   #projects > *:not(.content) {

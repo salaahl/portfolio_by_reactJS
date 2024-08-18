@@ -12,13 +12,13 @@ gsap.defaults({ ease: 'power1.out' });
 
 gsap.matchMedia().add('(min-width: 1024px)', () => {
   ScrollTrigger.defaults({
-    scroller: '#root', // Conteneur de défilement personnalisé
+    scroller: '.App', // Conteneur de défilement personnalisé
   });
 });
 
 // Fonction pour changer le fond d'écran
 function changeBackground(color) {
-  gsap.to(['body', '#root'], {
+  gsap.to('.App', {
     backgroundColor: color,
     duration: 0, // Peut être ajusté si nécessaire
   });
