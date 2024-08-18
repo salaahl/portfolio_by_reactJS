@@ -13,25 +13,25 @@ function App() {
         <ul>
           <li>
             <a href="#home">
-              <img src="src\assets\images\navbar_icons\home.svg" alt="Accueil" />
+              <img src="./src/assets/images/navbar_icons/home.svg" alt="Accueil" />
               <span className="text">Accueil</span>
             </a>
           </li>
           <li>
             <a href="#about-me">
-              <img src="src\assets\images\navbar_icons\about-me.svg" alt="A propos de moi" />
+              <img src="./src/assets/images/navbar_icons/about-me.svg" alt="A propos de moi" />
               <span className="text">A propos de moi</span>
             </a>
           </li>
           <li>
             <a href="#projects-anchor">
-              <img src="src\assets\images\navbar_icons\projects.svg" alt="Projets" />
+              <img src="./src/assets/images/navbar_icons/projects.svg" alt="Projets" />
               <span className="text">Projets</span>
             </a>
           </li>
           <li>
             <a href="#contact">
-              <img src="src\assets\images\navbar_icons\contact.svg" alt="Contact" />
+              <img src="./src/assets/images/navbar_icons/contact.svg" alt="Contact" />
               <span className="text">Contact</span>
             </a>
           </li>
