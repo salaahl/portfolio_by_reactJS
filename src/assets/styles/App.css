@@ -959,7 +959,8 @@ section {
 }
 
 #contact h2 {
-  color: black;
+  -webkit-text-stroke: thin;
+  -webkit-text-stroke-color: black;
 }
 
 #contact h2 span {
@@ -982,10 +983,6 @@ footer > div {
   :root {
     --vh-withdrawal: 0vh;
     --root-padding-x: 5%;
-  }
-
-  h2 {
-    font-family: 'Poiret One', sans-serif;
   }
 }
 
@@ -1199,21 +1196,17 @@ footer > div {
     transition-delay: 0s;
   }
 
-  #contact h2 {
-    color: white;
-    -webkit-text-stroke: thin;
-    -webkit-text-stroke-color: black;
-  }
-
   footer {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     height: 7.5vh;
+    width: fit-content;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: auto;
     padding: unset;
     backdrop-filter: unset;
   }
