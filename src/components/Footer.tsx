@@ -1,8 +1,7 @@
 function Footer() {
     return (
-        <div className="p-4 text-center">
-            © 2024 Copyright :
-            <span> Salaha Sokhona</span>
+        <div className="text-center">
+            © 2024 Copyright : Salaha Sokhona
         </div>
     );
 }
