@@ -725,6 +725,7 @@ footer > div {
 
 .sticky-nav ul li {
   height: 30px;
+  width: 25%;
   margin: 0 8px;
   overflow: hidden;
 }
@@ -1067,13 +1068,17 @@ footer > div {
 
   #about-me h2 {
     width: 50%;
-    font-size: 350%;
+    font-size: 325%;
     margin-bottom: 0;
   }
 
   #about-me h2 > span {
     --text-shadow: 0 0 0.8px #fff, 0 0 2.2px #fff, 0 0 3.8px #fff, 0 0 8px #fff,
       0 0 16px #fff, 0 0 18px #fff, 0 0 20px #fff, 0 0 30px #fff;
+  }
+
+  #about-me p {
+    font-size: 95%;
   }
 
   #projects > *:not(.content) {
