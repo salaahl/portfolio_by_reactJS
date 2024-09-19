@@ -725,6 +725,7 @@ footer > div {
 
 .sticky-nav ul li {
   height: 30px;
+  width: 25%;
   margin: 0 8px;
   overflow: hidden;
 }
@@ -828,7 +829,7 @@ section {
 #about-me h2 {
   width: 100%;
   margin-bottom: 20%;
-  font-size: 400%;
+  font-size: 350%;
   -webkit-text-stroke: thin;
 }
 
@@ -1129,7 +1130,7 @@ footer > div {
   }
 
   h2 {
-    font-size: 500%;
+    font-size: 400%;
     margin-bottom: 2%;
   }
 
@@ -1193,7 +1194,6 @@ footer > div {
 
   #about-me h2 {
     width: 50%;
-    font-size: 350%;
     margin-bottom: 0;
   }
 
