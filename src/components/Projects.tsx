@@ -152,7 +152,7 @@ function Project(props: ProjectProps) {
                     <img src={props.image} alt={props.title} />
                 </section>
                 <section className="masked-title">
-                    <h3 className="font-bold">{props.title}</h3>
+                    <h3>{props.title}</h3>
                 </section>
                 <section className="description">
                     <p>{props.description}</p>

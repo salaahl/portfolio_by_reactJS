@@ -843,6 +843,126 @@ section {
   animation: flicker 1.5s infinite alternate;
 }
 
+#services {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#services h2 {
+  font-size: xxx-large;
+  color: white;
+}
+
+#services > .content > .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+#services > .content {
+  display: flex;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 5% var(--padding-x);
+  overflow: auto;
+}
+
+#services > .content::-webkit-scrollbar {
+  display: none;
+}
+
+.service,
+#services > .content > .header {
+  scroll-snap-align: center;
+}
+
+#services .content > .header {
+  width: 15%;
+  transform: rotate(-90deg);
+}
+
+#services > .content > .header > h2 > span {
+  margin-right: 10px;
+  color: #9ca3af;
+}
+
+.service {
+  height: 85vh;
+  min-width: 80%;
+  margin: auto 2.5%;
+}
+
+.service .content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 100%;
+  padding: 2rem;
+  text-align: justify;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service .img-container {
+  height: 100%;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.service .img-container > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.service .details {
+  height: 100%;
+  padding-bottom: 1.25rem;
+}
+
+.service .title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #111827;
+}
+
+.service .description {
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  font-size: 1.125rem;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  color: #111827;
+}
+
+.service .footer {
+  text-align: center;
+}
+
+.service .price {
+  margin-bottom: 1rem;
+}
+
+.service .price-label {
+  color: #111827;
+}
+
+.service .price-value {
+  font-weight: 700;
+  color: #111827;
+}
+
 #projects {
   position: relative;
 }
@@ -979,6 +1099,12 @@ footer > div {
   padding: 1rem;
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .service {
+    min-width: 60%;
+  }
+}
+
 @media (max-width: 1023px) {
   :root {
     --vh-withdrawal: 0vh;
@@ -1076,6 +1202,31 @@ footer > div {
       0 0 16px #fff, 0 0 18px #fff, 0 0 20px #fff, 0 0 30px #fff;
   }
 
+  #services {
+    height: auto;
+  }
+
+  #services > .content {
+    flex-wrap: wrap;
+  }
+
+  #services > .content > .header {
+    width: 100%;
+    min-height: 20vh;
+    transform: rotate(0deg);
+  }
+
+  .service {
+    height: auto;
+    width: 30%;
+    min-width: auto;
+    margin: 0 auto 5% auto;
+  }
+
+  .service .img-container {
+    aspect-ratio: 16/9;
+  }
+
   #projects > *:not(.content) {
     transition: filter 0.5s var(--in-out-cubic);
   }
@@ -1146,6 +1297,7 @@ footer > div {
     height: var(--project-height);
     width: 100%;
     margin-top: 0;
+    font-weight: bold;
     z-index: 3;
     transition: all 0.5s;
     transition-delay: 0.15s;
