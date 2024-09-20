@@ -1,6 +1,6 @@
 function Footer() {
     return (
-        <div className="text-center">
+        <div>
             © 2024 Copyright : Salaha Sokhona
         </div>
     );

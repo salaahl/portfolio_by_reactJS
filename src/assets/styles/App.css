@@ -613,11 +613,7 @@ body::-webkit-scrollbar-thumb,
 }
 
 body {
-  background: radial-gradient(
-    circle,
-    rgba(214, 204, 194, 1) 0%,
-    rgba(245, 235, 224, 1) 100%
-  );
+  background-color: whitesmoke;
 }
 
 h2 {
@@ -868,7 +864,7 @@ section {
 #services > .content {
   width: 100%;
   display: flex;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: x proximity;
   scroll-behavior: smooth;
   padding: 5% var(--padding-x);
   overflow: auto;
@@ -916,13 +912,40 @@ section {
 }
 
 .service .img-container > .title {
-  position: absolute;
   height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  backdrop-filter: blur(5px);
+  padding: 15%;
+  text-align: center;
+  text-wrap-style: balance;
+  color: white;
+  background-color: rgb(53, 114, 172, 1);
+}
+
+.service:nth-of-type(1) .img-container > .title {
+  background-color: #3d5a80;
+}
+
+.service:nth-of-type(2) .img-container > .title {
+  background-color: #98c1d9;
+}
+
+.service:nth-of-type(3) .img-container > .title {
+  background-color: #e0fbfc;
+}
+
+.service:nth-of-type(4) .img-container > .title {
+  background-color: #e7b4a5;
+}
+
+.service:nth-of-type(5) .img-container > .title {
+  background-color: #ee6c4d;
+}
+
+.service:nth-of-type(6) .img-container > .title {
+  background-color: #293241;
 }
 
 .service .content {
@@ -936,9 +959,7 @@ section {
   padding: 2rem;
   text-align: justify;
   background-color: white;
-  border: 1px solid #e5e7eb;
   border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .service:hover .content {
@@ -949,13 +970,6 @@ section {
   height: 100%;
   width: 100%;
   overflow: hidden;
-}
-
-.service .img-container > img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
 }
 
 .service .details {
@@ -970,7 +984,7 @@ section {
 }
 
 .service .description {
-  margin-top: 0.5rem;
+  margin-top: 1.5rem;
 }
 
 .service .footer {
