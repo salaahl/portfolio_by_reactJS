@@ -28,7 +28,7 @@ function App() {
             <li>
               <a href="#about-me">
                 <img src={AboutMeIcon} alt="A propos de moi" />
-                <span className="text">A propos de moi</span>
+                <span className="text">Moi</span>
               </a>
             </li>
             <li>

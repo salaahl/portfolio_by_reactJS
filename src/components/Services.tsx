@@ -32,10 +32,11 @@ interface ServiceProps {
 function Service(props: ServiceProps) {
     return (
         <article className="service">
+            <div className="img-container">
+                <h3 className="title">{props.title}</h3>
+                <img src={props.image} alt="image du service" />
+            </div>
             <div className="content">
-                <div className="img-container">
-                    <img src={props.image} alt="image du service" />
-                </div>
                 <div className="details">
                     <h5 className="title">
                         {props.title}
