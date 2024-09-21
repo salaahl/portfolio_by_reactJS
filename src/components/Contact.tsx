@@ -10,7 +10,7 @@ function Contact(props: ContactProps) {
             <div className="content">
                 <h2><span>Con</span><span>tact</span></h2>
                 <p>
-                    <a href={props.mailto}>Mail</a>
+                    <a href={props.mailto}>sokhona.salaha@gmail.com</a>
                 </p>
                 <p>
                     <a href={props.linkedin} target="_blank">LinkedIn</a>
