@@ -70,7 +70,7 @@ function Projects(props: ProjectsProps) {
                     github="https://github.com/salaahl/nutri_verif_by_vue.js"
                     website="https://nutriverif-71662e666d39.herokuapp.com/"
                 />
-                 <Project
+                <Project
                     title="Blagues et sourires"
                     image={imgJokes}
                     description="Une application web amusante affichant des blagues aléatoires via une API personnalisée."
@@ -127,7 +127,6 @@ function Projects(props: ProjectsProps) {
                     website="https://salaha-sokhona-ecommerce.herokuapp.com/"
                 />
             </div>
-            <div id="particles-js"></div>
         </section>
     );
 }
@@ -153,7 +152,7 @@ function Project(props: ProjectProps) {
                     <img src={props.image} alt={props.title} />
                 </section>
                 <section className="masked-title">
-                    <h3 className="font-bold">{props.title}</h3>
+                    <h3>{props.title}</h3>
                 </section>
                 <section className="description">
                     <p>{props.description}</p>

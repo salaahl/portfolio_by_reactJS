@@ -1563,7 +1563,9 @@ window.particlesJS.load = function (tag_id, path_config_json, callback) {
 
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
 window.onload = function () {
-  window.particlesJS.load('particles-js', '/js/particles.json', function () {
-    console.log('callback - particles.js config loaded');
-  });
+  if (window.innerWidth > 1023) {
+    window.particlesJS.load('particles-js', '/js/particles.json', function () {
+      console.log('callback - particles.js config loaded');
+    });
+  }
 };
