@@ -89,23 +89,32 @@ window.addEventListener('load', () => {
     },
   });
 
+  // Animation du titre
+  gsap.from('#services .header h2', {
+    y: '200%',
+    opacity: 0,
+    duration: 0.5,
+    delay: 0.25,
+    scrollTrigger: {
+      trigger: '#services .header',
+      start: '0% 50%',
+    },
+  });
+
   // Animation de la taille du fond du h2
   gsap.fromTo(
     '#projects > .header > h2',
     {
       backgroundSize: '0% 100%',
-      duration: 1.5,
-      stagger: 1.5,
     },
     {
       backgroundSize: '100% 100%',
-      duration: 1.5,
-      stagger: 1.5,
+      duration: 1,
+      delay: 0.15,
       scrollTrigger: {
         trigger: '#projects > .header',
         start: '100% 100%',
         end: '0% 0%',
-        scrub: true,
       },
     }
   );
@@ -133,6 +142,7 @@ window.addEventListener('load', () => {
       y: '25%',
       opacity: 0,
       duration: 0.5,
+      delay: 0.25,
       stagger: 0.1,
       scrollTrigger: {
         trigger: '#projects > .header',
@@ -145,11 +155,11 @@ window.addEventListener('load', () => {
   gsap.from('#contact h2 span', {
     opacity: 0,
     x: (index) => (index === 0 ? '-100%' : '100%'),
+    delay: 0.15,
     scrollTrigger: {
       trigger: '#contact',
       start: '0% 50%',
       end: '50% 50%',
-      scrub: true,
     },
   });
 });
