@@ -864,7 +864,7 @@ section {
 #services > .content {
   width: 100%;
   display: flex;
-  scroll-snap-type: x proximity;
+  scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   padding: 5% var(--padding-x);
   overflow: auto;
