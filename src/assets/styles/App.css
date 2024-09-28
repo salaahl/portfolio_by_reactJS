@@ -1212,16 +1212,12 @@ footer > div {
   }
 
   #about-me .content {
-    height: calc(var(--vh-withdrawal) + 80vh);
-    width: calc(var(--vh-withdrawal) + 80vh);
+    height: calc(var(--vh-withdrawal) + 90vh);
+    width: calc(var(--vh-withdrawal) + 90vh);
     flex-wrap: nowrap;
     padding: 5%;
     border-radius: 999px;
-    background: linear-gradient(
-      to bottom,
-      rgb(255, 255, 255, 0.1),
-      rgb(255, 255, 255, 0)
-    );
+    background: linear-gradient(300deg, rgb(255, 255, 255, .1), rgb(255, 255, 255, 0));
   }
 
   @media (max-height: 799px) {
