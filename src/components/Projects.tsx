@@ -47,20 +47,20 @@ function Projects(props: ProjectsProps) {
             </div>
             <div className="content">
                 <Project
-                    title="Bibliothèque numérique"
-                    image={imgLocalLibrary}
-                    description="Bibliothèque numérique de prêt. Compte utilisateur disponible : Ousmane, mdp : Ous75019."
-                    stack={["HTML", "JS", "CSS", "Python", "PostgreSQL", "Django", "Bootstrap"]}
-                    github="https://github.com/salaahl/library"
-                    website="https://salaha-sokhona-library-6e6b0019ca6e.herokuapp.com/catalog/"
-                />
-                <Project
                     title="Site de prêt à porter"
                     image={imgDiaShop}
                     description="Les dernières tendances de la mode pour hommes et femmes."
-                    stack={["HTML", "JS", "CSS", "PHP", "MySQL", "Laravel", "Blade", "Tailwind CSS"]}
+                    stack={["HTML", "JS", "CSS", "PHP", "MySQL", "Laravel", "Blade", "Stripe", "Tailwind CSS"]}
                     github="https://github.com/salaahl/"
-                    website="https://diashop-44ca2fd005dc.herokuapp.com/"
+                    website="https://diashop-beta-b523d6ed32bd.herokuapp.com/"
+                />
+                <Project
+                    title="Restaurant Le Vingtième"
+                    image={imgRestaurant}
+                    description="Le Vingtième c'est la cuisine de toutes les gourmandises, alliant jus pressés minute de fruits et légumes & cocktails maison, recettes savoureuses..."
+                    stack={["HTML", "JS", "CSS", "PHP", "Symfony", "MySQL", "Bootstrap"]}
+                    github="https://github.com/salaahl/restaurant_project"
+                    website="https://restaurant-le-vingtieme.herokuapp.com/"
                 />
                 <Project
                     title="Appli de food-checking"
@@ -69,6 +69,14 @@ function Projects(props: ProjectsProps) {
                     stack={["HTML", "JS", "TypeScript", "CSS", "Tailwind", "Pinia", "Vue.js"]}
                     github="https://github.com/salaahl/nutri_verif_by_vue.js"
                     website="https://nutriverif-71662e666d39.herokuapp.com/"
+                />
+                <Project
+                    title="Bibliothèque numérique"
+                    image={imgLocalLibrary}
+                    description="Bibliothèque numérique de prêt. Compte utilisateur disponible : Ousmane, mdp : Ous75019."
+                    stack={["HTML", "JS", "CSS", "Python", "PostgreSQL", "Django", "Bootstrap"]}
+                    github="https://github.com/salaahl/library"
+                    website="https://salaha-sokhona-library-6e6b0019ca6e.herokuapp.com/catalog/"
                 />
                 <Project
                     title="Blagues et sourires"
@@ -93,14 +101,6 @@ function Projects(props: ProjectsProps) {
                     stack={["HTML (PUG)", "JS", "CSS", "Bulma", "MongoDB", "Mongoose"]}
                     github="https://github.com/salaahl/notepad"
                     website="https://salaha-sokhona-notepad-ed791a5cfd1e.herokuapp.com/login"
-                />
-                <Project
-                    title="Restaurant Le Vingtième"
-                    image={imgRestaurant}
-                    description="Le Vingtième c'est la cuisine de toutes les gourmandises, alliant jus pressés minute de fruits et légumes & cocktails maison, recettes savoureuses..."
-                    stack={["HTML", "JS", "CSS", "PHP", "Symfony", "MySQL", "Bootstrap"]}
-                    github="https://github.com/salaahl/restaurant_project"
-                    website="https://restaurant-le-vingtieme.herokuapp.com/"
                 />
                 <Project
                     title="Jeu de dés"
