@@ -52,7 +52,7 @@ function Projects(props: ProjectsProps) {
                     description="Les dernières tendances de la mode pour hommes et femmes."
                     stack={["HTML", "JS", "CSS", "PHP", "MySQL", "Laravel", "Blade", "Stripe", "Tailwind CSS"]}
                     github="https://github.com/salaahl/"
-                    website="https://diashop-beta-b523d6ed32bd.herokuapp.com/"
+                    website="https://diashop-v2-282b96906b4a.herokuapp.com/"
                 />
                 <Project
                     title="Restaurant Le Vingtième"
