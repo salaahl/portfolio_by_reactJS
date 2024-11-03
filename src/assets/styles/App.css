@@ -890,7 +890,7 @@ section {
 .service {
   position: relative;
   min-width: 75%;
-  aspect-ratio: 3/4;
+  aspect-ratio: 3/5;
   margin: auto 2.5%;
   overflow: hidden;
 }
@@ -1111,7 +1111,7 @@ section {
 }
 
 #projects .background-transition {
-  padding-top: 40%;
+  padding-top: 25%;
 }
 
 #projects .background-transition svg {
@@ -1290,6 +1290,7 @@ footer > div {
   .service {
     width: 30%;
     min-width: auto;
+    aspect-ratio: 3/4;
     margin: 0 auto 5% auto;
   }
 

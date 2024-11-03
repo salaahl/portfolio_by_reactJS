@@ -89,7 +89,7 @@ window.addEventListener("load", () => {
     delay: 0.25,
     scrollTrigger: {
       trigger: "#services .header",
-      start: "0% 50%",
+      start: "0% 85%",
     },
   });
 
