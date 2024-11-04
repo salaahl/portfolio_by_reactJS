@@ -10,29 +10,29 @@ gsap.config({
 });
 gsap.defaults({ ease: "power1.out" });
 
-gsap.matchMedia().add("(min-width: 1024px)", () => {
-  ScrollTrigger.defaults({
-    scroller: ".App", // Conteneur de défilement personnalisé
-  });
-});
-
-// Fonction pour changer le fond d'écran
-function changeBackground(color) {
-  gsap.to(".App", {
-    backgroundColor: color,
-    duration: 0, // Peut être ajusté si nécessaire
-  });
-}
-
-function invertColor(bgColor) {
-  gsap.to(".sticky-nav ul", {
-    backgroundColor: bgColor,
-    duration: 1, // Peut être ajusté si nécessaire
-  });
-}
-
 // Création des animations ScrollTrigger
 window.addEventListener("load", () => {
+  // Fonction pour changer le fond d'écran
+  function changeBackground(color) {
+    gsap.to("main", {
+      backgroundColor: color,
+      duration: 0, // Peut être ajusté si nécessaire
+    });
+  }
+
+  function invertColor(bgColor) {
+    gsap.to(".sticky-nav ul", {
+      backgroundColor: bgColor,
+      duration: 1, // Peut être ajusté si nécessaire
+    });
+  }
+
+  gsap.matchMedia().add("(min-width: 1024px)", () => {
+    ScrollTrigger.defaults({
+      scroller: "main", // Conteneur de défilement personnalisé
+    });
+  });
+
   // Animation de fond d'écran
   ScrollTrigger.create({
     trigger: "#projects > .header",

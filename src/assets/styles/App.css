@@ -598,17 +598,17 @@ body {
 }
 
 body::-webkit-scrollbar,
-.App::-webkit-scrollbar {
+main::-webkit-scrollbar {
   width: 10px;
 }
 
 body::-webkit-scrollbar-track,
-.App::-webkit-scrollbar-track {
+main::-webkit-scrollbar-track {
   background-color: #232e33;
 }
 
 body::-webkit-scrollbar-thumb,
-.App::-webkit-scrollbar-thumb {
+main::-webkit-scrollbar-thumb {
   background-color: #ffffff;
 }
 
@@ -676,13 +676,14 @@ video {
   transition: all 0.475s;
 }
 
-#root {
+#root,
+.App {
   height: 100%;
   width: 100%;
   overflow: hidden;
 }
 
-.App {
+main {
   position: relative;
   height: 100%;
   width: 100%;
@@ -1142,6 +1143,10 @@ section {
   text-align: center;
 }
 
+#contact a {
+  color: white;
+}
+
 footer {
   color: black;
   background-color: rgb(103, 175, 142, 0.95);
@@ -1188,7 +1193,8 @@ footer > div {
     margin-bottom: 2%;
   }
 
-  .sticky-nav {
+  .sticky-nav,
+  footer {
     height: 7.5vh;
     width: fit-content;
     margin: auto;
@@ -1196,6 +1202,7 @@ footer > div {
     align-items: center;
     justify-content: center;
     padding: unset;
+    background-color: unset;
   }
 
   .sticky-nav ul {
@@ -1389,7 +1396,7 @@ footer > div {
     left: 0;
     height: var(--project-height);
     aspect-ratio: unset;
-    border-radius: 25px;
+    border-radius: 100px;
     filter: blur(20px) brightness(0.9);
     transition: all 0.35s var(--in-out-cubic);
     transition-delay: 0.15s;
@@ -1397,6 +1404,7 @@ footer > div {
 
   .project:hover .img-container {
     filter: blur(0px) brightness(1);
+    border-radius: 25px;
     transition-delay: 0s;
   }
 
@@ -1420,14 +1428,6 @@ footer > div {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 7.5vh;
-    width: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    padding: unset;
-    background-color: unset;
   }
 
   footer > div {
