@@ -653,7 +653,7 @@ video {
 
 .button-style-1-content {
   position: relative;
-  text-wrap: nowrap;
+  white-space: nowrap;
   color: #fff;
   z-index: 1;
 }
@@ -723,7 +723,7 @@ footer > div {
   height: 30px;
   width: 25%;
   padding: 0 8px;
-  text-wrap: nowrap;
+  white-space: nowrap;
   overflow: hidden;
 }
 
@@ -1048,11 +1048,6 @@ section {
 
 .project:last-child {
   margin-bottom: 15%;
-}
-
-.project .inner {
-  height: 100%;
-  position: relative;
 }
 
 .project .masked-title h3 {
@@ -1385,7 +1380,7 @@ footer > div {
   }
 
   .project .masked-title h3 {
-    text-wrap: nowrap;
+    white-space: nowrap;
     background-color: unset;
     filter: drop-shadow(1px 1px 2px rgb(0, 0, 0, 0.8));
     transform: rotate(-90deg);
