@@ -225,7 +225,8 @@ function Project({
         <section className="masked-title">
           <h3>{title}</h3>
         </section>
-        <section className="description">
+      </div>
+      <section className="description">
           <p>{description}</p>
           <div className="stack">
             {stack.map((element, index) => (
@@ -243,7 +244,6 @@ function Project({
             </a>
           </div>
         </section>
-      </div>
     </article>
   );
 }
