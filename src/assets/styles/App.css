@@ -1046,6 +1046,10 @@ section {
     min-width 0.4s var(--in-out-cubic);
 }
 
+.project:last-child {
+  margin-bottom: 15%;
+}
+
 .project .inner {
   height: 100%;
   position: relative;
@@ -1111,16 +1115,11 @@ section {
   margin-right: 12.5px;
 }
 
-#projects .background-transition {
-  padding-top: 25%;
-}
-
 #projects .background-transition svg {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  margin-bottom: -2px;
+  bottom: -5px;
+  left: -5px;
+  width: 105%;
 }
 
 #contact {
@@ -1301,11 +1300,11 @@ footer > div {
     margin: 0 auto 5% auto;
   }
 
-  #projects > *:not(.content) {
+  #projects > .header, #projects > .background-transition {
     transition: filter 0.5s var(--in-out-cubic);
   }
 
-  #projects:has(.project:hover) > *:not(.content) {
+  #projects .blur {
     filter: blur(2px);
   }
 
@@ -1339,7 +1338,6 @@ footer > div {
     height: var(--project-height);
     min-width: 3%;
     margin: 0 1px;
-    border: 4px solid rgb(0, 0, 0, 0.05);
     border-radius: 100px;
     transition-delay: 0.15s;
   }
@@ -1350,6 +1348,7 @@ footer > div {
 
   .project:last-child {
     margin-right: 0;
+    margin-bottom: 0;
   }
 
   .project:hover {
@@ -1371,6 +1370,8 @@ footer > div {
     height: var(--project-height);
     width: 100%;
     margin-top: 0;
+    border: 4px solid rgb(255, 255, 255, 0.5);
+    border-radius: 100px;
     font-weight: bold;
     z-index: 3;
     transition: all 0.5s;

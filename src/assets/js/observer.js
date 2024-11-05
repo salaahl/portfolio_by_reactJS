@@ -143,6 +143,22 @@ window.addEventListener("load", () => {
           start: "0% 1%",
         },
       });
+
+      // Sélectionne tous les éléments avec la classe .project
+      const projects = document.querySelectorAll("#projects .project");
+
+      // Ajoute les écouteurs d'événements pour chaque projet
+      projects.forEach((project) => {
+        project.addEventListener("mouseenter", () => {
+          document.querySelector("#projects .header").classList.add("blur");
+          document.querySelector("#projects .background-transition").classList.add("blur");
+        });
+        project.addEventListener("mouseleave", () => {
+          document.querySelector("#projects .header").classList.remove("blur");
+          document.querySelector("#projects .background-transition").classList.remove("blur");
+        });
+      });
+
     });
 
     // Animation des spans dans la section contact
