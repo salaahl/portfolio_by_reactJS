@@ -158,7 +158,18 @@ window.addEventListener("load", () => {
           document.querySelector("#projects .background-transition").classList.remove("blur");
         });
       });
+    });
 
+    // Animation du background de la section contact
+    gsap.to("#contact > .background-transition > svg", {
+      opacity: 1,
+      height: "700%",
+      scrollTrigger: {
+        trigger: "#contact",
+        start: "0% 100%",
+        end: "100% 100%",
+        scrub: true
+      },
     });
 
     // Animation des spans dans la section contact

@@ -1115,18 +1115,27 @@ section {
   margin-right: 12.5px;
 }
 
-#projects .background-transition svg {
+#contact .background-transition {
   position: absolute;
-  bottom: -5px;
-  left: -5px;
-  width: 105%;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#contact > .background-transition > svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: auto;
+  z-index: -1;
 }
 
 #contact {
   flex-wrap: wrap;
   min-height: calc(var(--vh-withdrawal) + 100vh);
   color: black;
-  background-color: rgb(103, 175, 142);
 }
 
 #contact h2 {
@@ -1300,8 +1309,7 @@ footer > div {
     margin: 0 auto 5% auto;
   }
 
-  #projects > .header,
-  #projects > .background-transition {
+  #projects > .header {
     transition: filter 0.5s var(--in-out-cubic);
   }
 
