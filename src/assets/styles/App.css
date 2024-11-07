@@ -1122,6 +1122,14 @@ section {
   z-index: 1;
 }
 
+#contact > .content {
+  padding: 50% 10%;
+  background-image: url(src/assets/images/contact-content-bg.png);
+  background-size: 300%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 #contact h2 {
   -webkit-text-stroke: thin;
   -webkit-text-stroke-color: black;
@@ -1157,8 +1165,8 @@ section {
 }
 
 footer {
-  color: black;
-  background-color: #31717b;
+  color: white;
+  background-color: rgb(103, 175, 142);
 }
 
 footer > div {
@@ -1436,11 +1444,17 @@ footer > div {
     transition-delay: 0s;
   }
 
+  #contact > .content {
+    padding: 22.5% 10%;
+    background-size: 275%;
+  }
+
   footer {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
+    color: black;
   }
 
   footer > div {

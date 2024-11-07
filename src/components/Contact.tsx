@@ -29,8 +29,8 @@ function Contact() {
           <rect x="0" y="0" width="1920" height="1080" fill="transparent" />
           <defs>
             <linearGradient id="myGradient" x1="100%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor="#67af8e" stopOpacity="1" />
-              <stop offset="100%" stopColor="#31717b" stopOpacity="1" />
+              <stop offset="0%" stopColor="#4b9b8c" stopOpacity="1" />
+              <stop offset="100%" stopColor="rgb(103, 175, 142)" stopOpacity="1" />
             </linearGradient>
           </defs>
           <path
