@@ -151,11 +151,9 @@ window.addEventListener("load", () => {
       projects.forEach((project) => {
         project.addEventListener("mouseenter", () => {
           document.querySelector("#projects .header").classList.add("blur");
-          document.querySelector("#projects .background-transition").classList.add("blur");
         });
         project.addEventListener("mouseleave", () => {
           document.querySelector("#projects .header").classList.remove("blur");
-          document.querySelector("#projects .background-transition").classList.remove("blur");
         });
       });
     });
@@ -163,12 +161,12 @@ window.addEventListener("load", () => {
     // Animation du background de la section contact
     gsap.to("#contact > .background-transition > svg", {
       opacity: 1,
-      height: "700%",
+      height: "200%",
       scrollTrigger: {
         trigger: "#contact",
         start: "0% 100%",
         end: "100% 100%",
-        scrub: true
+        scrub: true,
       },
     });
 

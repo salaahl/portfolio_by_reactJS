@@ -1115,27 +1115,11 @@ section {
   margin-right: 12.5px;
 }
 
-#contact .background-transition {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
-#contact > .background-transition > svg {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  width: auto;
-  z-index: -1;
-}
-
 #contact {
   flex-wrap: wrap;
   min-height: calc(var(--vh-withdrawal) + 100vh);
   color: black;
+  z-index: 1;
 }
 
 #contact h2 {
@@ -1155,9 +1139,26 @@ section {
   color: white;
 }
 
+#contact .background-transition {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+#contact > .background-transition > svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: auto;
+}
+
 footer {
   color: black;
-  background-color: rgb(103, 175, 142, 0.95);
+  background-color: #31717b;
 }
 
 footer > div {
