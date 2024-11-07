@@ -1153,6 +1153,7 @@ section {
   left: 0;
   height: 100%;
   width: 100%;
+  transform: translateX(-15%);
   z-index: -1;
 }
 
@@ -1447,6 +1448,10 @@ footer > div {
   #contact > .content {
     padding: 22.5% 10%;
     background-size: 275%;
+  }
+
+  #contact .background-transition {
+    transform: translateX(0);
   }
 
   footer {
