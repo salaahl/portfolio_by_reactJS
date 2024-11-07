@@ -1,15 +1,15 @@
 import React from "react";
-import imgPlaceholder from "../assets/images/placeholder.png";
-import imgLocalLibrary from "../assets/images/library.png";
-import imgDiaShop from "../assets/images/diashop_b.png";
-import imgNutriVerif from "../assets/images/nutriverif.png";
-import imgJokes from "../assets/images/jokes.png";
-import imgQuizz from "../assets/images/quizz.png";
-import imgNotepad from "../assets/images/notepad.png";
-import imgRestaurant from "../assets/images/restauration.png";
-import imgDice from "../assets/images/dice.png";
-import imgAdministration from "../assets/images/administration.png";
-import imgCommerce from "../assets/images/e_commerce.png";
+import imgPlaceholder from "../assets/images/projects/placeholder.png";
+import imgLocalLibrary from "../assets/images/projects/library.png";
+import imgDiaShop from "../assets/images/projects/diashop_b.png";
+import imgNutriVerif from "../assets/images/projects/nutriverif.png";
+import imgJokes from "../assets/images/projects/jokes.png";
+import imgQuizz from "../assets/images/projects/quizz.png";
+import imgNotepad from "../assets/images/projects/notepad.png";
+import imgRestaurant from "../assets/images/projects/restauration.png";
+import imgDice from "../assets/images/projects/dice.png";
+import imgAdministration from "../assets/images/projects/administration.png";
+import imgCommerce from "../assets/images/projects/e_commerce.png";
 
 const AsyncImage = ({ props = {} }: any) => {
   const [loadedSrc, setLoadedSrc] = React.useState(null);
