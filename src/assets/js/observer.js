@@ -44,15 +44,11 @@ window.addEventListener("load", () => {
           backgroundSize: "0% 100%",
         },
         {
-          backgroundImage: "linear-gradient(to left, indianred 0%, rgb(53, 114, 172, 1) 0%)",
-          backgroundSize: "100% 100%",
-          duration: 1,
-          delay: 0.15,
+          backgroundSize: "118% 100%",
           scrollTrigger: {
             trigger: "main",
             start: "0% 0%",
             end: "100% 100%",
-            markers: true,
             scrub: true,
           },
         }
