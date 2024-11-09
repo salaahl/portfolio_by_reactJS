@@ -35,6 +35,30 @@ window.addEventListener("load", () => {
       });
     });
 
+    //
+    gsap.matchMedia().add("(max-width: 1023px)", () => {
+      gsap.fromTo(
+        ".sticky-nav ul",
+        {
+          backgroundImage: "linear-gradient(to left, indianred 15%, rgb(53, 114, 172, 1) 10%)",
+          backgroundSize: "0% 100%",
+        },
+        {
+          backgroundImage: "linear-gradient(to left, indianred 0%, rgb(53, 114, 172, 1) 0%)",
+          backgroundSize: "100% 100%",
+          duration: 1,
+          delay: 0.15,
+          scrollTrigger: {
+            trigger: "main",
+            start: "0% 0%",
+            end: "100% 100%",
+            markers: true,
+            scrub: true,
+          },
+        }
+      );
+    });
+
     // Animation de fond d'écran
     ScrollTrigger.create({
       trigger: "#projects > .header",
