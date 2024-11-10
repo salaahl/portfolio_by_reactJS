@@ -599,17 +599,7 @@ body {
 
 body::-webkit-scrollbar,
 main::-webkit-scrollbar {
-  width: 10px;
-}
-
-body::-webkit-scrollbar-track,
-main::-webkit-scrollbar-track {
-  background-color: #232e33;
-}
-
-body::-webkit-scrollbar-thumb,
-main::-webkit-scrollbar-thumb {
-  background-color: #ffffff;
+  display: none;
 }
 
 body {
@@ -1127,7 +1117,7 @@ section {
 
 #contact > .content {
   padding: 50% 10%;
-  background-image: url('data:image/svg+xml;base64,PHN2ZyBpZD0idmlzdWFsIiB2aWV3Qm94PSIwIDAgMTk4MCAxMDgwIiB3aWR0aD0iMTk4MCIgaGVpZ2h0PSIxMDgwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwODcuNjYxODE4Mzc5MTQyMiA2MDQuNDM2NTMyMzc4NDk3MSkiPjxwYXRoIGQ9Ik0yMDAuOSAtMTU0QzI0NiAtMzggMjU4LjEgNTkgMjE5LjEgMTM3LjNDMTgwLjEgMjE1LjcgOTAuMSAyNzUuMyAtMzIuMiAyOTMuOUMtMTU0LjQgMzEyLjUgLTMwOC45IDI5MCAtMzgzLjkgMTkwLjhDLTQ1OSA5MS43IC00NTQuNyAtODQuMiAtMzc3LjQgLTIxOC43Qy0zMDAuMiAtMzUzLjMgLTE1MC4xIC00NDYuNyAtMzYuMSAtNDI1LjhDNzcuOSAtNDA1IDE1NS45IC0yNzAgMjAwLjkgLTE1NCIgZmlsbD0iIzY3YWY4ZSI+PC9wYXRoPjwvZz48L3N2Zz4=');
+  background-image: url("data:image/svg+xml;base64,PHN2ZyBpZD0idmlzdWFsIiB2aWV3Qm94PSIwIDAgMTk4MCAxMDgwIiB3aWR0aD0iMTk4MCIgaGVpZ2h0PSIxMDgwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwODcuNjYxODE4Mzc5MTQyMiA2MDQuNDM2NTMyMzc4NDk3MSkiPjxwYXRoIGQ9Ik0yMDAuOSAtMTU0QzI0NiAtMzggMjU4LjEgNTkgMjE5LjEgMTM3LjNDMTgwLjEgMjE1LjcgOTAuMSAyNzUuMyAtMzIuMiAyOTMuOUMtMTU0LjQgMzEyLjUgLTMwOC45IDI5MCAtMzgzLjkgMTkwLjhDLTQ1OSA5MS43IC00NTQuNyAtODQuMiAtMzc3LjQgLTIxOC43Qy0zMDAuMiAtMzUzLjMgLTE1MC4xIC00NDYuNyAtMzYuMSAtNDI1LjhDNzcuOSAtNDA1IDE1NS45IC0yNzAgMjAwLjkgLTE1NCIgZmlsbD0iIzY3YWY4ZSI+PC9wYXRoPjwvZz48L3N2Zz4=");
   background-size: 300%;
   background-position: center top -10px;
   background-repeat: no-repeat;

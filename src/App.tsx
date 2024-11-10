@@ -15,11 +15,13 @@ function App() {
         <Navbar />
       </header>
       <main>
-        <Home />
-        <AboutMe />
-        <Services />
-        <Projects />
-        <Contact />
+        <div className="inner">
+          <Home />
+          <AboutMe />
+          <Services />
+          <Projects />
+          <Contact />
+        </div>
       </main>
       <footer>
         <Footer />

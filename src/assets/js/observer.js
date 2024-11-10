@@ -35,25 +35,24 @@ window.addEventListener("load", () => {
       });
     });
 
-    //
-    gsap.matchMedia().add("(max-width: 1023px)", () => {
-      gsap.fromTo(
-        ".sticky-nav ul",
-        {
-          backgroundImage: "linear-gradient(to left, indianred 15%, rgb(53, 114, 172, 1) 10%)",
-          backgroundSize: "0% 100%",
+    // Indicateur de progression
+    gsap.fromTo(
+      ".sticky-nav ul",
+      {
+        backgroundImage:
+          "linear-gradient(to left, rgb(205, 92, 92, 0.5), rgb(53, 114, 172, 0.6) 5rem)",
+        backgroundSize: "0% 100%",
+      },
+      {
+        backgroundSize: "110% 100%",
+        scrollTrigger: {
+          trigger: "main .inner",
+          start: "0% 0%",
+          end: "100% 100%",
+          scrub: true,
         },
-        {
-          backgroundSize: "118% 100%",
-          scrollTrigger: {
-            trigger: "main",
-            start: "0% 0%",
-            end: "100% 100%",
-            scrub: true,
-          },
-        }
-      );
-    });
+      }
+    );
 
     // Animation de fond d'écran
     ScrollTrigger.create({
