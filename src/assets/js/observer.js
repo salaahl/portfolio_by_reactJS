@@ -40,11 +40,11 @@ window.addEventListener("load", () => {
       ".sticky-nav ul",
       {
         backgroundImage:
-          "linear-gradient(to left, rgb(205, 92, 92, 0.5), rgb(53, 114, 172, 0.6) 5rem)",
+          "linear-gradient(to left, rgb(205, 92, 92, 0.5), rgb(53, 114, 172, 0.6))",
         backgroundSize: "0% 100%",
       },
       {
-        backgroundSize: "110% 100%",
+        backgroundSize: "100% 100%",
         scrollTrigger: {
           trigger: "main .inner",
           start: "0% 0%",
