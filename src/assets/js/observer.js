@@ -56,9 +56,9 @@ window.addEventListener("load", () => {
 
     // Animation de fond d'écran
     ScrollTrigger.create({
-      trigger: "#services > .content > .header",
-      start: "100% 100%",
-      end: "100% 100%",
+      trigger: "#services > .content",
+      start: window.innerWidth < 1024 ? "100% 100%" : "50% 100%",
+      end: window.innerWidth < 1024 ? "100% 100%" : "50% 100%",
       onEnter: () => changeBackground("#fdf3f2"),
       onEnterBack: () => changeBackground("rgb(0, 0, 0, 1)"),
     });
