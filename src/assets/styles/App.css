@@ -590,6 +590,14 @@ video {
 
 :root {
   --in-out-cubic: cubic-bezier(0.4, 0, 0.2, 1);
+  --service-width: 320px;
+  --service-height: 550px;
+  --service-radius: 25px;
+  --service-separator-height: 475px;
+  --service-bg: #fdeae6;
+  --service-book-x: 243px;
+  --service-book-y: 120px;
+  --service-transition: transform 0.7s ease-in-out;
 }
 
 html,
@@ -739,6 +747,7 @@ section {
 
 #home,
 #about-me,
+#services,
 #contact {
   position: relative;
   display: flex;
@@ -839,21 +848,6 @@ section {
 #services {
   height: 100vh;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#services h2 {
-  font-size: xxx-large;
-  color: white;
-}
-
-#services > .content > .header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 200px;
 }
 
 #services > .content {
@@ -874,9 +868,18 @@ section {
   scroll-snap-align: center;
 }
 
-#services .content > .header {
+#services > .content > .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
   width: 20%;
   transform: rotate(-90deg);
+}
+
+#services > .content > .header > h2 {
+  font-size: xxx-large;
+  color: rgb(30 41 59);
 }
 
 #services > .content > .header > h2 > span {
@@ -884,117 +887,158 @@ section {
   color: rgb(53, 114, 172, 1);
 }
 
+.services-container {
+  display: flex;
+}
+
 .service {
-  position: relative;
-  min-width: 75%;
-  aspect-ratio: 3/5;
-  margin: auto 2.5%;
+  width: var(--service-width);
+  min-width: var(--service-width);
+  height: var(--service-height);
+  margin-left: 1%;
+  margin-right: 1%;
+  border-radius: var(--service-radius);
+  perspective: 500px;
   overflow: hidden;
+  color: #807b7b;
+  background-color: var(--service-bg);
+  box-shadow: rgba(255, 255, 255, 0.05) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.125) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.15) 0px 30px 60px -30px;
 }
 
-.service .img-container,
-.service .content {
-  position: absolute;
+.service .notification-header {
+  position: fixed;
+  top: 5px;
   width: 100%;
-  height: 100%;
-  border-radius: 0.5rem;
-  backface-visibility: hidden;
-  transition: transform 0.8s;
+  padding: 5px 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 6;
 }
 
-.service:hover .img-container {
-  transform: rotateY(180deg);
+.service .book-cover {
+  position: relative;
+  height: var(--service-separator-height);
+  width: calc(var(--service-width) * 2);
+  left: -52.5%;
+  background-color: #eed7d1;
+  transform-style: preserve-3d;
+  transform-origin: 50% 40%;
+  transition: var(--service-transition);
+  z-index: 4;
 }
 
-.service .img-container > .title {
+.service .book-top {
+  text-align: center;
+  height: 255px;
+  width: 170px;
+  position: absolute;
+  top: var(--service-book-y);
+  left: var(--service-book-x);
+  padding: 20px;
+  z-index: 5;
+  transform: translateZ(28.5px);
+  color: white;
+  background-color: rgb(30 41 59);
+  border-radius: 10px;
+}
+
+.service .book-top .author {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 35%;
+  font-family: "Playwrite BE WAL", "Oswald", sans-serif;
+  font-weight: 100;
+}
+
+.service .book-top .author span {
+  font-size: larger;
+}
+
+.service .book-top .separator {
+  width: 75%;
+  margin: 10% auto 20% auto;
+  border: 2px dashed;
+}
+
+.service .book-top .title {
+  font-size: small;
+  text-wrap-style: pretty;
+}
+
+.service .book-side {
+  position: absolute;
+  height: 32px;
+  width: 170px;
+  top: 320px;
+  left: calc(var(--service-book-x) - 2px);
+  transform: translateY(35px) translateX(0px) translateZ(15px) rotateX(104deg);
+  background-color: white;
+  border-top: 4px solid rgb(30 41 59);
+  border-bottom: 4px solid rgb(30 41 59);
+  border-left: 4px solid rgb(30 41 59);
+  border-radius: 10px 0 0 10px;
+}
+
+.service:hover .book-cover {
+  transform: rotateX(75deg) translateZ(3px) scale(0.75);
+}
+
+.service .preface {
+  height: 330px;
+  padding: 0 25px 25px 25px;
+  transition: var(--service-transition);
+  background: white;
+}
+
+.service:hover .preface {
+  transform: translateY(-255px);
+}
+
+.service .preface .content {
   height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service .preface .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+}
+
+.service .preface .title {
+  height: 75px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 15%;
+  font-size: larger;
   text-align: center;
   text-wrap-style: balance;
-  color: white;
-  background-color: rgb(53, 114, 172, 1);
-}
-
-.service:nth-of-type(1) .img-container > .title {
-  background-color: #3d5a80;
-}
-
-.service:nth-of-type(2) .img-container > .title {
-  background-color: #98c1d9;
-}
-
-.service:nth-of-type(3) .img-container > .title {
-  background-color: #e0fbfc;
-}
-
-.service:nth-of-type(4) .img-container > .title {
-  background-color: #e7b4a5;
-}
-
-.service:nth-of-type(5) .img-container > .title {
-  background-color: #ee6c4d;
-}
-
-.service:nth-of-type(6) .img-container > .title {
-  background-color: #293241;
-}
-
-.service .content {
-  height: 100%;
-  width: 100%;
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transform: rotateY(180deg);
-  padding: 2rem;
-  text-align: justify;
-  color: black;
-  background-color: white;
-  border-radius: 0.5rem;
-}
-
-.service:hover .content {
-  transform: rotateY(0deg);
-}
-
-.service .img-container {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-}
-
-.service .details {
-  height: 100%;
-  padding-bottom: 1.25rem;
-}
-
-.service .title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-}
-
-.service .description {
-  margin-top: 1.5rem;
-}
-
-.service .footer {
-  text-align: center;
 }
 
 .service .price {
   display: none;
-  margin-bottom: 1rem;
+  margin-top: 10%;
+  text-align: center;
 }
 
 .service .price-value {
   margin-left: 5px;
   font-weight: 700;
+}
+
+.service .button-style-1 {
+  margin-top: 5%;
 }
 
 #projects {
@@ -1167,12 +1211,6 @@ footer > div {
   padding: 1rem;
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
-  .service {
-    min-width: 50%;
-  }
-}
-
 @media (max-width: 1023px) {
   :root {
     --vh-withdrawal: 0vh;
@@ -1295,21 +1333,24 @@ footer > div {
   }
 
   #services > .content {
-    width: 100%;
     flex-wrap: wrap;
+    width: 100%;
   }
 
   #services > .content > .header {
     width: 100%;
-    min-height: 15vh;
+    min-height: 20vh;
     transform: rotate(0deg);
   }
 
+  .services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+  }
+
   .service {
-    width: 30%;
-    min-width: auto;
-    aspect-ratio: 3/4;
-    margin: 0 auto 5% auto;
+    margin: auto auto 100px auto;
   }
 
   #projects > .header {
@@ -1460,6 +1501,29 @@ footer > div {
     height: 35px;
     padding: 5px 15px;
     border-radius: 25px;
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --service-width: 380px;
+    --service-height: 500px;
+    --service-separator-height: 425px;
+    --service-book-x: 305px;
+    --service-book-y: 90px;
+  }
+
+  .service .book-side {
+    top: 290px;
+    height: 31px;
+  }
+
+  .service .preface {
+    height: 305px;
+  }
+
+  .service:hover .preface {
+    transform: translateY(-230px);
   }
 }
 

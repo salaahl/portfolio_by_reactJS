@@ -56,11 +56,19 @@ window.addEventListener("load", () => {
 
     // Animation de fond d'écran
     ScrollTrigger.create({
+      trigger: "#services > .content > .header",
+      start: "100% 100%",
+      end: "100% 100%",
+      onEnter: () => changeBackground("#fdf3f2"),
+      onEnterBack: () => changeBackground("rgb(0, 0, 0, 1)"),
+    });
+
+    ScrollTrigger.create({
       trigger: "#projects > .header",
       start: "100% 100%",
       end: "100% 100%",
       onEnter: () => changeBackground("rgb(255, 255, 255, 0.5)"),
-      onEnterBack: () => changeBackground("rgb(0, 0, 0, 1)"),
+      onEnterBack: () => changeBackground("#fdf3f2"),
     });
 
     // Inversion des couleurs de la barre de navigation
