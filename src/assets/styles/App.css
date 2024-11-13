@@ -605,9 +605,9 @@ body {
   font-family: "Oswald", sans-serif;
 }
 
-body::-webkit-scrollbar,
-main::-webkit-scrollbar {
-  display: none;
+* {
+  scrollbar-width: none;
+  scrollbar-color: unset;
 }
 
 body {
