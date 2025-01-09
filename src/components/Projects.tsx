@@ -55,8 +55,8 @@ function Projects() {
             "Stripe",
             "Tailwind CSS",
           ]}
-          github="https://github.com/salaahl/"
-          website="https://diashop-v2-282b96906b4a.herokuapp.com/"
+          github="https://github.com/salaahl/diashop-app"
+          website="https://diashop-44ca2fd005dc.herokuapp.com/"
         />
         <Project
           title="Restaurant Le Vingtième"
