@@ -139,7 +139,7 @@ function Projects() {
           description="Jeu de dés."
           stack={["HTML", "JS", "CSS", "Bootstrap"]}
           github="https://replit.com/@SalahS/EXAM-jeu-STUDI"
-          website="https://4448b68c-2aea-4a82-a2d6-c40f41b42fdf-00-35mrmwldw9yx6.worf.replit.dev/"
+          website="https://exam-jeu-studi.salahs.repl.co/"
         />
         <Project
           title="Interface d'administration"
