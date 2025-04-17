@@ -80,7 +80,7 @@ function Projects() {
             "Vue.js",
           ]}
           github="https://github.com/salaahl/nutri_verif_by_vue.js"
-          website="https://nutriverif-71662e666d39.herokuapp.com/"
+          website="https://nutriverif.onrender.com/"
         />
         <Project
           title="Bibliothèque numérique"
