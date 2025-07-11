@@ -56,7 +56,7 @@ function Projects() {
             "Tailwind CSS",
           ]}
           github="https://github.com/salaahl/diashop-app"
-          website="https://diashop-44ca2fd005dc.herokuapp.com/"
+          website="https://diashop.onrender.com/"
         />
         <Project
           title="Restaurant Le Vingtième"
@@ -64,7 +64,7 @@ function Projects() {
           description="Le Vingtième c'est la cuisine de toutes les gourmandises, alliant jus pressés minute de fruits et légumes & cocktails maison, recettes savoureuses..."
           stack={["HTML", "JS", "CSS", "PHP", "Symfony", "MySQL", "Bootstrap"]}
           github="https://github.com/salaahl/restaurant_project"
-          website="https://restaurant-le-vingtieme.herokuapp.com/"
+          website="https://levingtieme.onrender.com/"
         />
         <Project
           title="Appli de food-checking"
@@ -96,7 +96,7 @@ function Projects() {
             "Bootstrap",
           ]}
           github="https://github.com/salaahl/library"
-          website="https://salaha-sokhona-library-6e6b0019ca6e.herokuapp.com/catalog/"
+          website="https://bibliotheque-numerique.onrender.com/"
         />
         <Project
           title="Blagues et sourires"
@@ -115,7 +115,7 @@ function Projects() {
             "React",
           ]}
           github="https://github.com/salaahl/jokes_app_by_reactJS"
-          website="https://salaha-sokhona-jokes-app-f2c846554a50.herokuapp.com/"
+          website="https://blagues-et-sourires.onrender.com/"
         />
         <Project
           title="Quizz général"
@@ -123,7 +123,7 @@ function Projects() {
           description="Quizz général."
           stack={["HTML", "JS", "TypeScript", "CSS", "SASS", "Angular"]}
           github="https://github.com/salaahl/MyQuizz"
-          website="https://salaha-sokhona-quizz-9443d49695cb.herokuapp.com/"
+          website="http://quizz-general.onrender.com/"
         />
         <Project
           title="Bloc-notes"
@@ -131,7 +131,7 @@ function Projects() {
           description="Bloc-notes inspiré de Google Keep. Compte utilisateur disponible : sokhona.salaha@gmail.com, mdp : Sokhona."
           stack={["HTML (PUG)", "JS", "CSS", "Bulma", "MongoDB", "Mongoose"]}
           github="https://github.com/salaahl/notepad"
-          website="https://salaha-sokhona-notepad-ed791a5cfd1e.herokuapp.com/login"
+          website="https://bloc-notes.onrender.com/"
         />
         <Project
           title="Jeu de dés"
