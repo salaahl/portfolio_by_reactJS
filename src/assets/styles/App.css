@@ -1332,31 +1332,33 @@ footer > div {
     font-size: 95%;
   }
 
-  #services {
-    height: auto;
-  }
+  @media (min-height: 820px) {
+    #services {
+      height: auto;
+    }
 
-  #services > .content {
-    flex-wrap: wrap;
-    width: 100%;
-  }
+    #services > .content {
+      flex-wrap: wrap;
+      width: 100%;
+    }
 
-  #services > .content > .header {
-    width: 100%;
-    min-height: 20vh;
-    transform: rotate(0deg);
-  }
+    #services > .content > .header {
+      width: 100%;
+      min-height: 20vh;
+      transform: rotate(0deg);
+    }
 
-  .services-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: 100%;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
+    .services-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      width: 100%;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
 
-  .service {
-    margin: auto auto 100px auto;
+    .service {
+      margin: auto auto 100px auto;
+    }
   }
 
   #projects > .header {
@@ -1510,7 +1512,7 @@ footer > div {
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1440px) and (min-height: 840px) {
   :root {
     --service-width: 380px;
     --service-height: 500px;
