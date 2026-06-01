@@ -1,7 +1,7 @@
 function Footer() {
     return (
         <div>
-            © 2024 Copyright : Salaha Sokhona
+            © 2026 Copyright : Salaha Sokhona
         </div>
     );
 }
