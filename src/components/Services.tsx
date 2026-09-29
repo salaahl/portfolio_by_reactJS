@@ -81,10 +81,10 @@ function Service({
               <span className="price-value">{price}</span>
             </div>
             <a
-              href="mailto:sokhona.salaha@gmail.com?subject=Demande%20de%20devis"
+              href="mailto:sokhona.salaha@gmail.com?subject=Demande%20d%27informations"
               className="button-style-1"
             >
-              <span className="button-style-1-content">Demander un devis</span>
+              <span className="button-style-1-content">Me contacter</span>
             </a>
           </div>
         </div>
