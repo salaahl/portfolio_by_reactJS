@@ -604,12 +604,12 @@ video {
 :root {
   --in-out-cubic: cubic-bezier(0.4, 0, 0.2, 1);
   --service-width: 320px;
-  --service-height: 550px;
+  --service-height: 500px;
   --service-radius: 25px;
-  --service-separator-height: 475px;
+  --service-separator-height: 425px;
   --service-bg: #fdeae6;
   --service-book-x: 243px;
-  --service-book-y: 120px;
+  --service-book-y: 95px;
   --service-transition: transform 0.5s ease-in-out;
 }
 
@@ -1121,7 +1121,7 @@ section {
   position: absolute;
   height: 32px;
   width: 170px;
-  top: 320px;
+  top: 295px;
   left: calc(var(--service-book-x) - 2px);
   transform: translateY(35px) translateX(0px) translateZ(15px) rotateX(104deg);
   background-color: white;
@@ -1385,6 +1385,7 @@ footer > div {
     justify-content: space-between;
     align-items: center;
     height: 60%;
+    min-height: 480px;
     width: 90%;
     max-width: 400px;
     margin: 10% calc(var(--root-padding-x) / 2);
