@@ -188,6 +188,8 @@ function Project({
   github = "#",
   website = "#",
 }: ProjectProps) {
+  const isMobile = window.innerWidth < 1024;
+
   return (
     <article className="project">
       <div className="inner">
@@ -197,25 +199,26 @@ function Project({
         <section className="masked-title">
           <h3>{title}</h3>
         </section>
+        {isMobile && <p className="description">{description}</p>}
       </div>
       <section className="description">
-          <p>{description}</p>
-          <div className="stack">
-            {stack.map((element, index) => (
-              <span key={index} className="language">
-                {element}
-              </span>
-            ))}
-          </div>
-          <div className="links">
-            <a href={github} className="button-style-1" target="_blank">
-              <span className="button-style-1-content">Github</span>
-            </a>
-            <a href={website} className="button-style-1" target="_blank">
-              <span className="button-style-1-content">Site web</span>
-            </a>
-          </div>
-        </section>
+        {!isMobile && <p>{description}</p>}
+        <div className="stack">
+          {stack.map((element, index) => (
+            <span key={index} className="language">
+              {element}
+            </span>
+          ))}
+        </div>
+        <div className="links">
+          <a href={github} className="button-style-1" target="_blank">
+            <span className="button-style-1-content">Github</span>
+          </a>
+          <a href={website} className="button-style-1" target="_blank">
+            <span className="button-style-1-content">Site web</span>
+          </a>
+        </div>
+      </section>
     </article>
   );
 }

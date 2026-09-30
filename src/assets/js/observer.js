@@ -141,22 +141,6 @@ window.addEventListener("load", () => {
     );
 
     // Animation pour les projets en fonction de la taille de l'écran
-    gsap.matchMedia().add("(max-width: 1023px)", () => {
-      const projects = gsap.utils.toArray("#projects .project");
-      projects.forEach((project) => {
-        gsap.from(project, {
-          pointerEvents: "none",
-          y: "25%",
-          opacity: 0,
-          duration: 0.5,
-          scrollTrigger: {
-            trigger: project.querySelector("img"),
-            start: "50% 100%",
-          },
-        });
-      });
-    });
-
     gsap.matchMedia().add("(min-width: 1024px)", () => {
       gsap.from("#projects .project", {
         pointerEvents: "none",
