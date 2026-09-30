@@ -608,8 +608,8 @@ video {
   --service-radius: 25px;
   --service-separator-height: 350px;
   --service-bg: #fdeae6;
-  --service-book-x: 166px;
-  --service-book-y: 52.5px;
+  --service-book-x: 176px;
+  --service-book-y: 62.5px;
   --service-transition: transform 0.5s ease-in-out;
 }
 
@@ -1079,8 +1079,8 @@ section {
 
 .service .book-top {
   text-align: center;
-  height: 255px;
-  width: 170px;
+  height: 235px;
+  width: 150px;
   position: absolute;
   top: var(--service-book-y);
   left: var(--service-book-x);
@@ -1120,8 +1120,8 @@ section {
 .service .book-side {
   position: absolute;
   height: 32px;
-  width: 170px;
-  top: 250px;
+  width: 150px;
+  top: 240px;
   left: calc(var(--service-book-x) - 2px);
   transform: translateY(35px) translateX(0px) translateZ(15px) rotateX(104deg);
   background-color: white;
@@ -1376,7 +1376,7 @@ footer > div {
 @media (min-width: 375px) {
   :root {
     --service-width: 260px;
-    --service-book-x: 181px;
+    --service-book-x: 191px;
   }
 }
 
@@ -1388,6 +1388,16 @@ footer > div {
 
   #services > .content > .header > h2 {
     font-size: xxx-large;
+  }
+
+  .service .book-top {
+    height: 255px;
+    width: 170px;
+  }
+
+  .service .book-side {
+    height: 32px;
+    width: 170px;
   }
 }
 
