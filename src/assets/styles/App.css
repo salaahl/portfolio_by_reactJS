@@ -603,13 +603,13 @@ video {
 
 :root {
   --in-out-cubic: cubic-bezier(0.4, 0, 0.2, 1);
-  --service-width: 320px;
-  --service-height: 500px;
+  --service-width: 300px;
+  --service-height: 450px;
   --service-radius: 25px;
-  --service-separator-height: 425px;
+  --service-separator-height: 375px;
   --service-bg: #fdeae6;
-  --service-book-x: 243px;
-  --service-book-y: 95px;
+  --service-book-x: 223px;
+  --service-book-y: 70px;
   --service-transition: transform 0.5s ease-in-out;
 }
 
@@ -1031,7 +1031,7 @@ section {
   top: 0;
   left: 0;
   width: var(--service-width);
-  min-width: var(--service-width);
+  max-width: 100%;
   height: var(--service-height);
   border-radius: var(--service-radius);
   perspective: 500px;
@@ -1121,7 +1121,7 @@ section {
   position: absolute;
   height: 32px;
   width: 170px;
-  top: 295px;
+  top: 270px;
   left: calc(var(--service-book-x) - 2px);
   transform: translateY(35px) translateX(0px) translateZ(15px) rotateX(104deg);
   background-color: white;
