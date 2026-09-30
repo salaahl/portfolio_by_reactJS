@@ -604,12 +604,12 @@ video {
 :root {
   --in-out-cubic: cubic-bezier(0.4, 0, 0.2, 1);
   --service-width: 245px;
-  --service-height: 450px;
+  --service-height: 425px;
   --service-radius: 25px;
-  --service-separator-height: 375px;
+  --service-separator-height: 350px;
   --service-bg: #fdeae6;
-  --service-book-x: 165px;
-  --service-book-y: 70px;
+  --service-book-x: 166px;
+  --service-book-y: 52.5px;
   --service-transition: transform 0.5s ease-in-out;
 }
 
@@ -866,7 +866,7 @@ section {
 }
 
 #services > .content > .header > h2 {
-  font-size: xxx-large;
+  font-size: 40px;
   color: rgb(30 41 59);
 }
 
@@ -1121,7 +1121,7 @@ section {
   position: absolute;
   height: 32px;
   width: 170px;
-  top: 270px;
+  top: 250px;
   left: calc(var(--service-book-x) - 2px);
   transform: translateY(35px) translateX(0px) translateZ(15px) rotateX(104deg);
   background-color: white;
@@ -1376,14 +1376,18 @@ footer > div {
 @media (min-width: 375px) {
   :root {
     --service-width: 260px;
-    --service-book-x: 180px;
+    --service-book-x: 181px;
   }
 }
 
 @media (min-width: 425px) {
   :root {
     --service-width: 280px;
-    --service-book-x: 200px;
+    --service-book-x: 201px;
+  }
+
+  #services > .content > .header > h2 {
+    font-size: xxx-large;
   }
 }
 
