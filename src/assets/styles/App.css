@@ -1143,7 +1143,7 @@ section {
 }
 
 .service:hover .preface {
-  transform: translateY(-200px);
+  transform: translateY(-190px);
 }
 
 .service .preface .content {
