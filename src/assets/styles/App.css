@@ -603,12 +603,12 @@ video {
 
 :root {
   --in-out-cubic: cubic-bezier(0.4, 0, 0.2, 1);
-  --service-width: 300px;
+  --service-width: 285px;
   --service-height: 450px;
   --service-radius: 25px;
   --service-separator-height: 375px;
   --service-bg: #fdeae6;
-  --service-book-x: 223px;
+  --service-book-x: 208px;
   --service-book-y: 70px;
   --service-transition: transform 0.5s ease-in-out;
 }
@@ -1143,7 +1143,7 @@ section {
 }
 
 .service:hover .preface {
-  transform: translateY(-255px);
+  transform: translateY(-200px);
 }
 
 .service .preface .content {
