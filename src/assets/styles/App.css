@@ -775,7 +775,7 @@ section {
 #home,
 #about-me,
 #services {
-  min-height: calc(var(--vh-withdrawal) + 100vh);
+  min-height: calc(var(--dvh-withdrawal) + 100dvh);
 }
 
 #home > svg {
@@ -1189,7 +1189,7 @@ section {
 
 #projects > .content {
   position: relative;
-  height: 100vh;
+  height: 100dvh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -1316,7 +1316,7 @@ section {
 
 #contact {
   flex-wrap: wrap;
-  min-height: calc(var(--vh-withdrawal) + 100vh);
+  min-height: calc(var(--dvh-withdrawal) + 100dvh);
   color: black;
   z-index: 1;
 }
@@ -1375,7 +1375,7 @@ footer > div {
 
 @media (max-width: 1023px) {
   :root {
-    --vh-withdrawal: 0vh;
+    --dvh-withdrawal: 0dvh;
     --root-padding-x: 5%;
   }
 
@@ -1436,17 +1436,17 @@ footer > div {
 
 @media (min-width: 1024px) {
   :root {
-    --vh-withdrawal: -15vh;
+    --dvh-withdrawal: -15dvh;
     --root-padding-x: 20px;
-    --project-height: 40vh;
-    --project-width: 80vh;
+    --project-height: 40dvh;
+    --project-width: 80dvh;
   }
 
   #root {
-    height: 85vh;
-    width: 141.66vh;
-    max-height: 85vh;
-    max-width: 141.66vh;
+    height: 85dvh;
+    width: 141.66dvh;
+    max-height: 85dvh;
+    max-width: 141.66dvh;
     margin: auto;
     border: 5px solid whitesmoke;
     border-radius: 5px;
@@ -1460,7 +1460,7 @@ footer > div {
 
   .sticky-nav,
   footer {
-    height: 7.5vh;
+    height: 7.5dvh;
     width: fit-content;
     margin: auto;
     display: flex;
@@ -1502,8 +1502,8 @@ footer > div {
   }
 
   #about-me .content {
-    height: calc(var(--vh-withdrawal) + 90vh);
-    width: calc(var(--vh-withdrawal) + 90vh);
+    height: calc(var(--dvh-withdrawal) + 90dvh);
+    width: calc(var(--dvh-withdrawal) + 90dvh);
     flex-wrap: nowrap;
     padding: 5%;
     border-radius: 999px;
@@ -1565,7 +1565,7 @@ footer > div {
   }
 
   #projects > .header > h2 {
-    padding-top: 5vh;
+    padding-top: 5dvh;
     font-size: 700%;
   }
 
