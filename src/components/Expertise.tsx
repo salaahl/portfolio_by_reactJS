@@ -31,8 +31,8 @@ export const Services: React.FC = () => {
                 <li className="flex items-start gap-2">
                   <span className="text-[var(--paper)] font-bold">―</span>
                   <span>
-                    <strong>Front-end :</strong> Vue.js, Flutter, TypeScript,
-                    Tailwind CSS
+                    <strong>Front-end :</strong> Vue.js, React, Flutter,
+                    TypeScript, Tailwind CSS
                   </span>
                 </li>
                 <li className="flex items-start gap-2">
@@ -64,9 +64,9 @@ export const Services: React.FC = () => {
                 SAP FI/CO & FLUX FINANCIERS
               </h3>
               <p className="text-sm md:text-base leading-relaxed text-[var(--paper)]/90 max-w-lg mb-6">
-                MCO et évolution du SI financier (SAP) et interfaces reliées, pilotage de la tierce
-                maintenance applicative et traitement de flux de données massifs
-                en environnement grand compte.
+                MCO et évolution du SI financier (SAP) et interfaces reliées,
+                pilotage de la tierce maintenance applicative et traitement de
+                flux de données massifs en environnement grand compte.
               </p>
 
               {/* Encadré Focus Facturation Électronique */}
