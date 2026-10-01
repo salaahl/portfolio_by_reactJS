@@ -20,7 +20,7 @@ export const InkWipe = forwardRef<InkWipeRefs>((_, ref) => {
       style={{ isolation: "isolate" }}
       aria-hidden="true"
     >
-      {/* Panneau vert (arrière-plan) */}
+      {/* Panneau vert */}
       <div
         ref={gRef}
         className="absolute inset-0 bg-[var(--green)] will-change-transform"
@@ -29,7 +29,7 @@ export const InkWipe = forwardRef<InkWipeRefs>((_, ref) => {
           backfaceVisibility: "hidden",
         }}
       />
-      {/* Panneau rouge (premier plan) */}
+      {/* Panneau rouge */}
       <div
         ref={rRef}
         className="absolute inset-0 bg-[var(--red)] will-change-transform"

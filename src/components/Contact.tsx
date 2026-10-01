@@ -81,7 +81,6 @@ export const Contact: React.FC = () => {
           04 CONTACT
         </span>
 
-        {/* Titre Risographique interactif */}
         <div className="w-full overflow-hidden select-none py-2">
           <div
             ref={risoRef}
@@ -99,7 +98,6 @@ export const Contact: React.FC = () => {
           </div>
         </div>
 
-        {/* Liens */}
         <div className="flex flex-wrap gap-x-8 gap-y-4 font-mono-code text-xs md:text-sm uppercase tracking-wider font-bold pt-4 border-t border-[var(--ink)]">
           <a
             href="mailto:sokhona.salaha@gmail.com"
@@ -122,13 +120,6 @@ export const Contact: React.FC = () => {
             className="underline decoration-[var(--ink)] hover:text-[var(--green)] transition-colors"
           >
             GITHUB ↗
-          </a>
-          <a
-            href="/cv.pdf"
-            download
-            className="underline decoration-[var(--ink)] hover:text-[var(--red)] transition-colors"
-          >
-            CV ↓
           </a>
         </div>
 

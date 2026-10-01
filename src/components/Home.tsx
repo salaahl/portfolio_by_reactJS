@@ -1,7 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-export const Home: React.FC = () => {
+interface HomeProps {
+  onNavigate?: (targetId: string) => void;
+}
+
+export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
   const risoRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
@@ -72,7 +76,7 @@ export const Home: React.FC = () => {
           ref={risoRef}
           onPointerMove={handlePointerMove}
           onPointerLeave={handlePointerLeave}
-          className="riso-title font-display text-[clamp(64px,25vw,290px)] md:text-[clamp(64px,15.5vw,290px)] tracking-tight text-left w-full select-none cursor-crosshair"
+          className="riso-title font-display text-[clamp(64px,25vw,290px)] md:text-[clamp(64px,min(28vw,38dvh),410px)] tracking-tight text-left w-full select-none cursor-crosshair"
           aria-label="Salaha Sokhona"
         >
           <span className="riso-layer riso-layer-red" aria-hidden="true">
@@ -92,6 +96,22 @@ export const Home: React.FC = () => {
         <div className="space-y-0.5">
           <p className="text-[var(--ink)]">DÉVELOPPEUR FULL-STACK</p>
           <p className="text-[var(--muted)]">CONSULTANT SAP FI/CO · PARIS</p>
+          <div className="flex flex-wrap gap-3 pt-3">
+            <button
+              type="button"
+              onClick={() => onNavigate?.("contact")}
+              className="border border-[var(--ink)] bg-[var(--ink)] text-[var(--paper)] px-4 py-2 hover:bg-transparent hover:text-[var(--ink)] transition-colors"
+            >
+              CONTACT ↓
+            </button>
+            <button
+              type="button"
+              onClick={() => onNavigate?.("projets")}
+              className="border border-[var(--ink)] px-4 py-2 hover:bg-[var(--ink)] hover:text-[var(--paper)] transition-colors cursor-pointer"
+            >
+              VOIR LES PROJETS
+            </button>
+          </div>
         </div>
         <div className="text-[var(--ink)] flex items-center gap-1.5 self-start sm:self-auto">
           <span>DÉFILER</span>

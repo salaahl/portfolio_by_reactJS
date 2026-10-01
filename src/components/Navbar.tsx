@@ -28,10 +28,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
   };
 
   const links = [
-    { label: "01 MOI", target: "moi" },
-    { label: "02 PROJETS", target: "projets" },
-    { label: "03 EXPERTISE", target: "expertise" },
-    { label: "04 CONTACT", target: "contact" },
+    { num: "01", label: "MOI", target: "moi" },
+    { num: "02", label: "PROJETS", target: "projets" },
+    { num: "03", label: "EXPERTISE", target: "expertise" },
+    { num: "04", label: "CONTACT", target: "contact" },
   ];
 
   return (
@@ -48,17 +48,24 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
             type="button"
             onClick={toggleCrispMode}
             aria-pressed={crispMode}
-            className={`border border-[var(--ink)] px-2 py-0.5 text-[11px] transition-colors cursor-pointer ${
+            aria-label="Effets"
+            title="Effets"
+            className={`border border-[var(--ink)] w-7 h-7 xs:w-auto xs:h-auto xs:px-2 xs:py-0.5 flex items-center justify-center text-[11px] transition-colors cursor-pointer ${
               crispMode
-                ? "bg-[var(--ink)] text-[var(--paper)]"
-                : "hover:bg-[var(--ink)] hover:text-[var(--paper)] text-[var(--ink)]"
+                ? "hover:bg-[var(--ink)] hover:text-[var(--paper)] text-[var(--ink)]"
+                : "bg-[var(--ink)] text-[var(--paper)]"
             }`}
           >
-            {crispMode ? "● ENCRE NETTE" : "○ ENCRE NETTE"}
+            <span aria-hidden="true" className="xs:hidden">
+              {crispMode ? "○" : "●"}
+            </span>
+            <span className="hidden xs:inline">
+              {crispMode ? "○ EFFETS" : "● EFFETS"}
+            </span>
           </button>
         </div>
 
-        <ul className="flex items-center gap-4 sm:gap-8 ml-auto">
+        <ul className="flex items-center gap-3 sm:gap-8 ml-auto">
           {links.map((link) => (
             <li key={link.target}>
               <button
@@ -66,6 +73,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
                 onClick={() => onNavigate(link.target)}
                 className="hover:text-[var(--green)] transition-colors py-1 cursor-pointer"
               >
+                <span className="hidden sm:inline">{link.num} </span>
                 {link.label}
               </button>
             </li>

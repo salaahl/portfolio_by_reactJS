@@ -11,6 +11,9 @@ export default {
         muted: "var(--muted)",
         "green-ink": "var(--green-ink)",
       },
+      screens: {
+        xs: "425px",
+      },
     },
   },
   plugins: [],

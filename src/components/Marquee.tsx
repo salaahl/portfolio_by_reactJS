@@ -24,7 +24,7 @@ export const Marquee: React.FC = () => {
     const trigger = ScrollTrigger.create({
       onUpdate: (self) => {
         // Normalisation de la vitesse de la molette
-        scrollVelocity = self.getVelocity() / 350;
+        scrollVelocity = gsap.utils.clamp(-60, 60, self.getVelocity() / 350);
       },
     });
 
@@ -52,8 +52,20 @@ export const Marquee: React.FC = () => {
     };
   }, []);
 
-  const phrase = "DÉVELOPPEUR FULL-STACK — SAP FI/CO — ";
-  const repetitions = Array(6).fill(phrase);
+  const items = [
+    "FULL-STACK",
+    "VUE.JS",
+    "TYPESCRIPT",
+    "LARAVEL",
+    "SYMFONY",
+    "DJANGO",
+    "FLUTTER",
+    "SAP ABAP",
+    "POSTGRESQL",
+    "DOCKER",
+  ];
+  const phrase = items.join(" — ") + " — ";
+  const repetitions = Array(2).fill(phrase);
 
   return (
     <div

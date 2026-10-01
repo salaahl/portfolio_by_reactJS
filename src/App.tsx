@@ -6,7 +6,7 @@ import { Home } from "./components/Home";
 import { AboutMe } from "./components/AboutMe";
 import { Marquee } from "./components/Marquee";
 import { Projects } from "./components/Projects";
-import { Services } from "./components/Services";
+import { Services } from "./components/Expertise";
 import { Contact } from "./components/Contact";
 import { InkWipe, InkWipeRefs } from "./components/InkWipe";
 import { RegistrationRipple } from "./components/RegistrationRipple";
@@ -67,17 +67,17 @@ export default function App() {
     const tl = gsap.timeline({
       defaults: { ease: "power3.inOut", force3D: true },
       onComplete: () => {
-        gsap.set([greenPanel, redPanel], { xPercent: -101 });
+        gsap.set([greenPanel, redPanel], { x: 0, xPercent: -101 });
         isTransitioning.current = false;
       },
     });
 
-    tl.set([greenPanel, redPanel], { xPercent: -101 })
+    tl.set([greenPanel, redPanel], { x: 0, xPercent: -101 })
       .to(greenPanel, { xPercent: 0, duration: 0.5 }, 0)
       .to(redPanel, { xPercent: 0, duration: 0.5 }, 0.12)
       .add(() => {
-        window.scrollTo({ top: targetTop, left: 0, behavior: "instant" });
-      }, 0.62)
+        window.scrollTo({ top: targetTop, left: 0, behavior: "instant" as ScrollBehavior });
+      }, 0.64)
       .to(redPanel, { xPercent: 101, duration: 0.5 }, 0.66)
       .to(greenPanel, { xPercent: 101, duration: 0.5 }, 0.78);
   };
@@ -88,7 +88,7 @@ export default function App() {
       <InkWipe ref={wipeRef} />
       <Navbar onNavigate={handleNavigate} />
       <main>
-        <Home />
+        <Home onNavigate={handleNavigate} />
         <AboutMe />
         <Marquee />
         <Projects />

@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@400;500;700&family=Montserrat:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,6 +10,9 @@
   --muted: #5f5e5a;
   --green-ink: #0f2a20;
   --rule: 1px solid var(--ink);
+  --dx: 0.025em;
+  --dy: 0.02em;
+  --v-offset: 0em;
 
   --font-display: "Anton", "Oswald", "Impact", sans-serif;
   --font-sans: "Montserrat", system-ui, sans-serif;
@@ -28,20 +29,37 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Typographie spécifique */
 .font-display {
   font-family: var(--font-display);
 }
 
 .font-serif-quote {
-  font-size: xx-large;
+  font-family: var(--font-serif);
 }
 
 .font-mono-code {
   font-family: var(--font-mono);
 }
 
-/* Technique des deux calques Risographie */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+}
+
+/* Respect de prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Technique des deux calques */
 .riso-title {
   position: relative;
   text-transform: uppercase;
@@ -61,8 +79,8 @@ html {
   position: relative;
   color: var(--green);
   transform: translate(
-    calc(var(--dx, 0.025em) * -1),
-    calc(var(--dy, 0.02em) * -1)
+    calc((var(--dx, 0.025em) + var(--v-offset, 0em)) * -1),
+    calc((var(--dy, 0.02em) + var(--v-offset, 0em)) * -1)
   );
 }
 
@@ -71,32 +89,17 @@ html {
   left: 0;
   top: 0;
   color: var(--red);
-  transform: translate(var(--dx, 0.025em), var(--dy, 0.02em));
+  transform: translate(
+    calc(var(--dx, 0.025em) + var(--v-offset, 0em)),
+    calc(var(--dy, 0.02em) + var(--v-offset, 0em))
+  );
 }
 
-/* Focus accessible selon §6 */
-a:focus-visible,
-button:focus-visible {
-  outline: 3px solid var(--ink);
-  outline-offset: 3px;
-}
-
-/* Respect de prefers-reduced-motion */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  ::before,
-  ::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-/* Mode accessibilité : Encre nette sans aberration chromatique */
+/* Mode accessibilité : Pas d'effets */
 html.crisp-mode {
   --dx: 0 !important;
   --dy: 0 !important;
+  --v-offset: 0em !important;
 }
 
 html.crisp-mode .riso-layer-red {
@@ -109,26 +112,6 @@ html.crisp-mode .riso-layer-green {
   mix-blend-mode: normal !important;
 }
 
-/* --- VIBRATION DE ROTATIVE (VELOCITY JITTER) --- */
-:root {
-  --v-offset: 0em;
-}
-
-.riso-layer-green {
-  transform: translate(
-    calc((var(--dx, 0.025em) + var(--v-offset, 0em)) * -1),
-    calc((var(--dy, 0.02em) + var(--v-offset, 0em)) * -1)
-  );
-}
-
-.riso-layer-red {
-  transform: translate(
-    calc(var(--dx, 0.025em) + var(--v-offset, 0em)),
-    calc(var(--dy, 0.02em) + var(--v-offset, 0em))
-  );
-}
-
-/* --- SURLIGNAGE AU ROULEAU ENCREUR (INK STROKE) --- */
 .ink-stroke {
   position: relative;
   display: inline-flex;
@@ -159,7 +142,6 @@ html.crisp-mode .riso-layer-green {
   transform: scaleX(1);
 }
 
-/* --- ONDE DE CALAGE AU CLIC --- */
 @keyframes riso-ripple-kf {
   0% {
     transform: translate(-50%, -50%) scale(0.2);
