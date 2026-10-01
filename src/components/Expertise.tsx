@@ -64,7 +64,7 @@ export const Services: React.FC = () => {
                 SAP FI/CO & FLUX FINANCIERS
               </h3>
               <p className="text-sm md:text-base leading-relaxed text-[var(--paper)]/90 max-w-lg mb-6">
-                MCO du SI financier (SAP ECC 6), pilotage de la tierce
+                MCO et évolution du SI financier (SAP) et interfaces reliées, pilotage de la tierce
                 maintenance applicative et traitement de flux de données massifs
                 en environnement grand compte.
               </p>

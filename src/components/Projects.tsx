@@ -45,7 +45,7 @@ const CASE_STUDIES: CaseStudy[] = [
     code: "https://github.com/salaahl/diashop-app",
     shapeVariant: "diashop",
     highlights: [
-      "Gestion précise des déclinaisons de stocks par taille",
+      "Gestion des déclinaisons de stocks par taille",
       "Tunnel de paiement bancaire sécurisé via Stripe Elements",
       "Traitement asynchrone des e-mails et factures en arrière-plan",
     ],
