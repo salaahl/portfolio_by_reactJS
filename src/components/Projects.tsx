@@ -1,226 +1,228 @@
-import React from "react";
-import imgPlaceholder from "../assets/images/projects/placeholder.png";
-import imgLocalLibrary from "../assets/images/projects/library.png";
-import imgDiaShop from "../assets/images/projects/diashop_b.png";
-import imgNutriVerif from "../assets/images/projects/nutriverif.png";
-import imgJokes from "../assets/images/projects/jokes.png";
-import imgQuizz from "../assets/images/projects/quizz.png";
-import imgNotepad from "../assets/images/projects/notepad.png";
-import imgRestaurant from "../assets/images/projects/restauration.png";
-import imgDice from "../assets/images/projects/dice.png";
-import imgAdministration from "../assets/images/projects/administration.png";
-import imgCommerce from "../assets/images/projects/e_commerce.png";
+import React, { useState } from "react";
 
-const AsyncImage = ({ props = {} }: any) => {
-  const [loadedSrc, setLoadedSrc] = React.useState(null);
-  React.useEffect(() => {
-    setLoadedSrc(null);
-    if (props.src) {
-      const handleLoad = () => {
-        setLoadedSrc(props.src);
-      };
-      const image = new Image();
-      image.addEventListener("load", handleLoad);
-      image.src = props.src;
-      return () => {
-        image.removeEventListener("load", handleLoad);
-      };
-    }
-  }, [props.src]);
-  if (loadedSrc === props.src) {
-    return <img {...props} />;
-  }
-  return null;
-};
+interface CaseStudy {
+  id: string;
+  title: string;
+  desc: string;
+  stack: string[];
+  demo: string;
+  code: string;
+  shapeVariant: "circles" | "rectangles" | "bars";
+  challenge: {
+    problem: string;
+    solution: string;
+  };
+}
 
-function Projects() {
+const CASE_STUDIES: CaseStudy[] = [
+  {
+    id: "01",
+    title: "NutriVérif",
+    desc: "Analyse de produits alimentaires via l'API Open Food Facts.",
+    stack: ["VUE.JS", "TYPESCRIPT", "PINIA", "TAILWIND"],
+    demo: "https://nutriverif.onrender.com/",
+    code: "https://github.com/salaahl/nutri_verif_by_vue.js",
+    shapeVariant: "circles",
+    challenge: {
+      problem:
+        "Latence de l'API externe et structures de données hétérogènes selon les pays.",
+      solution:
+        "Proxy intermédiaire avec cache en mémoire, normalisation typée TypeScript et calcul dynamique du Nutri-Score côté client.",
+    },
+  },
+  {
+    id: "02",
+    title: "DiaShop",
+    desc: "Site de prêt-à-porter avec paiement en ligne.",
+    stack: ["LARAVEL", "STRIPE", "TAILWIND"],
+    demo: "https://diashop.onrender.com/",
+    code: "https://github.com/salaahl/diashop-app",
+    shapeVariant: "rectangles",
+    challenge: {
+      problem:
+        "Risque de commandes orphelines en cas de déconnexion réseau lors du paiement.",
+      solution:
+        "Sécurisation par transactions SQL atomiques et traitement asynchrone des webhooks Stripe avec vérification d'idempotence.",
+    },
+  },
+  {
+    id: "03",
+    title: "Bibliothèque numérique",
+    desc: "Catalogue et gestion de prêts, inspirés de mon métier précédent.",
+    stack: ["FULL-STACK"],
+    demo: "https://bibliotheque-numerique.onrender.com/",
+    code: "https://github.com/salaahl/library",
+    shapeVariant: "bars",
+    challenge: {
+      problem:
+        "Modélisation des cycles de réservation multiples et conflits de disponibilité simultanés.",
+      solution:
+        "Architecture SQL relationnelle stricte avec verrous pessimistes lors des emprunts et automatisation des relances de retards.",
+    },
+  },
+];
+
+export const Projects: React.FC = () => {
+  const [openChallenge, setOpenChallenge] = useState<string | null>(null);
+
   return (
-    <section id="projects">
-      <div className="header">
-        <h2 id="projects-anchor">Projets</h2>
-      </div>
-      <div className="content">
-        <Project
-          title="Site de prêt à porter"
-          image={imgDiaShop}
-          description="Les dernières tendances de la mode pour hommes et femmes."
-          stack={[
-            "HTML",
-            "JS",
-            "CSS",
-            "PHP",
-            "MySQL",
-            "Laravel",
-            "Blade",
-            "Stripe",
-            "Tailwind CSS",
-          ]}
-          github="https://github.com/salaahl/diashop-app"
-          website="https://diashop.onrender.com/"
-        />
-        <Project
-          title="Restaurant Le Vingtième"
-          image={imgRestaurant}
-          description="Le Vingtième c'est la cuisine de toutes les gourmandises, alliant jus pressés minute de fruits et légumes & cocktails maison, recettes savoureuses..."
-          stack={["HTML", "JS", "CSS", "PHP", "Symfony", "MySQL", "Bootstrap"]}
-          github="https://github.com/salaahl/restaurant_project"
-          website="https://levingtieme.onrender.com/"
-        />
-        <Project
-          title="Appli de food-checking"
-          image={imgNutriVerif}
-          description="Application web de food checking alimentée par l'API d'OpenFactsFood."
-          stack={[
-            "HTML",
-            "JS",
-            "TypeScript",
-            "CSS",
-            "Tailwind",
-            "Pinia",
-            "Vue.js",
-          ]}
-          github="https://github.com/salaahl/nutri_verif_by_vue.js"
-          website="https://nutriverif.onrender.com/"
-        />
-        <Project
-          title="Bibliothèque numérique"
-          image={imgLocalLibrary}
-          description="Bibliothèque numérique de prêt. Compte utilisateur disponible : Ousmane, mdp : Ous75019."
-          stack={[
-            "HTML",
-            "JS",
-            "CSS",
-            "Python",
-            "PostgreSQL",
-            "Django",
-            "Bootstrap",
-          ]}
-          github="https://github.com/salaahl/library"
-          website="https://bibliotheque-numerique.onrender.com/"
-        />
-        <Project
-          title="Blagues et sourires"
-          image={imgJokes}
-          description="Une application web amusante affichant des blagues aléatoires via une API personnalisée."
-          stack={[
-            "HTML",
-            "JS",
-            "TypeScript",
-            "CSS",
-            "Tailwind",
-            "PHP",
-            "Twig",
-            "Symfony",
-            "API Platform",
-            "React",
-          ]}
-          github="https://github.com/salaahl/jokes_app_by_reactJS"
-          website="https://blagues-et-sourires.onrender.com/"
-        />
-        <Project
-          title="Quizz général"
-          image={imgQuizz}
-          description="Quizz général."
-          stack={["HTML", "JS", "TypeScript", "CSS", "SASS", "Angular"]}
-          github="https://github.com/salaahl/MyQuizz"
-          website="http://quizz-general.onrender.com/"
-        />
-        <Project
-          title="Bloc-notes"
-          image={imgNotepad}
-          description="Bloc-notes inspiré de Google Keep. Compte utilisateur disponible : sokhona.salaha@gmail.com, mdp : Sokhona."
-          stack={["HTML (PUG)", "JS", "CSS", "Bulma", "MongoDB", "Mongoose"]}
-          github="https://github.com/salaahl/notepad"
-          website="https://bloc-notes.onrender.com/"
-        />
-        <Project
-          title="Jeu de dés"
-          image={imgDice}
-          description="Jeu de dés."
-          stack={["HTML", "JS", "CSS", "Bootstrap"]}
-          github="https://replit.com/@SalahS/EXAM-jeu-STUDI"
-          website="https://4448b68c-2aea-4a82-a2d6-c40f41b42fdf-00-35mrmwldw9yx6.worf.replit.dev/"
-        />
-        <Project
-          title="Interface d'administration"
-          image={imgAdministration}
-          description="Interface d'administration d'une marque de sport. Identifiant administrateur : sokhona.salaha@gmail.com. Mot de passe : Sokhona."
-          stack={["HTML", "JS", "CSS", "PHP", "MySQL", "JQuery", "Bootstrap"]}
-          github="https://github.com/salaahl/ECF"
-          website="https://interface-d-administration.herokuapp.com/login.html"
-        />
-        <Project
-          title="E-commerce de parfums"
-          image={imgCommerce}
-          description="Trouvez le parfum parfait pour chaque occassion sur notre site de e-commerce de parfums."
-          stack={[
-            "HTML",
-            "JS",
-            "CSS",
-            "PHP",
-            "MySQL",
-            "Laravel",
-            "Blade",
-            "Tailwind CSS",
-          ]}
-          github="https://github.com/salaahl/e-commerce-by-laravel"
-          website="https://salaha-sokhona-ecommerce.herokuapp.com/"
-        />
+    <section
+      id="projets"
+      className="w-full border-b border-[var(--ink)] bg-[var(--paper)] py-14 md:py-20"
+    >
+      <div className="max-w-[1400px] mx-auto px-4 md:px-8">
+        <div className="flex items-baseline gap-3 mb-10 pb-4 border-b border-[var(--ink)]">
+          <h2 className="font-display text-[clamp(36px,5vw,72px)] leading-none uppercase">
+            PROJETS
+          </h2>
+          <span className="font-mono-code text-xs md:text-sm font-semibold text-[var(--muted)]">
+            (11)
+          </span>
+        </div>
+
+        <div className="divide-y divide-[var(--ink)]">
+          {CASE_STUDIES.map((p) => {
+            const isOpen = openChallenge === p.id;
+            return (
+              <article
+                key={p.id}
+                className="group py-8 md:py-12 grid grid-cols-1 md:grid-cols-[320px_1fr] lg:grid-cols-[400px_1fr] gap-6 md:gap-12 items-start"
+              >
+                {/* Vignette */}
+                <div className="w-full aspect-[16/10] border border-[var(--ink)] bg-[#f7f5ef] relative overflow-hidden flex items-center justify-center p-6">
+                  {p.shapeVariant === "circles" && (
+                    <div className="relative w-36 h-24 flex items-center justify-center">
+                      <div className="w-20 h-20 rounded-full bg-[var(--green)] mix-blend-multiply opacity-90 transition-transform duration-500 ease-out group-hover:-translate-x-3" />
+                      <div className="w-20 h-20 rounded-full bg-[var(--red)] mix-blend-multiply opacity-90 -ml-7 transition-transform duration-500 ease-out group-hover:translate-x-3" />
+                    </div>
+                  )}
+                  {p.shapeVariant === "rectangles" && (
+                    <div className="relative w-36 h-24 flex items-center justify-center">
+                      <div className="w-20 h-20 bg-[var(--green)] mix-blend-multiply opacity-90 transition-transform duration-500 ease-out group-hover:-translate-x-2 group-hover:-translate-y-2" />
+                      <div className="w-20 h-20 bg-[var(--red)] mix-blend-multiply opacity-90 -ml-8 mt-4 transition-transform duration-500 ease-out group-hover:translate-x-2 group-hover:translate-y-2" />
+                    </div>
+                  )}
+                  {p.shapeVariant === "bars" && (
+                    <div className="w-48 flex flex-col gap-3">
+                      <div className="h-5 w-3/4 bg-[var(--green)] mix-blend-multiply opacity-90 transition-transform duration-500 ease-out group-hover:translate-x-2" />
+                      <div className="h-5 w-full bg-[var(--red)] mix-blend-multiply opacity-90 transition-transform duration-500 ease-out group-hover:-translate-x-2" />
+                    </div>
+                  )}
+                </div>
+
+                {/* Contenu */}
+                <div className="flex flex-col justify-between">
+                  <div>
+                    <span className="font-mono-code text-xs md:text-sm text-[var(--muted)] font-bold">
+                      {p.id}
+                    </span>
+
+                    {/* Titre sobre sans dédoublement */}
+                    <h3 className="text-2xl md:text-3xl font-semibold tracking-tight mt-1 mb-2">
+                      {p.title}
+                    </h3>
+
+                    <p className="text-sm md:text-base text-[var(--ink)]/90 max-w-xl leading-relaxed mb-4">
+                      {p.desc}
+                    </p>
+
+                    <div className="mb-6">
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setOpenChallenge((prev) =>
+                            prev === p.id ? null : p.id,
+                          )
+                        }
+                        className="font-mono-code text-xs uppercase tracking-wider border border-[var(--ink)] px-2.5 py-1 hover:bg-[var(--ink)] hover:text-[var(--paper)] transition-colors flex items-center gap-2 cursor-pointer"
+                        aria-expanded={isOpen}
+                      >
+                        <span>DÉFI TECHNIQUE</span>
+                        <span className="font-bold">{isOpen ? "−" : "+"}</span>
+                      </button>
+
+                      {isOpen && (
+                        <div className="mt-3 p-4 border border-[var(--ink)] bg-[#ede8dc] font-mono-code text-xs space-y-2">
+                          <p>
+                            <strong className="text-[var(--red)] uppercase">
+                              Contrainte :
+                            </strong>{" "}
+                            {p.challenge.problem}
+                          </p>
+                          <p>
+                            <strong className="text-[var(--green)] uppercase">
+                              Résolution :
+                            </strong>{" "}
+                            {p.challenge.solution}
+                          </p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="space-y-3 font-mono-code text-xs md:text-sm">
+                    <p className="text-[var(--muted)] tracking-wider">
+                      {p.stack.join(" · ")}
+                    </p>
+
+                    <div className="flex gap-6 font-bold pt-1">
+                      <a
+                        href={p.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="ink-stroke ink-stroke-green pb-0.5"
+                      >
+                        DÉMO ↗
+                      </a>
+                      <a
+                        href={p.code}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="ink-stroke pb-0.5"
+                      >
+                        CODE ↗
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+
+        {/* Projets secondaires */}
+        <div className="mt-8 border-t border-[var(--ink)] divide-y divide-[var(--ink)] font-mono-code text-xs md:text-sm uppercase tracking-wider font-semibold">
+          <a
+            href="https://github.com/salaahl/restaurant_project"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="py-4 flex justify-between items-center hover:bg-black/5 px-2 transition-colors"
+          >
+            <span>04 RESTAURANT LE VINGTIÈME</span>
+            <span>SYMFONY ↗</span>
+          </a>
+          <a
+            href="https://github.com/salaahl/e-commerce-by-laravel"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="py-4 flex justify-between items-center hover:bg-black/5 px-2 transition-colors"
+          >
+            <span>05 E-COMMERCE DE PARFUMS</span>
+            <span>LARAVEL ↗</span>
+          </a>
+          <a
+            href="https://github.com/salaahl"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="py-4 flex justify-between items-center hover:bg-black/5 px-2 text-[var(--muted)] hover:text-[var(--ink)] transition-colors"
+          >
+            <span>06 + 5 AUTRES PROJETS</span>
+            <span>VOIR TOUT →</span>
+          </a>
+        </div>
       </div>
     </section>
   );
-}
-
-interface ProjectProps {
-  title: string;
-  image: string;
-  description: string;
-  stack: string[];
-  github: string;
-  website: string;
-}
-
-function Project({
-  title = "Titre",
-  image = "/images/placeholder.png",
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  stack = ["Non renseigné"],
-  github = "#",
-  website = "#",
-}: ProjectProps) {
-  const isMobile = window.innerWidth < 1024;
-
-  return (
-    <article className="project">
-      <div className="inner">
-        <section className="img-container">
-          <img src={image} alt={title} />
-        </section>
-        <section className="masked-title">
-          <h3>{title}</h3>
-        </section>
-        {isMobile && <p className="description">{description}</p>}
-      </div>
-      <section className="description">
-        {!isMobile && <p>{description}</p>}
-        <div className="stack">
-          {stack.map((element, index) => (
-            <span key={index} className="language">
-              {element}
-            </span>
-          ))}
-        </div>
-        <div className="links">
-          <a href={github} className="button-style-1" target="_blank">
-            <span className="button-style-1-content">Github</span>
-          </a>
-          <a href={website} className="button-style-1" target="_blank">
-            <span className="button-style-1-content">Site web</span>
-          </a>
-        </div>
-      </section>
-    </article>
-  );
-}
+};
 
 export default Projects;

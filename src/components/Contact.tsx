@@ -1,58 +1,143 @@
-function Contact() {
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+export const Contact: React.FC = () => {
+  const risoRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const el = risoRef.current;
+    if (!el) return;
+
+    const prefersReduced = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    if (prefersReduced) {
+      el.style.setProperty("--dx", "0.025em");
+      el.style.setProperty("--dy", "0.02em");
+      return;
+    }
+
+    // A6 : Recalage des calques à l'entrée dans le viewport
+    gsap.fromTo(
+      el,
+      { "--dx": "0.12em", "--dy": "0.07em", opacity: 0 },
+      {
+        "--dx": "0.025em",
+        "--dy": "0.02em",
+        opacity: 1,
+        duration: 1.1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 80%",
+          once: true,
+        },
+      },
+    );
+  }, []);
+
+  // Décalage dynamique au survol de « PARLONS-EN »
+  const handlePointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+    const el = risoRef.current;
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+
+    const normX = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+    const normY = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+
+    gsap.to(el, {
+      "--dx": `${0.025 + normX * 0.05}em`,
+      "--dy": `${0.02 + normY * 0.035}em`,
+      duration: 0.15,
+      ease: "power1.out",
+      overwrite: "auto",
+    });
+  };
+
+  const handlePointerLeave = () => {
+    const el = risoRef.current;
+    if (!el) return;
+    gsap.to(el, {
+      "--dx": "0.025em",
+      "--dy": "0.02em",
+      duration: 0.5,
+      ease: "power2.out",
+      overwrite: "auto",
+    });
+  };
+
   return (
-    <section id="contact">
-      <div className="content">
-        <h2>
-          <span>Con</span>
-          <span>tact</span>
-        </h2>
-        <p>
-          <a href="mailto:sokhona.salaha@gmail.com">sokhona.salaha@gmail.com</a>
-        </p>
-        <p>
-          <a href="https://www.linkedin.com/in/salaha-sokhona/" target="_blank">
-            LinkedIn
+    <footer
+      id="contact"
+      ref={sectionRef}
+      className="w-full bg-[var(--paper)] py-16 md:py-24"
+    >
+      <div className="max-w-[1400px] mx-auto px-4 md:px-8 flex flex-col gap-10">
+        <span className="font-mono-code text-xs md:text-sm font-bold uppercase tracking-wider text-[var(--muted)]">
+          04 CONTACT
+        </span>
+
+        {/* Titre Risographique interactif */}
+        <div className="w-full overflow-hidden select-none py-2">
+          <div
+            ref={risoRef}
+            onPointerMove={handlePointerMove}
+            onPointerLeave={handlePointerLeave}
+            className="riso-title font-display text-[clamp(56px,12vw,200px)] tracking-tight text-left cursor-crosshair"
+            aria-label="Parlons-en"
+          >
+            <span className="riso-layer riso-layer-red" aria-hidden="true">
+              PARLONS-EN
+            </span>
+            <span className="riso-layer riso-layer-green" aria-hidden="true">
+              PARLONS-EN
+            </span>
+          </div>
+        </div>
+
+        {/* Liens */}
+        <div className="flex flex-wrap gap-x-8 gap-y-4 font-mono-code text-xs md:text-sm uppercase tracking-wider font-bold pt-4 border-t border-[var(--ink)]">
+          <a
+            href="mailto:sokhona.salaha@gmail.com"
+            className="underline decoration-[var(--ink)] hover:text-[var(--green)] transition-colors"
+          >
+            EMAIL ↗
           </a>
-        </p>
-        <p>
-          <a href="https://github.com/salaahl" target="_blank">
-            Github
+          <a
+            href="https://www.linkedin.com/in/salaha-sokhona/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline decoration-[var(--ink)] hover:text-[var(--green)] transition-colors"
+          >
+            LINKEDIN ↗
           </a>
+          <a
+            href="https://github.com/salaahl"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline decoration-[var(--ink)] hover:text-[var(--green)] transition-colors"
+          >
+            GITHUB ↗
+          </a>
+          <a
+            href="/cv.pdf"
+            download
+            className="underline decoration-[var(--ink)] hover:text-[var(--red)] transition-colors"
+          >
+            CV ↓
+          </a>
+        </div>
+
+        <p className="font-mono-code text-[11px] text-[var(--muted)] pt-8">
+          © 2026 Salaha Sokhona. Tous droits réservés.
         </p>
       </div>
-      <div className="background-transition">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          id="visual"
-          viewBox="0 0 900 600"
-        >
-          <rect x="0" y="0" width="1920" height="1080" fill="transparent" />
-          <defs>
-            <linearGradient id="myGradient" x1="100%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor="#4b9b8c" stopOpacity="1" />
-              <stop offset="100%" stopColor="rgb(103, 175, 142)" stopOpacity="1" />
-            </linearGradient>
-          </defs>
-          <path
-            d="M0 162L21.5 159.8C43 157.7 86 153.3 128.8 143.5C171.7 133.7 214.3 118.3 257.2 135.5C300 152.7 343 202.3 385.8 206C428.7 209.7 471.3 167.3 514.2 170.5C557 173.7 600 222.3 642.8 243.8C685.7 265.3 728.3 259.7 771.2 252.2C814 244.7 857 235.3 878.5 230.7L900 226L900 601L878.5 601C857 601 814 601 771.2 601C728.3 601 685.7 601 642.8 601C600 601 557 601 514.2 601C471.3 601 428.7 601 385.8 601C343 601 300 601 257.2 601C214.3 601 171.7 601 128.8 601C86 601 43 601 21.5 601L0 601Z"
-            fill="url(#myGradient)"
-          />
-          <circle cx="60" cy="170" r="5" fill="#4b9b8c" />
-          <circle cx="150" cy="150" r="7" fill="#67af8e" />
-          <circle cx="200" cy="190" r="4" fill="#4b9b8c" />
-          <circle cx="300" cy="130" r="6" fill="#67af8e" />
-          <circle cx="380" cy="210" r="3" fill="#4b9b8c" />
-          <circle cx="420" cy="180" r="5" fill="#67af8e" />
-          <circle cx="490" cy="170" r="4" fill="#4b9b8c" />
-          <circle cx="570" cy="230" r="6" fill="#67af8e" />
-          <circle cx="680" cy="250" r="5" fill="#4b9b8c" />
-          <circle cx="750" cy="240" r="3" fill="#67af8e" />
-          <circle cx="830" cy="230" r="4" fill="#4b9b8c" />
-          <circle cx="880" cy="210" r="6" fill="#67af8e" />
-        </svg>
-      </div>
-    </section>
+    </footer>
   );
-}
+};
 
 export default Contact;

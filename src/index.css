@@ -1,272 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@400;500;700&family=Montserrat:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* cyrillic-ext */
-@font-face {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: normal;
-  font-display: auto;
-  src: url(./assets/fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
-    U+FE2E-FE2F;
-}
-
-/* cyrillic */
-@font-face {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: normal;
-  font-display: auto;
-  src: url(./assets/fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-
-/* vietnamese */
-@font-face {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: normal;
-  font-display: auto;
-  src: url(./assets/fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
-    U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329,
-    U+1EA0-1EF9, U+20AB;
-}
-
-/* latin-ext */
-@font-face {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: normal;
-  font-display: auto;
-  src: url(./assets/fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
-  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
-    U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-
-/* latin */
-@font-face {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: normal;
-  font-display: auto;
-  src: url(./assets/fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
-    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* cyrillic-ext */
-@font-face {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: normal;
-  font-display: auto;
-  src: url(./assets/fonts/Oswald-VariableFont_wght.ttf) format("truetype");
-  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
-    U+FE2E-FE2F;
-}
-
-/* cyrillic */
-@font-face {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: normal;
-  font-display: auto;
-  src: url(./assets/fonts/Oswald-VariableFont_wght.ttf) format("truetype");
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-
-/* vietnamese */
-@font-face {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: normal;
-  font-display: auto;
-  src: url(./assets/fonts/Oswald-VariableFont_wght.ttf) format("truetype");
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
-    U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329,
-    U+1EA0-1EF9, U+20AB;
-}
-
-/* latin-ext */
-@font-face {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: normal;
-  font-display: auto;
-  src: url(./assets/fonts/Oswald-VariableFont_wght.ttf) format("truetype");
-  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
-    U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-
-/* latin */
-@font-face {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: normal;
-  font-display: auto;
-  src: url(./assets/fonts/Oswald-VariableFont_wght.ttf) format("truetype");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
-    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* cyrillic */
-@font-face {
-  font-family: "Poiret One";
-  font-style: normal;
-  font-weight: normal;
-  font-display: auto;
-  src: url(./assets/fonts/PoiretOne-Regular.ttf) format("truetype");
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-
-/* latin-ext */
-@font-face {
-  font-family: "Poiret One";
-  font-style: normal;
-  font-weight: normal;
-  font-display: auto;
-  src: url(./assets/fonts/PoiretOne-Regular.ttf) format("truetype");
-  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
-    U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-
-/* latin */
-@font-face {
-  font-family: "Poiret One";
-  font-style: normal;
-  font-weight: normal;
-  font-display: auto;
-  src: url(./assets/fonts/PoiretOne-Regular.ttf) format("truetype");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
-    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-/* latin */
-@font-face {
-  font-family: "Playwrite BE WAL";
-  font-style: normal;
-  font-weight: normal;
-  font-display: auto;
-  src: url(./assets/fonts/PlaywriteBEWAL-VariableFont_wght.ttf) format("truetype");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
-    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --paper: #f1ede3;
+  --ink: #1c1c1a;
+  --green: #3a9c78;
+  --red: #e0524d;
+  --muted: #5f5e5a;
+  --green-ink: #0f2a20;
+  --rule: 1px solid var(--ink);
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-  --transition-emphasized: linear(
-    0 0%,
-    0 1.8%,
-    0.01 3.6%,
-    0.03 6.35%,
-    0.07 9.1%,
-    0.13 11.4%,
-    0.19 13.4%,
-    0.27 15%,
-    0.34 16.1%,
-    0.54 18.35%,
-    0.66 20.6%,
-    0.72 22.4%,
-    0.77 24.6%,
-    0.81 27.3%,
-    0.85 30.4%,
-    0.88 35.1%,
-    0.92 40.6%,
-    0.94 47.2%,
-    0.96 55%,
-    0.98 64%,
-    0.99 74.4%,
-    1 86.4%,
-    1 100%
-  );
-  --tranendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  --font-display: "Anton", "Oswald", "Impact", sans-serif;
+  --font-sans: "Montserrat", system-ui, sans-serif;
+  --font-serif: "Source Serif 4", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
 }
 
 html {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
   scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
-body {
-  min-width: 320px;
+/* Typographie spécifique */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-serif-quote {
+  font-size: xx-large;
+}
+
+.font-mono-code {
+  font-family: var(--font-mono);
+}
+
+/* Technique des deux calques Risographie */
+.riso-title {
+  position: relative;
+  text-transform: uppercase;
+  line-height: 0.88;
   margin: 0;
+  user-select: none;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.riso-layer {
+  display: block;
+  white-space: nowrap;
+  mix-blend-mode: multiply;
+  will-change: transform;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+.riso-layer-green {
+  position: relative;
+  color: var(--green);
+  transform: translate(
+    calc(var(--dx, 0.025em) * -1),
+    calc(var(--dy, 0.02em) * -1)
+  );
 }
-button:hover {
-  border-color: #646cff;
+
+.riso-layer-red {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--red);
+  transform: translate(var(--dx, 0.025em), var(--dy, 0.02em));
 }
-button:focus,
+
+/* Focus accessible selon §6 */
+a:focus-visible,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+/* Respect de prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-    min-height: 100vh;
-  }
+/* Mode accessibilité : Encre nette sans aberration chromatique */
+html.crisp-mode {
+  --dx: 0 !important;
+  --dy: 0 !important;
+}
 
-  #particles-js {
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 0;
+html.crisp-mode .riso-layer-red {
+  display: none !important;
+}
+
+html.crisp-mode .riso-layer-green {
+  color: var(--ink) !important;
+  transform: none !important;
+  mix-blend-mode: normal !important;
+}
+
+/* --- VIBRATION DE ROTATIVE (VELOCITY JITTER) --- */
+:root {
+  --v-offset: 0em;
+}
+
+.riso-layer-green {
+  transform: translate(
+    calc((var(--dx, 0.025em) + var(--v-offset, 0em)) * -1),
+    calc((var(--dy, 0.02em) + var(--v-offset, 0em)) * -1)
+  );
+}
+
+.riso-layer-red {
+  transform: translate(
+    calc(var(--dx, 0.025em) + var(--v-offset, 0em)),
+    calc(var(--dy, 0.02em) + var(--v-offset, 0em))
+  );
+}
+
+/* --- SURLIGNAGE AU ROULEAU ENCREUR (INK STROKE) --- */
+.ink-stroke {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.ink-stroke::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  width: 100%;
+  height: 42%;
+  background: var(--red);
+  mix-blend-mode: multiply;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.26s cubic-bezier(0.2, 0.9, 0.2, 1);
+  pointer-events: none;
+}
+
+.ink-stroke-green::after {
+  background: var(--green);
+}
+
+.ink-stroke:hover::after {
+  transform: scaleX(1);
+}
+
+/* --- ONDE DE CALAGE AU CLIC --- */
+@keyframes riso-ripple-kf {
+  0% {
+    transform: translate(-50%, -50%) scale(0.2);
+    opacity: 0.9;
   }
+  100% {
+    transform: translate(-50%, -50%) scale(1.6);
+    opacity: 0;
+  }
+}
+
+.animate-riso-ripple {
+  animation: riso-ripple-kf 0.38s cubic-bezier(0.1, 0.8, 0.2, 1) forwards;
 }
