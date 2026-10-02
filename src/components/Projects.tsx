@@ -81,7 +81,7 @@ const CASE_STUDIES: CaseStudy[] = [
     title: "Restaurant Le Vingtième",
     desc: "Site de restaurant avec réservation de table en direct.",
     stack: ["SYMFONY", "PHP", "DOCTRINE", "BOOTSTRAP"],
-    demo: "https://restaurant-le-vingtieme.onrender.com/",
+    demo: "https://levingtieme.onrender.com",
     code: "https://github.com/salaahl/restaurant_website_by_symfony",
     shapeVariant: "restaurant",
     highlights: [
