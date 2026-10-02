@@ -37,6 +37,29 @@ export default function App() {
       },
     });
 
+    function setHeaderState(isInsideExpertise: boolean) {
+      gsap.to("header", {
+        backgroundColor: isInsideExpertise
+          ? "rgba(255, 255, 255, 0.25)"
+          : "rgb(241, 237, 227)",
+        backdropFilter: isInsideExpertise ? "blur(4px)" : "blur(0px)",
+        duration: 0.4,
+        ease: "power2.out",
+      });
+    }
+
+    const ctx = gsap.context(() => {
+      ScrollTrigger.create({
+        trigger: "#expertise",
+        start: "top top",
+        end: "bottom top",
+        onEnter: () => setHeaderState(true),
+        onLeave: () => setHeaderState(false),
+        onEnterBack: () => setHeaderState(true),
+        onLeaveBack: () => setHeaderState(false),
+      });
+    });
+
     return () => trigger.kill();
   }, []);
 
@@ -76,7 +99,11 @@ export default function App() {
       .to(greenPanel, { xPercent: 0, duration: 0.5 }, 0)
       .to(redPanel, { xPercent: 0, duration: 0.5 }, 0.12)
       .add(() => {
-        window.scrollTo({ top: targetTop, left: 0, behavior: "instant" as ScrollBehavior });
+        window.scrollTo({
+          top: targetTop,
+          left: 0,
+          behavior: "instant" as ScrollBehavior,
+        });
       }, 0.64)
       .to(redPanel, { xPercent: 101, duration: 0.5 }, 0.66)
       .to(greenPanel, { xPercent: 101, duration: 0.5 }, 0.78);
