@@ -17,7 +17,7 @@ export const Marquee: React.FC = () => {
     if (prefersReducedMotion) return;
 
     let xPos = 0;
-    const baseSpeed = 0.08; // Vitesse de croisière automatique
+    const baseSpeed = 0.02; // Vitesse de croisière automatique
     let scrollVelocity = 0;
 
     // Capture de la vélocité instantanée du scroll
@@ -74,7 +74,7 @@ export const Marquee: React.FC = () => {
     >
       <div
         ref={trackRef}
-        className="flex whitespace-nowrap will-change-transform font-display text-[clamp(28px,4.5vw,56px)] leading-none tracking-tight text-[var(--ink)] uppercase"
+        className="flex w-max whitespace-nowrap will-change-transform font-display text-[clamp(28px,4.5vw,56px)] leading-none tracking-tight text-[var(--ink)] uppercase"
       >
         {/* Deux blocs identiques pour assurer une boucle sans coupure */}
         <div className="flex shrink-0">
