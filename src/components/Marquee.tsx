@@ -54,12 +54,13 @@ export const Marquee: React.FC = () => {
 
   const items = [
     "FULL-STACK",
+    "REACT",
     "VUE.JS",
     "TYPESCRIPT",
-    "LARAVEL",
+    "FLUTTER",
+    "API REST",
     "SYMFONY",
     "DJANGO",
-    "FLUTTER",
     "SAP ABAP",
     "POSTGRESQL",
     "DOCKER",
