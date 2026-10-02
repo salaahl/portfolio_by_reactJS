@@ -124,7 +124,7 @@ export const AboutMe: React.FC = () => {
           </div>
           <div className="border-t border-[var(--ink)]/30 pt-4">
             <div className="font-bold text-[var(--ink)] text-base md:text-lg">
-              + 11 PROJETS
+              + 15 PROJETS
             </div>
             <div className="text-[var(--muted)]">
               WEB · MOBILE · SI FINANCIER
