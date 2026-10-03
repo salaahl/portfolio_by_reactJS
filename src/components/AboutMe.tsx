@@ -12,27 +12,20 @@ export const AboutMe: React.FC = () => {
     const prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)",
     ).matches;
-    if (prefersReducedMotion || !textContainerRef.current) return;
-
-    const words = textContainerRef.current.querySelectorAll(".scrub-word");
-    if (!words.length) return;
+    if (prefersReducedMotion || !sectionRef.current) return;
 
     const ctx = gsap.context(() => {
-      gsap.fromTo(
-        words,
-        { opacity: 0 },
-        {
-          opacity: 1,
-          stagger: 0.05,
-          ease: "none",
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 75%",
-            end: "top 35%",
-            scrub: true,
-          },
+      gsap.to(".char-reveal", {
+        opacity: 1,
+        stagger: 0.02,
+        ease: "none",
+        scrollTrigger: {
+          trigger: textContainerRef.current,
+          start: "top 75%",
+          end: "bottom 45%",
+          scrub: 0.3,
         },
-      );
+      });
     }, sectionRef);
 
     return () => ctx.revert();
@@ -95,16 +88,23 @@ export const AboutMe: React.FC = () => {
         <div>
           <p
             ref={textContainerRef}
-            className="font-serif-quote text-[clamp(22px,2.6vw,40px)] leading-[1.35] text-[var(--ink)]"
+            className="font-serif-quote text-2xl md:text-3xl leading-relaxed"
           >
-            {fullSentence.map((item, idx) => (
+            {fullSentence.map((word, wIdx) => (
               <span
-                key={idx}
-                className={`scrub-word inline-block mr-[0.28em] transition-colors ${
-                  item.highlight ? "text-[var(--green)] font-semibold" : ""
+                key={wIdx}
+                className={`inline-block whitespace-nowrap mr-[0.28em] ${
+                  word.highlight ? "text-[var(--green)]" : "text-[var(--ink)]"
                 }`}
               >
-                {item.text}
+                {word.text.split("").map((char, cIdx) => (
+                  <span
+                    key={cIdx}
+                    className="char-reveal inline-block opacity-0 will-change-transform"
+                  >
+                    {char}
+                  </span>
+                ))}
               </span>
             ))}
           </p>
@@ -128,7 +128,7 @@ export const AboutMe: React.FC = () => {
           </div>
           <div className="border-t border-[var(--ink)]/30 pt-4">
             <div className="font-bold text-[var(--ink)] text-base md:text-lg">
-              + 15 PROJETS
+              + 15 DE PROJETS
             </div>
             <div className="text-[var(--muted)]">
               WEB · MOBILE · SI FINANCIER
