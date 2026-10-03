@@ -14,21 +14,37 @@ export const AboutMe: React.FC = () => {
     ).matches;
     if (prefersReducedMotion || !sectionRef.current) return;
 
-    const ctx = gsap.context(() => {
+    const mm = gsap.matchMedia();
+
+    mm.add("(max-width: 767px)", () => {
       gsap.to(".char-reveal", {
         opacity: 1,
-        stagger: 0.02,
-        ease: "none",
+        ease: "steps(1)",
+        stagger: 0.05,
+        scrollTrigger: {
+          trigger: textContainerRef.current,
+          start: "top 90%",
+          end: "bottom 60%",
+          scrub: true,
+        },
+      });
+    });
+
+    mm.add("(min-width: 768px)", () => {
+      gsap.to(".char-reveal", {
+        opacity: 1,
+        ease: "steps(1)",
+        stagger: 0.05,
         scrollTrigger: {
           trigger: textContainerRef.current,
           start: "top 75%",
           end: "bottom 45%",
-          scrub: 0.3,
+          scrub: true,
         },
       });
-    }, sectionRef);
+    });
 
-    return () => ctx.revert();
+    return () => mm.revert();
   }, []);
 
   const fullSentence = [
