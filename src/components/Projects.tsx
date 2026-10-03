@@ -53,27 +53,27 @@ const CASE_STUDIES: CaseStudy[] = [
       problem:
         "Éviter la survente lors de commandes simultanées sur la dernière pièce d'une taille, et prévenir les doublons lors des relances webhook Stripe.",
       solution:
-        "Verrous pessimistes en base (lockForUpdate) au sein d'une transaction SQL atomique et idempotence stricte des événements Stripe basée sur l'identifiant unique de session.",
+        "Verrou de ligne (lockForUpdate) dans une transaction SQL à l'ajout au panier, et contrôle de doublon sur l'identifiant de session Stripe avant de créer la commande.",
     },
   },
   {
     id: "03",
     title: "Bibliothèque numérique",
     desc: "Gestion de prêts avec liseuse 3D pensée pour recréer la sensation du livre papier.",
-    stack: ["DJANGO", "PYTHON", "POSTGRESQL"],
+    stack: ["DJANGO", "PYTHON", "POSTGRESQL", "PDF.JS"],
     demo: "https://bibliotheque-numerique.onrender.com/",
     code: "https://github.com/salaahl/local_library_by_django",
     shapeVariant: "bibliotheque",
     highlights: [
-      "Liseuse 3D interactive avec effet de page tournée et rendu papier",
-      "Gestion des réservations, emprunts et alertes de retard",
-      "Espaces séparés pour les usagers et l'administration",
+      "Liseuse en double page sur grand écran, page simple sur mobile",
+      "Marque-page enregistré côté serveur, remis à zéro au retour du livre",
+      "Cycle de prêt complet : emprunt, prolongation limitée, retour des prêts échus",
     ],
     challenge: {
       problem:
-        "Rendre le feuilletage 3D fluide dans le navigateur sans ralentir la lecture du texte.",
+        "Lire un PDF dans un navigateur sans perdre ce qui fait le livre papier : la double page, le geste de tourner la page, la reprise là où on s'était arrêté.",
       solution:
-        "Rendu 3D léger optimisé avec textures basse consommation et séparation propre entre le texte et le moteur d'affichage.",
+        "Les pages sont rendues par PDF.js, et le tourne-page est une animation CSS 3D (perspective, preserve-3d, couches imbriquées). La page courante est sauvegardée côté serveur pour reprendre la lecture.",
     },
   },
   {
@@ -91,9 +91,9 @@ const CASE_STUDIES: CaseStudy[] = [
     ],
     challenge: {
       problem:
-        "Empêcher les surréservations lors des créneaux de forte affluence tout en prenant en compte les contraintes horaires d'ouverture et le nombre maximal de couverts par service.",
+        "Gérer des places limitées par date et par créneau, et empêcher qu'un même client occupe plusieurs tables.",
       solution:
-        "Validation personnalisée sous Symfony ('ConstraintValidator') croisant l'historique des réservations actives via des requêtes Doctrine DQL ciblées avant persistance en base.",
+        "Un service de réservation vérifie les places disponibles par créneau, refuse une deuxième réservation à la même date pour une même adresse e-mail, et limite le nombre de réservations à venir par client. Les places du créneau sont décrémentées à la confirmation.",
     },
   },
 ];
