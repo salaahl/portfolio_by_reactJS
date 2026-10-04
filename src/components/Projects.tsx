@@ -26,8 +26,8 @@ const CASE_STUDIES: CaseStudy[] = [
     shapeVariant: "nutriverif",
     highlights: [
       "Scan photo de plat par IA : estimation des portions, Nutri-Score, NOVA et AJR",
-      "Version web (Vue.js) et mobile (Flutter)",
-      "Proxy PHP/Symfony pour agréger l'API Vision et le catalogue Open Food Facts",
+      "Recherche et scan de codes-barres sur plus d'un million de produits via Open Food Facts",
+      "Applications web (Vue.js) et mobile (Flutter) synchronisées via un proxy backend PHP/Symfony",
     ],
     challenge: {
       problem:
